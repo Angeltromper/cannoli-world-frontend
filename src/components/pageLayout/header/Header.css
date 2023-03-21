@@ -1,0 +1,131 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+header::before {
+    content: '';
+    display: block;
+    width: 78px;
+    height: 100px;
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 39px);
+}
+
+header::before {
+    content: '';
+    display: block;
+    width: 78px;
+    height: 100px;
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 39px);
+}
+
+header::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-position: top center;
+    background-size:auto;
+}
+.header-image-container {
+    display: flex;
+    position: revert;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar__container {
+    background-color: var(--dark-brown);
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 100ch;
+    min-height: 30ch;
+}
+
+.navbar__container .logo {
+    width: 7rem;
+    height: 3em;
+}
+
+.navbar__container ul {
+    font-family: var(--main-font);
+    position: relative;
+    display: flex;
+    list-style: none;
+    z-index: 2;
+}
+
+.navbar__container li {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 100px;
+    position: relative;
+}
+
+.nav-list li {
+    list-style: none;
+}
+
+.navbar-list li:hover {
+    color: #CEA71E ;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+.active-link {
+    color: var(--white);
+}
+
+.menu-icon {
+    font-size: 0.6em;
+    margin: 0.2em;
+}
+
+.illustrationFormLeft {
+    width: 10rem;
+    display: flex ;
+}
+
+.illustrationFormRight {
+    width: 10rem;
+    display: flex;
+}
+
+/*------------------- Header-image ---------------------*/
+
+.header-container__reusable {
+    width: 100%;
+}
+
+.skewer--top {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    border-top: 60px solid var(--dark-brown);
+    border-right: 100ch solid transparent;
+    z-index: 1;
+}
+
+/*--------------------- Media-queries -----------------*/
+

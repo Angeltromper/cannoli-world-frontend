@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@300;400;700&display=swap');
+
+/*/////////////////////////
+    Table of Contents
+    1.  Global Styles
+    2.  Typography
+    3.  Page-layout
+    4.  Scroll-bar
+    5.  Media Queries
+/////////////////////////*/
+
+/*--------------------- 1. Global Styles ---------------------*/
+
+:root {
+    --main-font: Merriweather;
+    --main-text-weight: 800;
+    --second-font: 'Roboto', sans-serif;
+    --second-font-line-height: 10px;
+
+    --light-brown: #251009;
+    --dark-brown: #150A06;
+    --pink: #FF003D;
+    --green: #1AE216;
+    --light-yellow: #FAF34A;
+    --white: #FFFFFF;
+    --black: #010101;
+
+    --text-logo: #CEA71E;
+    --text-color-error: #F40000;
+    --text: #7A7A7A;
+    --text-faded: #f2f0ff;
+    --text-dark: #0c0c0c;
+    --dropshadow: 0.2em 0.2em 0 var(--black);
+    --margin: 1.5em;
+    --border: 0.2em solid var(--black);
+    --minusTop: -7rem;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+}
+
+* {
+    padding: 0;
+    /*Met de padding worden de hoogtes en breedtes van de elementen berekend en inclusief padding en borders*/
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+
+}
+
+body a {
+    color: var(--white);
+}
+
+a,
+a:visited,
+a:link {
+    text-decoration: none;
+    color: var(--white);
+}
+
+/*--------------------- 2. Typography ---------------------*/
+
+.page-title {
+    font-size: 1em;
+    margin: 0.1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Merriweather, 'Times New Roman', serif;
+    letter-spacing: 0.02em;
+}
+
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 0.2em;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h4::after {
+    display: block;
+    content: '';
+    margin: 24px 0 0;
+    width: 57px;
+    height: 4px;
+}
+
+h5 {
+    font-size: 0.8em;
+}
+
+h6 {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1em;
+}
+
+strong {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+/*--------------------- 3. Page-layout ---------------------*/
+
+.outer-content-container {
+    background-color: var(--white);
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100ch;
+    min-height: 110ch;
+    margin: var(--margin);
+    box-shadow: var(--dropshadow);
+    border: var(--border);
+}
+
+.inner-content-container {
+    flex-shrink: 1;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.outer-container__reusable {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.inner-container__reusable {
+    display: flex;
+    flex-direction: revert;
+    justify-content: flex-start;
+    flex-basis: 100%;
+}
+
+.default-area-padding {
+    padding: 0 0 100px 0;
+}
+
+.default-text-restrictor {
+    max-width: 800px;
+    text-align: center;
+}
+
+.page-content {
+    position: relative;
+    top: var(--minusTop);
+}
+
+.highlighter {
+    box-shadow: inset 0 -.7em 0 0 var(--dark-brown);
+}
+
+.highlighter:hover {
+    box-shadow: inset 0 -.7em 0 0#FAF34A
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.6rem;
+}
+
+figcaption::before {
+    content: " ";
+}
+
+.bigFont {
+    font-size: 8rem;
+}
+
+.image-preview {
+    width: 100px;
+}
+/*--------------------- 4.Scrollbar ---------------------*/
+
+
+
+/*--------------------- 5.Media-queries -----------------*/
+
+@media screen and (min-width: 600px) {
+    :root {
+        font-size: 14px;
+    }
+}
