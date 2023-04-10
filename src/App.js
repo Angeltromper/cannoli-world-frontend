@@ -1,9 +1,11 @@
-import React, {useLayoutEffect, useState} from 'react'
-import {Route, Routes, useLocation} from 'react-router-dom'
+import React from "react";
+import {Routes, Route, useLocation} from "react-router-dom";
+import {useLayoutEffect, useState} from 'react'
 import Header from "./components/pageLayout/header/Header";
 import Homepage from "./pages/homepage/Homepage";
-import Footer from "./components/pageLayout/footer/Footer";
-import './App.module.css';
+import NavBarResp from "./components/pageLayout/navBarResp/navBarResp";
+import './App.css';
+
 
 function App () {
     const [headerImage, setHeaderImage] = useState();
@@ -13,7 +15,6 @@ function App () {
     useLayoutEffect(() => {
       document.documentElement.scrollTo(0, 0);
     }, [location.pathname]);
-
     return children
   };
 
@@ -24,17 +25,25 @@ function App () {
                   <Header headerImage={headerImage} pageTitle={pageTitle}/>
 
                   <Routes>
-                      <Route path="/*"
+                      <Route path="/"
                              element={<Homepage headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
-                      <Route path="/*"
-                             element={<Footer headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
+
+                      <Route path="/navbarResp"
+                             element={<NavBarResp headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
+
+
+
+
+
+
+
                   </Routes>
 
 
               </div>
           </main>
-      </Wrapper>
 
+      </Wrapper>
   );
 }
 

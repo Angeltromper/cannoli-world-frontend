@@ -1,17 +1,26 @@
 import React from 'react';
-import {useLocation} from "react-router-dom";
+import {NavLink} from "react-router-dom";
+import logo from "../../../assets/logo/Logo Cannoli.png";
 
 
 function NavBar() {
-    let location = useLocation().pathname;
-    console.log(location);
 
     return (
+        <nav>
+            <div className="navbar-container">
+                <ul className="navbar-list">
+                    <li><NavLink to="/" end exact activeClassName="active-link">Home</NavLink></li>
+                    <li><NavLink to="/cannoli" exact activeClassName="active-link">Cannoli</NavLink></li>
+                    <li><NavLink to="/giftbox" exact activeClassName="active-link">Giftbox</NavLink></li>
 
-        <main>
+                    <li><NavLink to="/logo"><figure><img src= {logo} alt="logo" className="logo"/></figure></NavLink></li>
 
-
-        </main>
+                    <li><NavLink to="/service" exact activeClassName="active-link">Service</NavLink></li>
+                    <li><NavLink to="/franchise" exact activeClassName="active-link">Franchise</NavLink></li>
+                    <li><NavLink to="/contact" end activeClassName="active-link">Contact</NavLink></li>
+                </ul>
+            </div>
+        </nav>
     );
 }
 

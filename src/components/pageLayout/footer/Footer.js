@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import {AuthContext} from "../../../context/AuthContext";
 import {Link} from "react-router-dom";
-import './Footer.module.css';
+import './Footer.css';
 
 function Footer() {
     // eslint-disable-next-line no-unused-vars

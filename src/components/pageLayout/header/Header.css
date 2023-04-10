@@ -1,8 +1,7 @@
 header {
     display: flex;
-    justify-content: space-between;
     position: relative;
-    height: auto;
+    padding: 50px 0;
     width: 100%;
 }
 
@@ -12,17 +11,7 @@ header::before {
     width: 78px;
     height: 100px;
     position: absolute;
-    bottom: 20px;
-    left: calc(50% - 39px);
-}
-
-header::before {
-    content: '';
-    display: block;
-    width: 78px;
-    height: 100px;
-    position: absolute;
-    bottom: 20px;
+    bottom: 25px;
     left: calc(50% - 39px);
 }
 
@@ -36,55 +25,31 @@ header::after {
     height: 100%;
     opacity: 0.6;
     background-position: top center;
-    background-size:auto;
-}
-.header-image-container {
-    display: flex;
-    position: revert;
-    flex-direction: column;
-    align-items: center;
 }
 
-.navbar__container {
-    background-color: var(--dark-brown);
+.navbar-container {
+    background-color: var(--background-color-dark);
     display: flex;
     width: 100%;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    max-width: 100ch;
-    min-height: 30ch;
 }
 
-.navbar__container .logo {
-    width: 7rem;
-    height: 3em;
-}
-
-.navbar__container ul {
-    font-family: var(--main-font);
-    position: relative;
+.navbar-container ul {
+    font-family: var(--font);
+    flex-basis: 200px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-direction: row;
     display: flex;
-    list-style: none;
     z-index: 2;
 }
 
-.navbar__container li {
+.navbar-list li {
     display: flex;
-    justify-content: space-around;
-}
-
-.nav-list {
-    display: flex;
-    justify-content: space-around;
     align-items: center;
-    list-style: none;
     margin: 100px;
-    position: relative;
-}
+    position: revert;
 
-.nav-list li {
-    list-style: none;
 }
 
 .navbar-list li:hover {
@@ -93,23 +58,15 @@ header::after {
     z-index: 2;
 }
 
-.active-link {
-    color: var(--white);
+.navbar-list .logo {
+    width: 7rem;
+    height: 3em;
 }
 
 .menu-icon {
     font-size: 0.6em;
-    margin: 0.2em;
-}
+    margin: 0.4em;
 
-.illustrationFormLeft {
-    width: 10rem;
-    display: flex ;
-}
-
-.illustrationFormRight {
-    width: 10rem;
-    display: flex;
 }
 
 /*------------------- Header-image ---------------------*/
@@ -118,14 +75,9 @@ header::after {
     width: 100%;
 }
 
-.skewer--top {
-    position: absolute;
-    top: 0;
-    right: 5px;
-    border-top: 60px solid var(--dark-brown);
-    border-right: 100ch solid transparent;
-    z-index: 1;
-}
+
 
 /*--------------------- Media-queries -----------------*/
+
+
 

@@ -12,27 +12,31 @@
 /*--------------------- 1. Global Styles ---------------------*/
 
 :root {
-    --main-font: Merriweather;
-    --main-text-weight: 800;
+    --font: Merriweather;
+    --text-weight: 800;
     --second-font: 'Roboto', sans-serif;
     --second-font-line-height: 10px;
 
-    --light-brown: #251009;
-    --dark-brown: #150A06;
-    --pink: #FF003D;
-    --green: #1AE216;
-    --light-yellow: #FAF34A;
-    --white: #FFFFFF;
-    --black: #010101;
+    --background-color-dark: #150A06;
+    --background-color: #251009;
+    --background-color-light: #FFFFFF;
+    --figure-color-1: #FF003D;
+    --figure-color-2: #1AE216;
+    --button-color: #FF003D;
+
+    --focus-color: #010101;
+    --shadow-color: #00000085;
 
     --text-logo: #CEA71E;
     --text-color-error: #F40000;
     --text: #7A7A7A;
+    --text-light: #FFFFFF;
     --text-faded: #f2f0ff;
-    --text-dark: #0c0c0c;
-    --dropshadow: 0.2em 0.2em 0 var(--black);
+    --ext-dark: #010101;
+
+    --dropshadow: 0.2em 0.2em 0 var(--shadow-color);
+    --border: 0.2em solid var(--focus-color);
     --margin: 1.5em;
-    --border: 0.2em solid var(--black);
     --minusTop: -7rem;
 }
 
@@ -42,7 +46,7 @@
 }
 
 * {
-    padding: 0;
+    padding:0;
     /*Met de padding worden de hoogtes en breedtes van de elementen berekend en inclusief padding en borders*/
     margin: 0;
     box-sizing: border-box;
@@ -51,19 +55,19 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
-
 }
 
 body a {
-    color: var(--white);
+    color: var(--background-color-dark);
 }
 
 a,
 a:visited,
 a:link {
     text-decoration: none;
-    color: var(--white);
+    color: var(--text-light);
 }
+
 
 /*--------------------- 2. Typography ---------------------*/
 
@@ -78,12 +82,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 1.8em;
+    font-size: 2.5em;
     margin-bottom: 0.2em;
+    padding: 16px 0;
 }
 
 h2 {
-    font-size: 1.6em;
+    font-size: 1.8em;
 }
 
 h3 {
@@ -92,6 +97,7 @@ h3 {
 
 h4 {
     font-size: 1.2rem;
+    padding: 12px 0;
 }
 
 h4::after {
@@ -103,16 +109,16 @@ h4::after {
 }
 
 h5 {
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 h6 {
-    font-size: 1rem;
+    font-size: 0.8em;
     line-height: 1.5;
 }
 
 p {
-    font-size: 1em;
+    font-size: 0.6em;
 }
 
 strong {
@@ -123,21 +129,16 @@ strong {
 /*--------------------- 3. Page-layout ---------------------*/
 
 .outer-content-container {
-    background-color: var(--white);
     display: flex;
     width: 100%;
     flex-direction: row;
     justify-content: center;
-    max-width: 100ch;
-    min-height: 110ch;
-    margin: var(--margin);
-    box-shadow: var(--dropshadow);
-    border: var(--border);
 }
 
 .inner-content-container {
     flex-shrink: 1;
     flex-grow: 0;
+    margin: 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -145,18 +146,18 @@ strong {
 }
 
 .outer-container__reusable {
-    width: 100%;
     display: flex;
+    max-width: 100%;
     flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .inner-container__reusable {
     display: flex;
-    flex-direction: revert;
+    flex-direction: column;
     justify-content: flex-start;
     flex-basis: 100%;
+    padding: 20px 20px;
 }
 
 .default-area-padding {
@@ -174,7 +175,7 @@ strong {
 }
 
 .highlighter {
-    box-shadow: inset 0 -.7em 0 0 var(--dark-brown);
+    box-shadow: inset 0 -.7em 0 0 var(--background-color-dark);
 }
 
 .highlighter:hover {
@@ -197,14 +198,41 @@ figcaption::before {
 .image-preview {
     width: 100px;
 }
-/*--------------------- 4.Scrollbar ---------------------*/
 
+.skewer--top {
+    position: absolute;
+    top: 10px;
+    right:0;
+    border-top: 100px solid var(--background-color-dark);
+    border-right: 150ch solid transparent;
+    z-index: 1;
+}
 
 
 /*--------------------- 5.Media-queries -----------------*/
 
-@media screen and (min-width: 600px) {
-    :root {
-        font-size: 14px;
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 2em;
     }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+     font-size: 1.5em;
+    }
+
+    h5 {
+        font-size: 1.2em;
+    }
+
+    h6 {
+        font-size: 1em;
+    }
+
 }
+
+
+
