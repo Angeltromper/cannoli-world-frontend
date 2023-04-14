@@ -18,7 +18,7 @@
     --second-font-line-height: 10px;
 
     --background-color-dark: #150A06;
-    --background-color: #251009;
+    --background-color: #432216;
     --background-color-light: #FFFFFF;
     --figure-color-1: #FF003D;
     --figure-color-2: #1AE216;
@@ -58,7 +58,7 @@ body {
 }
 
 body a {
-    color: var(--background-color-dark);
+    color: white;
 }
 
 a,
@@ -199,12 +199,13 @@ figcaption::before {
     width: 100px;
 }
 
-.skewer--top {
+.skewer--bottom {
     position: absolute;
-    top: 10px;
-    right:0;
-    border-top: 100px solid var(--background-color-dark);
-    border-right: 150ch solid transparent;
+    top: 0;
+    left: 2;
+    display: flex;
+    border-bottom: 75px solid transparent;
+    border-left: 98vw solid var(--background-color);
     z-index: 1;
 }
 

@@ -1,14 +1,15 @@
 header {
     display: flex;
     position: relative;
-    padding: 50px 0;
-    width: 100%;
+    width: 100vw;
+    height: 50vh;
+    z-index: 1;
 }
 
 header::before {
     content: '';
     display: block;
-    width: 78px;
+    width: 78x;
     height: 100px;
     position: absolute;
     bottom: 25px;
@@ -28,7 +29,7 @@ header::after {
 }
 
 .navbar-container {
-    background-color: var(--background-color-dark);
+    background: var(--background-color-dark) linear-gradient(180deg, var(--background-color-dark) 0%, var(--background-color-dark) 30%, var(--background-color) 100%);
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -48,7 +49,7 @@ header::after {
     display: flex;
     align-items: center;
     margin: 100px;
-    position: revert;
+    position: relative;
 
 }
 
@@ -71,9 +72,16 @@ header::after {
 
 /*------------------- Header-image ---------------------*/
 
+.header-image {
+    padding: 10px 0;
+    position: relative;
+
+}
+
 .header-container__reusable {
     width: 100%;
 }
+
 
 
 

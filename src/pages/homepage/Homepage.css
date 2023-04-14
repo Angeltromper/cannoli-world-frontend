@@ -1,3 +1,80 @@
+.header-background-image__homepage {
+    background-image: url("../../assets/img.header/homepage-background-1700x800.jpg");
+    background-repeat: no-repeat;
+    background-size: 1200px;
+    background-position: top;
+    resize: horizontal;
+}
 
+.product-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.4em;
+    font-size: 7px;
+}
+
+.input-field__reusable {
+    width: 800px;
+}
+
+.search-query__section {
+    margin: 2.5em 0 2.5em 0;
+}
+
+label {
+    display: flex;
+    flex-direction: revert;
+    width: 250px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 5em 0;
+    border: none;
+}
+
+.cannoli-img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.2em 0.7em;
+}
+
+.search-query__input-field {
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+select {
+    width: 100%;
+}
+
+.search-result__go-up-icon {
+    margin-top: 10em;
+    width: 1.5em;
+    cursor: pointer;
+    align-self: center;
+}
+
+@media screen and (min-width: 1200px) {
+    .search-query__section {
+        width: 800px;
+    }
+
+    .input-field__select-information {
+        width: 400px;
+        align-items: start;
+        margin: 5px;
+    }
+
+    .product-container {
+        width: 280px;
+    }
+}
 
 

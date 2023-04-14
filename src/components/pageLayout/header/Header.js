@@ -8,18 +8,20 @@ function Header({headerImage, pageTitle}) {
         <>
             <NavBar/>
 
-            <header className="outer-content-container header header-image__background">
-                <div className="inner-content-container"></div>
+            <header className="outer-content-container">
+                <div className="header-image"></div>
                 <figure>
                     <img src={headerImage} className="header-img"/>
                 </figure>
-
-                <div className="skewer--top"></div>
-
                 <div className="page-title">
                     <h1>{pageTitle}</h1>
                 </div>
+
+                <div className="skewer--bottom"></div>
+
             </header>
+
+
         </>
     );
 }

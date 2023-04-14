@@ -2,6 +2,8 @@ import React from 'react';
 import './HeaderImage.css';
 function HeaderImage({text, text1, text2, text3, children}) {
     return (
+
+
     <div className="outer-container__reusable header header-background-image__homepage">
         <main className="inner-container__reusable">
 
