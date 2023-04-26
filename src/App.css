@@ -17,8 +17,8 @@
     --second-font: 'Roboto', sans-serif;
     --second-font-line-height: 10px;
 
-    --background-color-dark: #150A06;
-    --background-color: #432216;
+    --background-color-dark:  #150A06;
+    --background-color:  #3B1C11;
     --background-color-light: #FFFFFF;
     --figure-color-1: #FF003D;
     --figure-color-2: #1AE216;
@@ -32,8 +32,7 @@
     --text: #7A7A7A;
     --text-light: #FFFFFF;
     --text-faded: #f2f0ff;
-    --ext-dark: #010101;
-
+    --text-dark: #010101;
     --dropshadow: 0.2em 0.2em 0 var(--shadow-color);
     --border: 0.2em solid var(--focus-color);
     --margin: 1.5em;
@@ -165,7 +164,7 @@ strong {
 }
 
 .default-text-restrictor {
-    max-width: 800px;
+    max-width: 850px;
     text-align: center;
 }
 
@@ -199,41 +198,21 @@ figcaption::before {
     width: 100px;
 }
 
-.skewer--bottom {
-    position: absolute;
-    top: 0;
-    left: 2;
-    display: flex;
-    border-bottom: 75px solid transparent;
-    border-left: 98vw solid var(--background-color);
-    z-index: 1;
-}
-
-
 /*--------------------- 5.Media-queries -----------------*/
-
-@media screen and (max-width: 576px) {
-    h1 {
-        font-size: 2em;
-    }
-
-    h2 {
-        font-size: 1.8em;
-    }
-
-    h3 {
-     font-size: 1.5em;
-    }
-
-    h5 {
-        font-size: 1.2em;
-    }
-
-    h6 {
+@media only screen and (max-width: 992px) {
+    body {
+        font-family: 'Roboto', sans-serif;
         font-size: 1em;
     }
 
+    body a {
+        color: black;
+    }
+
+    a,
+    a:visited,
+    a:link {
+        text-decoration: none;
+        color: var(--text-dark-mobile);
+    }
 }
-
-
-

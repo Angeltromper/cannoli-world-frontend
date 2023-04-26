@@ -1,0 +1,51 @@
+:root {
+    --background-color-light-mobile: #E7FFC7;
+    --background-color-mobile: #FFDA5B;
+    --text-dark-mobile: #010101;
+    --menu-bar-width: 60px;
+    --menu-bar-height: 10px;
+}
+
+.mobile-navbar {
+    position: relative;
+    width: var(--menu-bar-width);
+    height: var(--menu-bar-height);
+    top: 100%;
+    right: 0;
+    transition: all 0.15s ease-in-out;
+}
+
+.mobile-navbar.active {
+    transform: translateY(0%);
+}
+
+.mobile-navbar .navbar-menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 2.5rem;
+    gap: 1 rem;
+}
+
+
+/*--------------------- Media-queries -----------------*/
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
+body a {
+    color: black;
+}
+
+a,
+a:visited,
+a:link {
+    text-decoration: none;
+    color: var(--text-dark-mobile);
+}
+
+

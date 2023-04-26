@@ -1,14 +1,15 @@
-
 import NavBar from "../navBar/NavBar";
 import './MobileNavBar.css';
 
 function MobileNavBar({open}) {
 
     return (
-        <div className={`mobile-nav ${open ? 'active' : ''}`}>
-           <div className="navbar-menu">
-               <NavBar/>
-           </div>
+        <div className={`mobile-navbar ${open ? 'active' : ''}`}>
+            <div className="container">
+                <div className="navbar-menu">
+                    <NavBar/>
+                </div>
+            </div>
         </div>
     );
 }

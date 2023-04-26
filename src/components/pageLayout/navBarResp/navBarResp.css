@@ -1,0 +1,62 @@
+.navbarResp {
+    background: var(--background-color-light-mobile);
+    background: linear-gradient(180deg, var(--background-color-light-mobile) 0%, var(--background-color-light-mobile) 25%, var(--background-color-mobile) 100%); ;
+    position: relative;
+    z-index: 999;
+}
+
+.navbarResp .logo-wrapper {
+    margin: auto;
+
+}
+
+.navbarResp .logo-wrapper .logo {
+    max-height: 4rem;
+}
+.navbarResp .desktop-navigation {
+    display: flex;
+    gap: 3rem;
+}
+
+.navbarResp .desktop-navigation a {
+    color: black;
+    font-size: 1.2rem;
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbarResp .desktop-navigation a.active:after {
+    background-color: black;
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.navbarResp .desktop-navigation a:after {
+    background-color: black;
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/*------------------- Mobile ---------------------*/
+
+@media screen and (max-width: 992px) {
+    .navbarResp .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbarResp .desktop-navigation {
+        display: none;
+    }
+}
