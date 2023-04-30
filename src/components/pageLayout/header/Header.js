@@ -1,12 +1,12 @@
 import React from 'react';
-import NavBar from "../navBar/NavBar";
+import Navbar from "../navbar/Navbar";
 import './Header.css';
 
 function Header({headerImage, pageTitle}) {
 
     return (
         <>
-            <NavBar/>
+            <Navbar/>
 
             <header className="outer-content-container">
                 <div className="header-image"></div>

@@ -96,11 +96,13 @@ header::after {
     .header-content__navbar-list {
         background: var(--background-color-light-mobile);
         background: linear-gradient(180deg, var(--background-color-light-mobile) 0%, var(--background-color-light-mobile) 25%, var(--background-color-mobile) 100%);
-        font-size: 9px;
+        display: flex;
+        font-size: 1.2rem;
         font-weight: 400;
         font-family: 'Roboto', sans-serif;
         align-items: center;
-        justify-content: flex-end;
+        flex-direction: row;
+        justify-content: space-evenly;
         width: 100%;
     }
 

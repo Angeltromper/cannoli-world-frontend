@@ -37,6 +37,13 @@
     --border: 0.2em solid var(--focus-color);
     --margin: 1.5em;
     --minusTop: -7rem;
+
+/*--------------------- Mobile Styles  ---------------------*/
+    --background-color-light-mobile: #E7FFC7;
+    --background-color-mobile: #FFDA5B;
+    --text-dark-mobile: #010101;
+    --menu-bar-width: 60px;
+    --menu-bar-height: 10px;
 }
 
 #root {
