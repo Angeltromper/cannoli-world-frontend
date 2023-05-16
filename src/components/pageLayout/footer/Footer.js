@@ -1,6 +1,10 @@
 import React, {useContext} from 'react';
 import {AuthContext} from "../../../context/AuthContext";
 import {Link} from "react-router-dom";
+import mail from "../../../assets/navIcon/mail.png";
+import phone from "../../../assets/navIcon/phone.png";
+import Column from "../designElement/column/Column";
+import TwoColumn from "../designElement/column/TwoColumn";
 import './Footer.css';
 
 function Footer() {
@@ -8,14 +12,52 @@ function Footer() {
     const {auth} = useContext(AuthContext);
 
     return (
-        <footer className="outer-container__reusable">
 
-            {auth ? <li><Link to="/inloggen"></Link></li> :
-                <li><Link to="/inloggen">Inloggen</Link></li>}
+        <footer id="footer" className="outer-content-container">
+            <div className="footer">
+                <TwoColumn>
+                    <Column>
 
+
+                            <ul className="footer-text__section-list">
+                                <h4>navigatie</h4>
+
+                                <li><Link to="/home">Home</Link></li>
+                                <li><Link to="/webshop">Webshop</Link></li>
+                                <li><Link to="/faq's">Faq's</Link></li>
+                                <li><Link to="/home">Allergens</Link></li>
+                                <li><Link to="/webshop">Contact</Link></li>
+                                <li><Link to="/faq's">Mijn Account</Link></li>
+
+                                {auth ? <li><Link to="/inloggen">Uitloggen</Link></li> :
+                                    <li><Link to="/inloggen">Inloggen</Link></li>}
+                                {auth && <li><Link to="/profiel">Profiel</Link></li>}
+                            </ul>
+
+                    </Column>
+                    <Column>
+                    <aside className="inner-container__reusable footer footer-container">
+
+
+                        <ol className= "footer-text-section__contact">
+                            <h4>contact</h4>
+
+                            <li><Link to="/"><figure><img src={mail} alt="mail-icon" className="mail-icon"/>srruffino@outlook.com</figure></Link></li>
+                            <li><Link to="/"><figure><img src={phone} alt="phone-icon" className="phone-icon"/>SR.Ruffino:(+31)620940691</figure></Link></li>
+                            <li><Link to="/"><figure><img src={phone} alt="phone-icon" className="phone-icon"/>E.Jongh Visscher:(+31)648889093</figure></Link></li>
+                        </ol>
+
+
+
+                        <p className="footer-text-section__newsletter">Wilt u onze nieuwsbrief ontvangen</p>
+                        <button className="button">Inschrijven</button>
+                    </aside>
+                    </Column>
+                </TwoColumn>
+
+                <div className="skewer--top-footer"></div>
+            </div>
         </footer>
-
-
 
     );
 }

@@ -25,3 +25,4 @@ yarn-debug.log*
 yarn-error.log*
 /public/logo512.png
 /public/logo192.png
+/src/assets/img.header/background header-2400px.png

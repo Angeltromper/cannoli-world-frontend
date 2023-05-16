@@ -1,0 +1,131 @@
+footer {
+    background: linear-gradient(180deg, var(--background-color-dark) 0%, var(--background-color-dark) 70%, var(--background-color) 100%);
+    position: relative;
+    font-size: 14px;
+    margin: var(--margin);
+
+}
+
+footer::before {
+    content: '';
+    display: block;
+    width: 78x;
+    height: 100px;
+    position: absolute;
+    bottom: 25px;
+    left: calc(50% - 39px);
+}
+
+footer::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-position: top center;
+}
+
+.footer-text__section-list h4 {
+    text-transform: uppercase;
+    margin-left: -1em;
+}
+
+.footer-text__section-list {
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-transform: none;
+    width: 100%;
+    height: 0.1em;
+    margin: 1em 0;
+    padding: 8em;
+}
+
+.footer-text-section__contact h4 {
+    text-transform: uppercase;
+}
+
+
+
+.footer-text-section__contact {
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-transform: none;
+    width: 100%;
+    height: 0.1em;
+    margin: 1em 0;
+    padding: 8em;
+}
+
+
+.footer .mail-icon {
+    width: 1.5em;
+    display: flex;
+}
+
+.footer .phone-icon {
+    width: 3em;
+    display: flex;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 20ch;
+}
+
+.footer.logo {
+    width: 6em;
+    padding: 1em;
+    transform: rotate(-1.3deg);
+}
+
+.color-figure {
+    display: revert;
+}
+
+.color-figure div {
+    width: 2em;
+    height: 4em;
+    margin: 3px;
+}
+
+.footer-text-section__newsletter {
+    color: var(--text-light);
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+}
+
+.button {
+    color: var(--background-color-light);
+    background-color: var(--button-color);
+    font-size: 10px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 5px 8px 4px rgba(0, 0, 0, .2);
+    padding: 10px 10px;
+    margin: 200px 0;
+
+}
+.skewer--top-footer {
+    position: absolute;
+    top:-50px;
+    right: 0;
+    border-right: 100vw solid transparent ;
+    z-index: 1;
+}
+
+
+

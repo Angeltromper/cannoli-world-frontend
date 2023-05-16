@@ -56,3 +56,22 @@
     transition: all 0.35s ease-in-out;
 }
 
+/*--------------------- Media-queries -----------------*/
+
+@media only screen and (max-width: 992px) {
+    body {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1em;
+    }
+
+    body a {
+        color: black;
+    }
+
+    a,
+    a:visited,
+    a:link {
+        text-decoration: none;
+        color: var(--text-dark-mobile);
+    }
+}

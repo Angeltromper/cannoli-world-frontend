@@ -1,8 +1,13 @@
 header {
+    background-image: url("../../../assets/img.header/homepage-background-2400x1100 .jpg");
     display: flex;
     align-items: center;
     position: relative;
     width: 100%;
+    height: 100ch;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     z-index: 1;
 }
 
@@ -31,7 +36,7 @@ header::after {
 .header-content__navbar {
     background: var(--background-color-dark);
     background: linear-gradient(180deg, var(--background-color-dark) 0%, var(--background-color-dark) 70%, var(--background-color) 100%);
-    padding: 20px 0;
+    padding: 50px 0;
     position: relative;
 }
 
@@ -70,24 +75,23 @@ header::after {
 
 /*------------------- Header-image ---------------------*/
 
-.header-image {
-    padding: 10px 0;
-    position: relative;
-}
-
-.header-container__reusable {
-    width: 100%;
-}
-
 .skewer--bottom {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 2;
-    border-bottom: 75px solid transparent;
-    border-left: 100vw solid var(--background-color);
+    border-bottom: 100px solid var(--background-color-light);
+    border-left: 100vw solid transparent;
     z-index: 1;
 }
 
+.skewer--top {
+    position: absolute;
+    top: 0;
+    right: 2;
+    border-top: 100px solid var(--background-color);
+    border-right: 100vw solid transparent;
+    z-index: 1;
+}
 
 /*--------------------- Media-queries -----------------*/
 
@@ -118,10 +122,19 @@ header::after {
 
     .skewer--bottom {
         position: absolute;
-        top: 0;
+        bottom: 0;
         left: 2;
-        border-bottom: 75 solid transparent;
-        border-left: 100vw solid var(--background-color-mobile);
+        border-bottom: 100px solid var(--background-color-light);
+        border-left: 100vw solid transparent;
+        z-index: 1;
+    }
+
+    .skewer--top {
+        position: absolute;
+        top: 0;
+        right: 2;
+        border-top: 100px solid var(--background-color);
+        border-right: 100vw solid transparent;
         z-index: 1;
     }
 }

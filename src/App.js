@@ -32,6 +32,7 @@ import OrderList from './components/orderList/OrderList';
 
 
 
+
 function App () {
     const [headerImage, setHeaderImage] = useState();
     const [pageTitle, setPageTitle] = useState();
@@ -47,8 +48,8 @@ function App () {
       <Wrapper>
           <main className="outer-content-container">
               <div className="inner-content-container default-area-padding default-text-restrictor">
-
                   <Header headerImage={headerImage} pageTitle={pageTitle}/>
+
                   <Routes>
                       <Route path="/"
                              element={<Homepage headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>

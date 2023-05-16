@@ -28,11 +28,14 @@
     --shadow-color: #00000085;
 
     --text-logo: #CEA71E;
+    --text-intro-pink: #FF003D;
     --text-color-error: #F40000;
     --text: #7A7A7A;
+    --text-intro-white: #FFFFFF;
     --text-light: #FFFFFF;
     --text-faded: #f2f0ff;
     --text-dark: #010101;
+
     --dropshadow: 0.2em 0.2em 0 var(--shadow-color);
     --border: 0.2em solid var(--focus-color);
     --margin: 1.5em;
@@ -144,40 +147,44 @@ strong {
 .inner-content-container {
     flex-shrink: 1;
     flex-grow: 0;
-    margin: 0 20px;
     display: flex;
+    margin: 0 20px;
     flex-direction: column;
     align-items: center;
     z-index: 2;
 }
 
 .outer-container__reusable {
+    width: 100%;
     display: flex;
-    max-width: 100%;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-.inner-container__reusable {
+.inner-container__reusable  {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: revert;
     flex-basis: 100%;
-    padding: 20px 20px;
 }
+
 
 .default-area-padding {
     padding: 0 0 100px 0;
 }
 
 .default-text-restrictor {
-    max-width: 850px;
+    max-width: 1500px;
     text-align: center;
 }
 
 .page-content {
+    display: flex;
     position: relative;
-    top: var(--minusTop);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index:2;
 }
 
 .highlighter {
@@ -205,21 +212,10 @@ figcaption::before {
     width: 100px;
 }
 
-/*--------------------- 5.Media-queries -----------------*/
-@media only screen and (max-width: 992px) {
-    body {
-        font-family: 'Roboto', sans-serif;
-        font-size: 1em;
-    }
+/*--------------------- 4.Media-queries -----------------*/
 
-    body a {
-        color: black;
-    }
-
-    a,
-    a:visited,
-    a:link {
-        text-decoration: none;
-        color: var(--text-dark-mobile);
+@media screen and (min-width: 600px) {
+    :root {
+        font-size: 14px;
     }
 }
