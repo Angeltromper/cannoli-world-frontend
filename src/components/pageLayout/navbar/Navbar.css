@@ -1,0 +1,42 @@
+.navbar-container {
+    background: #150A06;
+    background: linear-gradient(180deg, var(--background-color-dark) 0%, var(--background-color-dark) 40%, var(--background-color) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    z-index: 4;
+}
+
+
+.header-content__navbar-list {
+    display: flex;
+    width: 100%;
+    padding: 1em;
+}
+
+.header-content__navbar-list li {
+    display: flex;
+    width: 100%;
+}
+
+.header-content__navbar-list li a:hover {
+    color: #FF003D;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+.header-content__navbar-list ul {
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    font-family: var(--font);
+    font-weight: 400;
+
+}
+
+.header-content__navbar-list .logo {
+    width: 6rem;
+
+}

@@ -21,8 +21,9 @@ function NavbarResp() {
     });
 
     return (
-        <section className="navbar-resp__container">
-            <div className= "navbar-resp__menu">
+        <section className="navbar__main-container">
+
+            <div>
                 <NavLink to="/" exact activeClassName="active-link">
                     <img className="logo-wrapper" src={logo} alt="logo"/>
                 </NavLink>
@@ -33,7 +34,7 @@ function NavbarResp() {
 
             <div className="nav-container">
                 <div>
-                    <div className="navbar-resp__desktop-fullscreen">
+                    <div className="navbar__items-fullscreen">
                         <Navbar/>
                         <NavbarRegister/>
                     </div>
@@ -58,6 +59,7 @@ function NavbarResp() {
                     </div>
                 </div>
             </div>
+
       </section>
     );
 }

@@ -63,26 +63,25 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 body a {
     color: white;
 }
 
-a,
-a:visited,
-a:link {
+a, a:hover{
     text-decoration: none;
-    color: var(--text-light);
 }
 
 
 /*--------------------- 2. Typography ---------------------*/
 
 .page-title {
-    font-size: 1em;
-    margin: 0.1em;
+    font-size: 10px;
+    margin: -15rem;
+    padding: 5em;
+    background-size: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -136,17 +135,29 @@ strong {
 }
 
 /*--------------------- 3. Page-layout ---------------------*/
-
 .outer-content-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.inner-content-container {
+    display: flex;
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-direction: column;
+    max-width: 100ch;
+    z-index: 2;
+}
+
+.outer-container__reusable {
     display: flex;
     width: 100%;
     flex-direction: row;
     justify-content: center;
 }
 
-.inner-content-container {
-    flex-shrink: 1;
-    flex-grow: 0;
+.inner-container__reusable  {
     display: flex;
     margin: 0 20px;
     flex-direction: column;
@@ -154,63 +165,46 @@ strong {
     z-index: 2;
 }
 
-.outer-container__reusable {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.inner-container__reusable  {
-    display: flex;
-    flex-direction: revert;
-    flex-basis: 100%;
-}
-
-
 .default-area-padding {
     padding: 0 0 100px 0;
 }
 
 .default-text-restrictor {
-    max-width: 1500px;
+    display: flex;
+    max-width: 850px;
     text-align: center;
 }
 
 .page-content {
+    color: var(--text-intro-pink);
     display: flex;
     position: relative;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    z-index:2;
 }
 
-.highlighter {
-    box-shadow: inset 0 -.7em 0 0 var(--background-color-dark);
-}
-
-.highlighter:hover {
-    box-shadow: inset 0 -.7em 0 0#FAF34A
-}
-
-figcaption {
-    margin-top: 0.5rem;
-    font-size: 0.6rem;
-}
-
-figcaption::before {
-    content: " ";
-}
-
-.bigFont {
-    font-size: 8rem;
+.page-content-two {
+    max-width: 150ch;
+    position: relative;
+    text-align: start;
 }
 
 .image-preview {
-    width: 100px;
+    width: 100%;
 }
+
+button, header button:visited {
+    background-color: var(--button-color);
+    color: var(--background-color-light);
+    text-transform: uppercase;
+    margin: var(--margin);
+    border-radius: 15px;
+    box-shadow: var(--dropshadow);
+    padding: 0.5em 1em;
+    font-size: 1em;
+}
+
+
+
 
 /*--------------------- 4.Media-queries -----------------*/
 

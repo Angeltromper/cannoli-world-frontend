@@ -8,4 +8,4 @@ function TextContainer({children}) {
     );
 }
 
-export default TextContainer
+export default TextContainer;
