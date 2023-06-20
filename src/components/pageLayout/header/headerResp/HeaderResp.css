@@ -1,28 +1,5 @@
-.header-text__section-one {
-    display: revert;
-    flex-direction: column;
-    color: var(--text-intro-pink);
-    font-family: var(--second-font);
-    font-weight: 800;
-    line-height: 1.5em;
-    text-transform: uppercase;
-}
-
-.header-text__section-two {
-    display: block;
-    flex-direction: column;
-    color: var(--text-intro-white);
-    font-family: var(--second-font);
-    font-weight: 800;
-    line-height: 1.5em;
-    text-transform: uppercase;
-}
 
 
-.header-text-section__title {
-    text-align: center;
-    line-height: 10em;
-}
 
 
 

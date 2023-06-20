@@ -1,21 +1,22 @@
 .cannoli-image {
     display: flex;
-    flex-direction: revert;
-    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
+    justify-content: center;
 }
 
 .cannoli-img {
     display: flex;
+    padding: 0 20px 20px;
+    flex: 1 1 auto;
     justify-content: center;
-    padding: 0.2em 0.8em;
-    float: left; width: 250px; height: 200px;
     border-top: 1px dotted hsl(4, 9%, 70%);
-    z-index: 2;
 }
 
 .product-container {
     display: flex;
+    width: 100%;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -28,9 +29,6 @@
 .input-field__reusable {
     display: flex;
     border-width: thin;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
     padding: 0.1em 0.3em;
     float: left; width: 225px; height: 20px;
     z-index: 2;

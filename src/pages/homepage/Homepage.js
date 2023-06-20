@@ -11,6 +11,15 @@ import TextContainer from "../../components/pageLayout/designElement/container/t
 import TextContainerResp from "../../components/pageLayout/designElement/container/textContainerResp/TextContainerResp";
 import HandleRef from "../../helpers/HandleRef";
 import './Homepage.css'
+import * as PropTypes from "prop-types";
+
+class Wrapper extends React.Component {
+    render() {
+        return null;
+    }
+}
+
+Wrapper.propTypes = {children: PropTypes.node};
 
 function Homepage ({headerImageHandler, pageTitleHandler}) {
 
@@ -23,16 +32,16 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
     const refSearch = useRef(null);
 
     return (
-        <homepage className="outer-content-container">
-            <div className="inner-content-container">
+            <homepage className="homepage-container">
+                <div className="inner-container__reusable">
 
-                <div className="search-query__section" ref={refSearch}>
+                    <div className="search-query__section" ref={refSearch}>
 
                     <TextContainer>
                             <h1>Welkom op de site van Cannoli World</h1>
                     </TextContainer>
 
-                    <div className="inner-content-container default-area-padding default-text-restrictor">
+                    <div className="inner-container__reusable default-area-padding default-text-restrictor">
                         <br/>
                             <h5>Graag willen wij de liefde voor Italië en de overheerlijke lekkernijen met u delen.We nemen u mee op reis.</h5>
                             <h3><strong>De reis begint hier:<em> "hoe de liefde voor cannoli is ontstaan"</em></strong></h3>
@@ -47,6 +56,7 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                             <h5>opzetten van een breed assortiment van verkoop van verse cannoli's.</h5>
                         <br/>
                     </div>
+
 
 
                     <image className="cannoli-image">
@@ -142,46 +152,67 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                             type="submit"
                             text="zoeken"
 
-                    />
-                </div>
+                    /></div>
 
-                <TextContainerResp>
-                    <h3><strong>We nemen u verder mee op reis:<em>"geschiedenis over de oorsprong van de cannoli"</em></strong></h3>
-                    <h5>De geschiedenis over de oorsprong van de cannoli is waarschijnlijk een mix van alle legendes en overtuigingen verzamelden
-                        doorgegeven door de eeuwen heen.
-                        <strong><em>"Twee daarvan zijn de legendes"</em></strong>die vertellen over de oorsprong van de cannoli.Beide van
-                        hen het eens over één ding: vrouwen zijn
-                        achter hun schepping die plaatsvond in of rond de stad Caltanissetta</h5>
+                    <TextContainer>
+                        <h2><strong>We nemen u verder mee op reis:<em>"geschiedenis over de oorsprong van de cannoli"</em></strong></h2>
+                    </TextContainer>
                     <br/>
-                    <h3><strong>Het eerste verhaal:</strong></h3>
-                    <h5>Brengt ons in de harem van een Arabische prins, tijdens de Arabische overheersing van het eiland.Men zegt dat de concubines van
-                        de emir gebak bakken als afleiding, onder hen, een cilinder-vorm pastei geval gevuld met ricotta, amandelen en honing.De Arabische oorsprong van de cannoli
-                        wordt ondersteund door het feit dat de stad Caltanissetta historisch verbonden is met de aanwezigheid van de Moren in Sicillie, zoals blijkt uit de
-                        naam zelf, die voorkomt uit "kalf el nissa", een arabische locatie die "vrouwenkasteel"betekent.Interessant, gezien de legende is gevestigd in een
-                        kasteel en de uitvinding van de cannoli, volgens het, ligt in de vaardige handen van vrouwen.</h5>
                     <br/>
-                    <h3><strong>Volgens een ander verhaal:</strong></h3>
-                    <h5>Werden cannoli voor het eerst gemaakt in een klooster in de buurt van Caltanissetta. Om het carnaval te vieren, "verzonnen" de nonnen een
-                        buisvormig gebak gevuld met ricottacrème, chocoladeschilfers en gehakte hazelnoten. Concubines of nonnen, het is zeker dat cannoli voor het eerst
-                        werden gemaakt ten tijde van de Arabische overheersing van Sicillié suikerriet, rijst, amandelen, jasmijn, anijs, sesam, saffraan en kaneel gebracht, alle
-                        ingrediénten sterk aanwezig in de Siciliaanse keuken nog steeds vandaag.Zoals zo vaak het geval is, de waarheid over de historische oorsprong van cannoli is
-                        waarschijnlijk een mix van alle legendes en overtuigingen verzameld en doorgegeven door de eeuwen heen.</h5>
-                    <br/>
-                    <h3><strong>Het amandelkoekje:</strong></h3>
-                    <h5>Is onstaan vanuit een andere Siciliaanse zoet lekkernij, de "Frutta di Martorana" Deze traditionele lekkernij werd gemaakt
-                        in de 16e eeuw door nonnen die in het klooster leefden. De aanleiding hiervan waren de voorbereidingen voor de festiviteiten die waren opgesteld voor 2 november,
-                        de dag van allerzielen. Op deze dag zou de bisschop het klooster bezoeken, omdat zogezegd hij vele verhalen had gehoord over de prachtige tuin met vele fruitbomen
-                        waar de nonnen het idee om van amandelspijs fruit te creeren omm zo de bomen en de tuin ermee te versieren. Vandaag de dag vind je nog in vele winkeltjes in Sicillie
-                        deze frutta martorana, vaak prachtig verpakt in een rieten mandje of houten kistje. De bijnaam van het Siciliaanse amandelkoekje is 'pasta reale' dit omdat het geschikt
-                        voor de koning zou zijn vanwege de zoetigheid en de goedheid van het koekje. Aan wie de eer van deze lekkernijen toe komt is nog steeds niet helemaal 100% zeker. Er gaat
-                        namelijk ook het verhaal te ronde dat de Arabieren al in de 6e eeuw aan het experimenteren waren met suiker en amandelen.</h5>
-                </TextContainerResp>
+
+                    <TextContainerResp>
+                        <h4>De geschiedenis over de oorsprong van de cannoli is waarschijnlijk een mix van alle legendes en
+                            overtuigingen verzamelden doorgegeven door de eeuwen heen.
+                            <strong><em>"Twee daarvan zijn de legendes"</em></strong>die vertellen over de oorsprong van de cannoli.
+                            Beide van hen het eens over één ding: vrouwen zijn achter hun schepping die plaatsvond in of rond de stad Caltanissetta</h4>
+                        <br/>
+
+                        <TextContainer>
+                            <h3><strong>Het eerste verhaal:</strong></h3>
+                        </TextContainer>
+                        <h4>Brengt ons in de harem van een Arabische prins, tijdens de Arabische overheersing van het eiland.Men zegt dat de concubines van
+                            de emir gebak bakken als afleiding, onder hen, een cilinder-vorm pastei geval gevuld met ricotta, amandelen en honing.</h4>
+                        <h4>De Arabische oorsprong van de cannoli wordt ondersteund door het feit dat de stad Caltanissetta historisch verbonden is met de
+                            aanwezigheid van de Moren in Sicillie, zoals blijkt uit de
+                            naam zelf, die voorkomt uit "kalf el nissa", een arabische locatie die "vrouwenkasteel"betekent.</h4>
+                        <h4>Interessant, gezien de legende is gevestigd in een
+                            kasteel en de uitvinding van de cannoli, volgens het, ligt in de vaardige handen van vrouwen.</h4>
+                        <br/>
+
+                        <TextContainer>
+                            <h3><strong>Volgens een ander verhaal:</strong></h3>
+                        </TextContainer>
+
+                        <h4>Werden cannoli voor het eerst gemaakt in een klooster in de buurt van Caltanissetta. Om het carnaval te vieren, "verzonnen"
+                            de nonnen een buisvopmig gebak gevuld met ricottacrème, chocoladeschilfers en gehakte hazelnoten.</h4>
+                        <h4>Concubines of nonnen, het is zeker dat cannoli voor het eerst werden gemaakt ten tijde van de Arabische overheersing van
+                            Sicillié suikerriet, rijst, amandelen, jasmijn, anijs, sesam, saffraan en kaneel gebracht, alle ingrediénten sterk aanwezig in
+                            de Siciliaanse keuken nog steeds vandaag.</h4>
+                        <h4>Zoals zo vaak het geval is, de waarheid over de historische oorsprong van cannoli is
+                            waarschijnlijk een mix van alle legendes en overtuigingen verzameld en doorgegeven door de eeuwen heen.</h4>
+                        <br/>
+
+                        <TextContainer>
+                            <h3><strong>Het amandelkoekje:</strong></h3>
+                        </TextContainer>
+
+                        <h4>Is onstaan vanuit een andere Siciliaanse zoet lekkernij, de "Frutta di Martorana" Deze traditionele lekkernij werd gemaakt
+                            in de 16e eeuw door nonnen die in het klooster leefden.</h4>
+                        <h4>De aanleiding hiervan waren de voorbereidingen voor de festiviteiten die waren opgesteld voor 2 november,
+                            de dag van allerzielen. Op deze dag zou de bisschop het klooster bezoeken, omdat zogezegd hij vele verhalen had gehoord over
+                            de prachtige tuin met vele fruitbomen waar de nonnen het idee om van amandelspijs fruit te creeren omm zo de bomen en de tuin ermee te versieren.</h4>
+                        <h4>Vandaag de dag vind je nog in vele winkeltjes in Sicillie deze frutta martorana, vaak prachtig verpakt in een rieten mandje of houten kistje.
+                            De bijnaam van het Siciliaanse amandelkoekje is 'pasta reale' dit omdat het geschikt voor de koning zou zijn vanwege de zoetigheid en de goedheid van het koekje.</h4>
+                        <h4>Aan wie de eer van deze lekkernijen toe komt is nog steeds niet helemaal 100% zeker. Er gaat namelijk ook het verhaal te ronde
+                            dat de Arabieren al in de 6e eeuw aan het experimenteren waren met suiker en amandelen.</h4>
+                    </TextContainerResp>
                 <br/>
 
                 <img alt="go-up-search-section" src={goUp} onClick={() => HandleRef(refSearch)}
                      className="search-result__go-up-icon"/>
-            </div>
-        </homepage>
+
+                </div>
+            </homepage>
     );
 
 }

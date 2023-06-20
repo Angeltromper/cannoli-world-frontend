@@ -1,7 +1,7 @@
 .columnContainer {
     display: flex;
     align-items: flex-start;
-    gap: 2em;
+    gap: 1em;
 }
 
 .one {

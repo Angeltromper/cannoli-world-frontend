@@ -1,17 +1,39 @@
 import React, {useContext} from 'react';
-import {NavLink} from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 import logo from "../../../assets/logo/Logo Cannoli.png";
 import {AuthContext} from "../../../context/AuthContext";
 import './Navbar.css';
 
 
 function Navbar() {
+    let location = useLocation().pathname;
+    console.log(location);
     const {isAuth} = useContext(AuthContext);
 
+    function getNavClass(location) {
+        switch (location) {
+            case "":
+                return "/nav-home";
+            case "/cannoli":
+                return "/cannoli";
+            case "/giftbox":
+                return "/giftbox";
+            case "/service":
+                return "/service";
+            case "/franchise":
+                return "/franchise";
+            case "/contact":
+                return "contact";
+            case "/bestellingen":
+                return "bestellingen";
+            default:
+                return "nav-home";
+        }
+    }
+
     return (
-        <nav className="navbar-container">
-            <main className="header-content__navbar-list">
-                <ul>
+        <nav className="nav-container">
+                <ul className={getNavClass(location) + " nav-list-items"}>
                     <li><NavLink to="/" end exact activeClassName="active-link">Home</NavLink></li>
                     <li><NavLink to="/cannoli" exact activeClassName="active-link">Cannoli</NavLink></li>
                     <li><NavLink to="/giftbox" exact activeClassName="active-link">Giftbox</NavLink></li>
@@ -23,9 +45,7 @@ function Navbar() {
                     <li><NavLink to="/contact" exact activeClassName="active-link">Contact</NavLink></li>
                     {isAuth && <li><NavLink to="/orderList"end activeClassName="active-link">Bestellingen</NavLink></li>}
                 </ul>
-            </main>
         </nav>
-
     );
 }
 

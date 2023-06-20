@@ -48,8 +48,8 @@ function App () {
 
   return (
       <Wrapper>
-          <main className="outer-content-container">
-              <div className="inner-content-container default-area-padding default-text-restrictor">
+          <main className="container">
+              <div className="inner-container__reusable default-area-padding default-text-restrictor">
                   <Header headerImage={headerImage} pageTitle={pageTitle}/>
 
                   <Routes>

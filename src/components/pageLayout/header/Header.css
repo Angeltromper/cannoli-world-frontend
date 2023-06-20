@@ -1,15 +1,19 @@
 .header {
+    background: #150A06;
+    background: linear-gradient(180deg, var(--background-color-dark) 0%, var(--background-color-dark) 40%, var(--background-color) 100%);
     display: flex;
-    justify-content: space-between;
     width: 100%;
-    padding-top: 12rem;
-    z-index: 4;
+    height: 20em ;
+    position: fixed;
+    flex-direction: row;
+    justify-content: flex-start;
+    z-index: 3;
 }
 
 header::before {
     content: '';
     display: block;
-    width: 78x;
+    width: 78px;
     height: 100px;
     position: absolute;
     bottom: 25px;
@@ -28,19 +32,49 @@ header::after {
     background-position: top center;
 }
 
+
 /*------------------- Header-image ---------------------*/
 
 .header-img-container {
     display: flex;
     flex-direction: row;
     position: relative;
+}
+
+.img {
     width: 100%;
 }
 
 .header-img {
     display: flex;
-    flex: 1 1 auto;
     width: 100%;
+    margin-top: 14em;
+    margin-bottom: 5rem;
+    flex-shrink: 0;
+    z-index: 3;
+}
+
+.header-text-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-one {
+    height: 18em;
+    font-weight: 800;
+    color: var(--text-intro-pink);
+    font-family: var(--second-font);
+    line-height: 34em;
+    text-transform: uppercase;
+    z-index: 3;
+}
+
+.section-two {
+    color: var(--text-intro-white);
+    font-family: var(--second-font);
+    font-weight: 800;
+    line-height: 2em;
+    text-transform: uppercase;
     z-index: 3;
 }
 
