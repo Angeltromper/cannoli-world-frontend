@@ -6,7 +6,7 @@
     height: 20em ;
     position: fixed;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     z-index: 3;
 }
 
@@ -35,7 +35,30 @@ header::after {
 
 /*------------------- Header-image ---------------------*/
 
-.header-img-container {
+.header-text-one {
+    color: var(--text-intro-pink);
+    text-decoration-line: underline;
+    text-decoration-thickness: auto;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: var(--second-font);
+    line-height: 1,5em;
+    padding: 25em 80%;
+    text-transform: uppercase;
+    z-index: 1;
+}
+.header-text-two {
+    color: var(--text-intro-white);
+    text-decoration-line: underline;
+    text-decoration-thickness: auto;
+}
+
+
+.header-img-container  {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -48,41 +71,52 @@ header::after {
 .header-img {
     display: flex;
     width: 100%;
-    margin-top: 14em;
-    margin-bottom: 5rem;
+    margin-top: 20em;
     flex-shrink: 0;
     z-index: 3;
 }
 
-.header-text-section {
+
+
+button, header button:visited {
+    background-color: var(--button-color);
+    color: var(--background-color-light);
+    text-transform: uppercase;
+    margin: var(--margin);
+    border-radius: 15px;
+    box-shadow: var(--dropshadow);
+    padding: 0.5em 1em;
+    font-size: 1em;
+    font-weight: 400;
+    z-index: 2;
+}
+
+button, header button:hover {
+    cursor:pointer;
+}
+
+button, header button:active {
+    transform: translateY(0.4em);
+    color: #1AE216;
+    box-shadow: 0.2em 0.2em 0 #1AE216;
+}
+
+button, header button:hover .btn-text {
     display: flex;
-    flex-direction: column;
 }
 
-.section-one {
-    height: 18em;
-    font-weight: 800;
-    color: var(--text-intro-pink);
-    font-family: var(--second-font);
-    line-height: 34em;
-    text-transform: uppercase;
-    z-index: 3;
+button, header .btn-text::after {
+    margin-left: 0.4em;
+    content: "";
+    transform: translateX(0.5em);
 }
 
-.section-two {
-    color: var(--text-intro-white);
-    font-family: var(--second-font);
-    font-weight: 800;
-    line-height: 2em;
-    text-transform: uppercase;
-    z-index: 3;
-}
+
 
 .skewer--top {
-    border-bottom: 50px solid var(--background-color-light);
+    border-bottom: 100px solid var(--background-color-light);
     border-left: 100vw solid transparent;
     position: absolute;
-
     right: 0;
     bottom: 0;
     z-index: 2;

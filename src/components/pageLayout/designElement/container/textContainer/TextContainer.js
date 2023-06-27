@@ -1,6 +1,6 @@
 import React from 'react';
 
-function TextContainer({children}) {
+function TextContainer ({children}) {
     return (
         <section className="page-content">
             {children}

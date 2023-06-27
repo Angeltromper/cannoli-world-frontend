@@ -3,6 +3,8 @@ import {NavLink, useLocation} from "react-router-dom";
 import logo from "../../../assets/logo/Logo Cannoli.png";
 import {AuthContext} from "../../../context/AuthContext";
 import './Navbar.css';
+import rightColors from "./../../../assets/img.header/rightColors.png";
+import leftColors from "./../../../assets/img.header/leftColors .png";
 
 
 function Navbar() {
@@ -33,6 +35,7 @@ function Navbar() {
 
     return (
         <nav className="nav-container">
+            <div className="nav-content-container">
                 <ul className={getNavClass(location) + " nav-list-items"}>
                     <li><NavLink to="/" end exact activeClassName="active-link">Home</NavLink></li>
                     <li><NavLink to="/cannoli" exact activeClassName="active-link">Cannoli</NavLink></li>
@@ -45,7 +48,22 @@ function Navbar() {
                     <li><NavLink to="/contact" exact activeClassName="active-link">Contact</NavLink></li>
                     {isAuth && <li><NavLink to="/orderList"end activeClassName="active-link">Bestellingen</NavLink></li>}
                 </ul>
+            </div>
+
+
+            <div className="color-container">
+                <figure><img src={rightColors} alt="right-colors" className="right"/></figure>
+                <figure><img src={leftColors} alt="left-colors" className="left"/></figure>
+            </div>
+
+
+            <div className="skewer--bottom">
+
+            </div>
+
         </nav>
+
+
     );
 }
 

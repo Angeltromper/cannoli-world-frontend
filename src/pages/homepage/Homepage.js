@@ -6,7 +6,7 @@ import cannoliVegan from "./../../assets/img.menu-background/cannoliVegan.png";
 import cannoliGiftbox from "../../assets/img.menu-background/cannoliGiftbox.png";
 import cannoliFranchise from "../../assets/img.menu-background/cannoliFranchise.png";
 import goUp from "../../assets/navIcon/goUp.png";
-import Button from "../../components/button/Button";
+import SearchButton from "../../components/button/searchButton/SearchButton";
 import TextContainer from "../../components/pageLayout/designElement/container/textContainer/TextContainer";
 import TextContainerResp from "../../components/pageLayout/designElement/container/textContainerResp/TextContainerResp";
 import HandleRef from "../../helpers/HandleRef";
@@ -147,12 +147,13 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                         </div>
                     <br/>
 
-                    <Button
+                    <SearchButton
                             onClick={() => HandleRef(refSearch)}
                             type="submit"
                             text="zoeken"
 
-                    /></div>
+                    />
+                    </div>
 
                     <TextContainer>
                         <h2><strong>We nemen u verder mee op reis:<em>"geschiedenis over de oorsprong van de cannoli"</em></strong></h2>
@@ -212,8 +213,8 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                      className="search-result__go-up-icon"/>
 
                 </div>
-            </homepage>
-    );
+                </homepage>
+);
 
 }
 

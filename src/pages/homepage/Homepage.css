@@ -1,3 +1,8 @@
+.homepage-container {
+    background-color: white;
+    z-index: 5;
+}
+
 .cannoli-image {
     display: flex;
     flex-direction: row;
@@ -17,8 +22,9 @@
 .product-container {
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .label {
@@ -45,7 +51,9 @@
     align-self: center;
 }
 
+.search-query__section {
 
+}
 
 
 

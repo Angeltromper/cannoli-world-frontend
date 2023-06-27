@@ -1,6 +1,18 @@
 .nav-container {
     display: flex;
-    height: 7em;
+    width: 100%;
+    position: fixed;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 4;
+}
+
+.nav-content-container {
+    display: flex;
+    flex-shrink: 1;
+    flex-grow: 0;
+    margin: 0 auto;
+
 }
 
 .nav-container a,
@@ -51,4 +63,37 @@
 
 .nav-list-items .logo {
     width: 6em;
+}
+
+.color-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+
+.right  {
+
+    margin: 10em 0;
+}
+
+
+
+.left {
+    margin-left: 100% 0;
+
+
+}
+
+
+
+.skewer--bottom {
+    border-top: 100px solid var(--background-color);
+    border-right: 100vw solid transparent;
+    position: absolute;
+    margin: 20em 0;
+    left: 0;
+    top: 0;
+    z-index: 2;
 }
