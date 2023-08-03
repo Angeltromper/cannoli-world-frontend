@@ -1,15 +1,17 @@
-footer {
-    background: linear-gradient(180deg, var(--background-color-dark) 0%, var(--background-color-dark) 70%, var(--background-color) 100%);
+.footer {
+    background: #150A06;
+    background: linear-gradient(180deg, var(--background-color) 100%, var(--background-color-dark) 40%, var(--background-color-dark) 0%);
+    display: flex;
+    width: 100%;
     position: relative;
     font-size: 14px;
-    margin: var(--margin);
-
+    z-index: 8;
 }
 
 footer::before {
     content: '';
     display: block;
-    width: 78x;
+    width: 78px;
     height: 100px;
     position: absolute;
     bottom: 25px;
@@ -117,15 +119,27 @@ footer::after {
     box-shadow: 0 5px 8px 4px rgba(0, 0, 0, .2);
     padding: 10px 10px;
     margin: 200px 0;
-
 }
-.skewer--top-footer {
+
+.color-footer-container {
+    display: flex;
+    width: 100%;
+
+    z-index: 5;
+}
+
+.footer-right {
+    margin: 0 0 5em;
+}
+
+
+.skewer--top {
     position: absolute;
-    top:-50px;
+    top: 0;
     right: 0;
-    border-right: 100vw solid transparent ;
-    z-index: 1;
+    border-top: 100px solid var(--background-color-light);
+    border-right: 100vw solid transparent;
+    z-index: 8;
 }
-
 
 

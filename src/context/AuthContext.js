@@ -1,56 +1,52 @@
-import React, {createContext, useContext, useEffect, useState} from 'react';
+import React, {createContext, useEffect, useState} from 'react';
 import {useNavigate} from "react-router-dom";
 import isTokenValid from "../helpers/isTokenValid";
-import axios from "axios";
 import jwtDecode from "jwt-decode";
-
+import axios from "axios";
 export const AuthContext = createContext(null);
 
-export function useAuth() {
-    return useContext(AuthContext);
-}
 
 function AuthContextProvider({children}) {
-    const [auth, toggleAuth] = useState( {
+    const [isAuth, toggleIsAuth] = useState ({
         isAuth: false,
         user: null,
-        status: 'pending',
+        status:'pending',
     });
 
     let navigate = useNavigate();
 
+    // is er een token? En zo ja, is deze nog geldig?
+    useEffect (() => {
+        const token = localStorage.getItem ('token');
 
-    useEffect(() => {
-        const token = localStorage.getItem('token');
-
-        if (token && isTokenValid(token)) {
-            const decodedToken = jwtDecode( token );
-            getData (decodedToken.sub, token)
+        if (token && isTokenValid (token)) {
+            const decodedToken = jwtDecode (token);
+            getData (decodedToken.sub, token);
         } else {
             // als er geen token is doen we niks en zetten we de status op 'done'
-            toggleAuth({
+            toggleIsAuth ( {
                 isAuth: false,
                 user: null,
                 status: 'done',
-            });
+            } );
         }
     }, []);
 
     function login(token) {
-        const decodedToken = jwtDecode ( token );
-        localStorage.setItem( 'token', token );
-        getData (decodedToken.sub, token, "/profiel")
+        const decodedToken = jwtDecode (token);
+        localStorage.setItem ('token', token);
+        getData (decodedToken.sub, token, "/profiel");
     }
 
     function logout(e) {
-        localStorage.clear("de gebruiker is uithelogd!");
-        e.preventDefault();
-        toggleAuth({
+        localStorage.clear ('De gebruiker is uitgelogd!');
+        e.preventDefault ();
+        toggleIsAuth ({
             isAuth: false,
             user: null,
             status: 'done',
         });
-       navigate('/');
+        navigate('/');
     }
 
     async function getData(id, token, redirectUrl) {
@@ -61,8 +57,8 @@ function AuthContextProvider({children}) {
                     "Authorization": `Bearer ${token}`,
                 }
             });
-            toggleAuth({
-                ...auth,
+            toggleIsAuth({
+                ...isAuth,
                 isAuth: true,
                 user: {
                     username: response.data.username,
@@ -81,19 +77,33 @@ function AuthContextProvider({children}) {
 
 
     const contextData = {
-        auth: auth.isAuth,
-        user: auth.user,
+        isAuth: isAuth.isAuth,
+        user: isAuth.user,
         login: login,
         logout: logout,
-    }
+    };
 
     return (
         <AuthContext.Provider value={contextData}>
-            {auth.status === 'done' ? children : <p>Loading...</p>}
+            {isAuth.status === 'done' ? children : <p>Ogenblik geduld alstublieft...</p>}
         </AuthContext.Provider>
     );
 }
 
 export default AuthContextProvider;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -1,9 +1,6 @@
-import React from "react";
-import './App.css';
-
 import {Routes, Route, useLocation} from "react-router-dom";
-import {useLayoutEffect, useState} from 'react'
-import {Cart} from './components/cart/Cart';
+import React, {useLayoutEffect, useState} from 'react'
+import {Cart} from "./components/cart/Cart";
 import headerImg from "../../cannoli-world-frontend-main/src/assets/img.header/homepage-background-2400x1100.jpg";
 import Header from "./components/pageLayout/header/Header";
 import Homepage from "./pages/homepage/Homepage";
@@ -30,6 +27,7 @@ import SignUp from './pages/signUp/SignUp';
 import Elements from './pages/elements/Elements';
 import FourZeroFour from './pages/404/FourZeroFour';
 import OrderList from './components/orderList/OrderList';
+import './App.css';
 
 
 
@@ -39,17 +37,17 @@ function App () {
     const [pageTitle, setPageTitle] = useState();
 
     const Wrapper = ({ children }) => {
-    const location = useLocation();
-    useLayoutEffect(() => {
-      document.documentElement.scrollTo(0, 0);
-    }, [location.pathname]);
-    return children
-  };
+        const location = useLocation();
+        useLayoutEffect(() => {
+            document.documentElement.scrollTo(0, 0);
+            }, [location.pathname]);
+        return children
+    };
 
   return (
       <Wrapper>
-          <main className="container">
-              <div className="inner-container__reusable default-area-padding default-text-restrictor">
+          <div className="container">
+              <div className="inner-container__reusable default-area-padding default-text-restrict">
                   <Header headerImage={headerImage} pageTitle={pageTitle}/>
 
                   <Routes>
@@ -131,7 +129,7 @@ function App () {
 
                   <Footer/>
               </div>
-          </main>
+          </div>
       </Wrapper>
 
   );

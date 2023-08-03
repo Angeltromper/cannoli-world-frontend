@@ -6,6 +6,8 @@ import phone from "../../../assets/navIcon/phone.png";
 import Column from "../designElement/column/Column";
 import TwoColumn from "../designElement/column/TwoColumn";
 import './Footer.css';
+import rightColors from "../../../assets/img.header/rightColors.png";
+import leftColors from "../../../assets/img.header/leftColors .png";
 
 function Footer() {
     // eslint-disable-next-line no-unused-vars
@@ -13,11 +15,13 @@ function Footer() {
 
     return (
 
-        <footer id="footer" className="outer-content-container">
-            <div className="footer">
+
+            <footer className="footer">
+
+                <div className="skewer--top"></div>
+
                 <TwoColumn>
                     <Column>
-
 
                             <ul className="footer-text__section-list">
                                 <h4>navigatie</h4>
@@ -36,7 +40,7 @@ function Footer() {
 
                     </Column>
                     <Column>
-                    <aside className="inner-container__reusable footer footer-container">
+                    <aside className="footer-container">
 
 
                         <ol className= "footer-text-section__contact">
@@ -47,6 +51,11 @@ function Footer() {
                             <li><Link to="/"><figure><img src={phone} alt="phone-icon" className="phone-icon"/>E.Jongh Visscher:(+31)648889093</figure></Link></li>
                         </ol>
 
+                        <div className="color-footer-container">
+                            <figure><img src={rightColors} alt="right-colors" className="footer-right"/></figure>
+                            <figure><img src={leftColors} alt="left-colors" className="footer-left"/></figure>
+                        </div>
+
 
 
                         <p className="footer-text-section__newsletter">Wilt u onze nieuwsbrief ontvangen</p>
@@ -55,9 +64,9 @@ function Footer() {
                     </Column>
                 </TwoColumn>
 
-                <div className="skewer--top-footer"></div>
-            </div>
-        </footer>
+
+            </footer>
+
 
     );
 }

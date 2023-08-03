@@ -1,6 +1,6 @@
 .homepage-container {
     background-color: white;
-    z-index: 5;
+    z-index: 15;
 }
 
 .cannoli-image {
@@ -9,6 +9,7 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
+    z-index: 6;
 }
 
 .cannoli-img {
@@ -37,7 +38,6 @@
     border-width: thin;
     padding: 0.1em 0.3em;
     float: left; width: 225px; height: 20px;
-    z-index: 2;
 }
 
 

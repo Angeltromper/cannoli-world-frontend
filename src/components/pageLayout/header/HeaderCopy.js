@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from "../navbar/Navbar";
+import Hero from "../hero/Hero";
 import './Header.css';
 
 function Header({headerImage, pageTitle}) {
@@ -9,6 +10,7 @@ function Header({headerImage, pageTitle}) {
         <>
 
             <header className="header">
+
                 <div className="header-text">
                     <div className="header-text-one">
                         <h2>Heerlijk</h2>
@@ -35,6 +37,7 @@ function Header({headerImage, pageTitle}) {
                     <h1>{pageTitle}</h1>
                 </div>
 
+                <Hero/>
 
                 <div className="skewer--top">
 
@@ -45,4 +48,14 @@ function Header({headerImage, pageTitle}) {
 }
 
 export default Header;
+
+
+
+
+
+
+
+
+
+
 

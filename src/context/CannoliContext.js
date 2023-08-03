@@ -1,12 +1,9 @@
-import React, {createContext, useState, useContext} from "react";
+import React, {createContext, useState} from "react";
 
 export const cannoliContext = createContext({});
 
-export function useCannoliContext() {
-    return useContext(cannoliContext);
-}
 
-export default function CannoliContextProvider({children}) {
+function CannoliContextProvider({children}) {
     const [cannoli, setCannoli] = useState('');
     const [cannoliList, setCannoliList] = useState([]);
     const [searchResult, setSearchResult] = useState([]);
@@ -20,6 +17,11 @@ export default function CannoliContextProvider({children}) {
     const [errorMessage, setErrorMessage] = useState('');
     const [loading, setLoading] = useState(false);
     const [pageTitle, setPageTitle] = useState('');
+    const [searchText, setSearchText] = useState('');
+
+    const[letter, setLetter] = useState('A');
+    const[numberToLetter, setNumberToLetter] = useState(1);
+
 
     const data= {
         cannoli,
@@ -40,18 +42,24 @@ export default function CannoliContextProvider({children}) {
         setGiftbox,
         priceList,
         setPriceList,
-
         errorMessage,
         setErrorMessage,
         loading,
         setLoading,
         pageTitle,
-        setPageTitle
+        setPageTitle,
+        searchText,
+        setSearchText,
+        letter,
+        setLetter,
+        numberToLetter,
+        setNumberToLetter
     };
 
-    // eslint-disable-next-line react/jsx-no-undef
     return (<cannoliContext.Provider value={data}>
             {children}
     </cannoliContext.Provider>
     );
 }
+
+export default CannoliContextProvider;

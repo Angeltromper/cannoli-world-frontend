@@ -3,11 +3,12 @@ import {NavLink} from "react-router-dom";
 import { RiMenu3Line, RiCloseLine} from 'react-icons/ri';
 import logo from "../../../assets/logo/Logo Cannoli.png";
 import Navbar from "../navbar/Navbar";
-import NavbarRegister from "../navRegister/NavRegister";
 import MobileNavbar from "../mobileNavbar/MobileNavbar";
-import './NavbarResp.css';
 
 
+function NavbarRegister() {
+    return null;
+}
 
 function NavbarResp() {
     const [open, setOpen] = useState(false);
@@ -56,6 +57,7 @@ function NavbarResp() {
                             </div>
                         </div>
                     )}
+
                     </div>
                 </div>
             </div>
