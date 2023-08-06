@@ -57,8 +57,6 @@ function Navbar() {
 
             <div className="skewer--bottom"></div>
         </nav>
-
-
     );
 }
 

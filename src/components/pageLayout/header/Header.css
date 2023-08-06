@@ -4,7 +4,7 @@
     position: fixed;
     flex-direction: row;
     justify-content: space-between;
-    z-index: 14;
+    z-index: 6;
 }
 
 header::before {
@@ -28,30 +28,29 @@ header::after {
     height: 100%;
     opacity: 0.6;
     background-position: top center;
-
 }
+
+
+/*------------------- Header-image ---------------------*/
 
 .header-text {
     flex-direction: column;
     font-family: var(--second-font);
-    line-height: 1,5em;
-    margin: 25em 70em;
+    line-height: 1.5em;
+    margin: 25em 50em;
     text-transform: uppercase;
+
 }
 
 .header-text-one {
     color: var(--text-intro-pink);
-
 }
 
 .header-text-two {
     color: var(--text-intro-white);
 }
 
-
-/*------------------- Header-image ---------------------*/
-
-.header-img-container {
+.header-img-container  {
     display: flex;
     flex-direction: row;
 }
@@ -68,17 +67,17 @@ header::after {
     z-index: 2;
 }
 
-
 button, header button:visited {
     background-color: var(--button-color);
-    color: var(--background-color-light);
+    color: var(--text-intro-white);
     text-transform: uppercase;
     margin: var(--margin);
-    border-radius: 15px;
+    border-radius: 12px;
     box-shadow: var(--dropshadow);
-    padding: 0.5em 1em;
+    padding: 0.5em 0.5em;
     font-size: 1em;
     font-weight: 400;
+    font-family: var(--font);
     z-index: 2;
 }
 
@@ -86,10 +85,9 @@ button, header button:hover {
     cursor:pointer;
 }
 
-button, header button:active {
+header button:active {
     transform: translateY(0.4em);
-    color: #1AE216;
-    box-shadow: 0.2em 0.2em 0 #1AE216;
+    color: var(--text-intro-white);
 }
 
 button, header button:hover .btn-text {
@@ -97,9 +95,9 @@ button, header button:hover .btn-text {
 }
 
 button, header .btn-text::after {
-    margin-left: 0.4em;
+    margin-left: 0.5em;
     content: "";
-    transform: translateX(0.5em);
+    transform: translateX(0.2em);
 }
 
 

@@ -161,7 +161,7 @@ strong {
 }
 
 .default-area-padding {
-    padding: 0 0 100px 0;
+    padding: 0 0 10px 0;
 }
 
 
@@ -176,12 +176,13 @@ strong {
     flex-direction: row;
     position: relative;
     justify-content: center;
+    margin: 2ch;
 }
 
 .page-content-two {
     position: relative;
     top: var(--minusTop);
-    margin: 12ch;
+    margin: 2ch;
 }
 
 .image-preview {

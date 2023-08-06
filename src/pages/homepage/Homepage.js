@@ -154,12 +154,15 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                 </TextContainer>
                 <br/>
                 <br/>
+                <br/>
+
 
                 <TextContainerResp>
                     <h4>De geschiedenis over de oorsprong van de cannoli is waarschijnlijk een mix van alle legendes en
                         overtuigingen verzamelden doorgegeven door de eeuwen heen.
-                        <strong><em>"Twee daarvan zijn de legendes"</em></strong>die vertellen over de oorsprong van de cannoli.
-                        Beide van hen het eens over één ding: vrouwen zijn achter hun schepping die plaatsvond in of rond de stad Caltanissetta</h4>
+                        <strong><em>"Twee daarvan zijn de legendes"</em></strong>die vertellen over de oorsprong van
+                        de cannoli. Beide van hen het eens over één ding: vrouwen zijn achter hun schepping die plaatsvond
+                        in of rond de stad Caltanissetta</h4>
                     <br/>
 
                     <TextContainer>

@@ -30,8 +30,6 @@ import OrderList from './components/orderList/OrderList';
 import './App.css';
 
 
-
-
 function App () {
     const [headerImage, setHeaderImage] = useState(headerImg);
     const [pageTitle, setPageTitle] = useState();
