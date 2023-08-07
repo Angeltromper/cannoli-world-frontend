@@ -176,13 +176,13 @@ strong {
     flex-direction: row;
     position: relative;
     justify-content: center;
-    margin: 2ch;
+    margin: 2.5ch;
 }
 
 .page-content-two {
     position: relative;
     top: var(--minusTop);
-    margin: 2ch;
+    margin: 5ch;
 }
 
 .image-preview {

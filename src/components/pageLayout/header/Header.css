@@ -4,7 +4,7 @@
     position: fixed;
     flex-direction: row;
     justify-content: space-between;
-    z-index: 6;
+    z-index: 14;
 }
 
 header::before {
@@ -37,7 +37,7 @@ header::after {
     flex-direction: column;
     font-family: var(--second-font);
     line-height: 1.5em;
-    margin: 25em 50em;
+    margin: 25em 70em;
     text-transform: uppercase;
 
 }
@@ -66,41 +66,6 @@ header::after {
     flex-shrink: 0;
     z-index: 2;
 }
-
-button, header button:visited {
-    background-color: var(--button-color);
-    color: var(--text-intro-white);
-    text-transform: uppercase;
-    margin: var(--margin);
-    border-radius: 12px;
-    box-shadow: var(--dropshadow);
-    padding: 0.5em 0.5em;
-    font-size: 1em;
-    font-weight: 400;
-    font-family: var(--font);
-    z-index: 2;
-}
-
-button, header button:hover {
-    cursor:pointer;
-}
-
-header button:active {
-    transform: translateY(0.4em);
-    color: var(--text-intro-white);
-}
-
-button, header button:hover .btn-text {
-    display: flex;
-}
-
-button, header .btn-text::after {
-    margin-left: 0.5em;
-    content: "";
-    transform: translateX(0.2em);
-}
-
-
 
 
 /*--------------------- Media-queries -----------------*/

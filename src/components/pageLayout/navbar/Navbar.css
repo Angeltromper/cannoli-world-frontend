@@ -5,21 +5,19 @@
     height: 20em;
     width: 100%;
     position: fixed;
+    font-family: var(--font);
     flex-direction: row;
     flex-shrink: 1;
     flex-grow: 0;
     margin: 0 auto;
     justify-content: space-between;
-    z-index: 14;
+    z-index: 15;
 }
-
-
 
 .nav-container a,
 .nav-container a:visited {
     color: white;
     text-decoration: none;
-
 }
 
 .nav-container a:hover {
@@ -27,7 +25,6 @@
     color: #FF003D;
     transition: transform 250ms ease-in-out;
     transform: scale(1.10);
-
 }
 
 .nav-list-items {
@@ -42,44 +39,81 @@
     position: fixed;
     left: -6%;
     top: -0.5rem;
-    z-index: 15;
+    z-index: 10;
     animation-duration: .8s;
     animation-iteration-count: 1;
     animation-timing-function: ease;
     animation-fill-mode: both;
-}
-.nav-list-items li:active {
-    transform: translateY(3px);
-    color: var(--text-intro-white);
 }
 
 .nav-list-items li {
     display: flex;
     width: 100% ;
     justify-content: center;
-
 }
 
+.nav-list-items li:active {
+    transform: translateY(3px);
+    color: var(--text-intro-white);
+}
+
+
 .nav-list-items li a:hover {
-    color: #FF003D;
+    color: var(--figure-color-2);
     transition: all 0.5s;
 }
 
+.active-link {
+    color: var(--text-intro-white);
+    box-shadow: inset 0 -.3em 0 0 #FF003D;
+}
 
 .nav-list-items .logo {
     width: 6em;
     z-index: 8;
 }
 
+button, header button:visited {
+    background-color: var(--button-color);
+    color: var(--text-intro-white);
+    text-transform: uppercase;
+    margin: var(--margin);
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: var(--font);
+}
+
+button, header button:hover {
+    cursor:pointer;
+}
+
+header button:active {
+    transform: translateY(0.4em);
+    color: var(--text-intro-white);
+
+}
+
+button, header button:hover .btn-text {
+    display: flex;
+}
+
+button, header .btn-text::after {
+    margin-left: 0.5em;
+    content: "";
+    transform: translateX(0.2em);
+}
+
 .color-container {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    z-index: 5;
+    z-index: 15;
 }
 
 .right  {
-    margin: 15em 0;
+    margin: 15em -10em;
 }
 
 .left {
@@ -95,4 +129,11 @@
     top: 0;
     z-index: 2;
 }
+
+/*------------------- NAV-IMAGE---------------------*/
+
+
+
+
+
 
