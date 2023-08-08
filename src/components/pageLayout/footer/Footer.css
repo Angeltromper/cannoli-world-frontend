@@ -54,8 +54,6 @@
     cursor: pointer;
     padding: 8em 20em;
     gap: 10px;
-
-
 }
 
 .footer-text-section__contact h4 {
@@ -123,10 +121,13 @@
 }
 
 
-.skewer--top {
+.skewer--footer-top {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 4;
+    left: 0;
     border-right: 100vw solid transparent;
+    border-top: 100px solid var(--background-color-light);
+    z-index: 2;
+
 }
 

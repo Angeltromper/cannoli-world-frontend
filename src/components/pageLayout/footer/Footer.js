@@ -16,6 +16,9 @@ function Footer() {
 
     return (
         <footer className="footer-container">
+
+
+
             <div className="footer">
                 <TwoColumn>
                     <Column>
@@ -57,11 +60,15 @@ function Footer() {
 
                         <p className="footer-text-section__newsletter">Wilt u onze nieuwsbrief ontvangen</p>
                         <button className="button">Inschrijven</button>
-                        <div className="skewer--top"></div>
+
+
                     </Column>
                 </TwoColumn>
 
             </div>
+
+            <div className="skewer--footer-top"></div>
+
         </footer>
     );
 }
