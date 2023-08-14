@@ -34,12 +34,12 @@ header::after {
 /*------------------- Header-image ---------------------*/
 
 .header-text {
+    display: flex;
     flex-direction: column;
     font-family: var(--second-font);
+    margin: 25em 10em 0 auto;
     line-height: 1.5em;
-    margin: 25em 70em;
     text-transform: uppercase;
-
 }
 
 .header-text-one {
@@ -62,8 +62,7 @@ header::after {
 .header-img {
     display: flex;
     width: 100%;
-    margin-top: 20em;
-    flex-shrink: 0;
+    margin: 10em auto;
     z-index: 2;
 }
 

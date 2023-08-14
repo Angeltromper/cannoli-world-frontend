@@ -1,0 +1,13 @@
+.footer-color {
+    display: flex;
+    width: 100%;
+    z-index: 5;
+}
+
+.footer-color .right {
+    margin: 30em -74em;
+}
+
+.footer-color .left {
+    margin: 0 4em;
+}

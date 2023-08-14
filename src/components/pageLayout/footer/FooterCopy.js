@@ -8,6 +8,8 @@ import TwoColumn from "../designElement/column/TwoColumn";
 import './Footer.css';
 import rightColors from "../../../assets/img.header/rightColors.png";
 import leftColors from "../../../assets/img.header/leftColors .png";
+import Facebook from "../../../assets/mediaIcon/Facebook.png";
+import Instagram from "../../../assets/mediaIcon/Instagram.png";
 
 function Footer() {
     // eslint-disable-next-line no-unused-vars
@@ -48,6 +50,14 @@ function Footer() {
                         <div className="footer-color">
                             <figure><img src={rightColors} alt="right-colors" className="right"/></figure>
                             <figure><img src={leftColors} alt="left-colors" className="left"/></figure>
+                        </div>
+
+
+                        <div className="media-icon">
+                            <ul>
+                                <li><a href="https://www.facebook.com/cannoli-world"><img src={Facebook} alt="Facebook icon"/></a></li>
+                                <li><a href="https://www.instagram.com/cannoli-world"><img src={Instagram} alt="Instagram icon"/></a></li>
+                            </ul>
                         </div>
 
 

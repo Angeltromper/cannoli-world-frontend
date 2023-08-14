@@ -39,7 +39,7 @@
     --dropshadow: 0.2em 0.2em 0 var(--shadow-color);
     --border: 0.2em solid var(--focus-color);
     --margin: 1.5em;
-    --minusTop: -7rem;
+    --minusTop: -8rem;
 
 /*--------------------- Mobile Styles  ---------------------*/
     --background-color-light-mobile: #E7FFC7;
@@ -161,7 +161,7 @@ strong {
 }
 
 .default-area-padding {
-    padding: 0 0 10px 0;
+    padding: 0 0 200px 0;
 }
 
 
@@ -173,17 +173,30 @@ strong {
 .page-content {
     color: var(--text-intro-pink);
     display: flex;
-    flex-direction: row;
+    height: 6ch;
+    margin: 1em 0;
     position: relative;
     justify-content: center;
-    margin: 2.5ch;
+}
+
+.page-content-two h2 {
+    color: var(--text-intro-pink);
+    height: 1ch;
+}
+
+.page-content-two h3 {
+    color: var(--text-intro-pink);
+    height: 1ch;
 }
 
 .page-content-two {
     position: relative;
-    top: var(--minusTop);
-    margin: 5ch;
+    margin: var(--margin);
+    font-weight: bold;
 }
+
+
+
 
 .image-preview {
     width: 100%;

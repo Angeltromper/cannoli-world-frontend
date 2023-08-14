@@ -1,75 +1,76 @@
 import React, {useContext} from 'react';
+import { NavLink, useNavigate } from "react-router-dom";
 import {AuthContext} from "../../../context/AuthContext";
-import {Link, NavLink} from "react-router-dom";
 import Column from "../designElement/column/Column";
 import TwoColumn from "../designElement/column/TwoColumn";
+import FooterResp from "../footerResp/FooterResp";
 import './Footer.css';
-import rightColors from "../../../assets/img.header/rightColors.png";
-import leftColors from "../../../assets/img.header/leftColors .png";
 import mail from "../../../assets/navIcon/mail.png";
 import phone from "../../../assets/navIcon/phone.png";
 
 
 function Footer() {
+
     // eslint-disable-next-line no-unused-vars
-    const {auth} = useContext(AuthContext);
+    const {isAuth} = useContext(AuthContext);
+
 
     return (
-        <footer className="footer-container">
+        <footer className="footer">
+            <div className="footer-container">
 
+            <TwoColumn>
+                <Column>
+                    <div className="footer-menu">
+                        <h3>navigatie</h3>
+                        <ul>
+                            <li><NavLink to="/home">Home</NavLink></li>
+                            <li><NavLink to="/webshop">Webshop</NavLink></li>
+                            <li><NavLink to="/faq's">Faq's</NavLink></li>
+                            <li><NavLink to="/webshop">Contact</NavLink></li>
+                            <li><NavLink to="/faq's">Account</NavLink></li>
 
+                            {isAuth ? <li><NavLink to="/inloggen">Uitloggen</NavLink></li> : <li><NavLink to="/inloggen">Inloggen</NavLink></li>}
+                            {isAuth && <li><NavLink to="/profiel">Profiel</NavLink></li>}
+                        </ul>
+                    </div>
+                </Column>
 
-            <div className="footer">
-                <TwoColumn>
-                    <Column>
+                <Column>
+                    <div className= "footer-contact">
+                        <h3>contact</h3>
+                        <ul>
+                            <NavLink to="mail"><img src={mail} alt="mail" className="mail"/>srruffino@outlook.com</NavLink>
+                            <NavLink to="phone"><img src={phone} alt="phone" className="phone"/>SR.Ruffino:(+31)620940691</NavLink>
+                            <NavLink to="phone"><img src={phone} alt="phone" className="phone"/>E.Jongh Visscher:(+31)648889093</NavLink>
+                        </ul>
+                    </div>
 
-                            <ul className="footer-text__section-list">
-                                <h3>navigatie</h3>
+                    <div className="register-content">
+                        <h3 className="register-subtitle">Wilt u onze nieuwsbrief ontvangen?</h3>
+                        <form className="register-form">
+                            <label>
+                                <input className="register-input" type="text" placeholder="E-mail adres..."/>
+                            </label>
+                            <button className="button" type="submit">inschrijven</button>
+                        </form>
+                    </div>
+                </Column>
+            </TwoColumn>
 
-                                <li><Link to="/home">Home</Link></li>
-                                <li><Link to="/webshop">Webshop</Link></li>
-                                <li><Link to="/faq's">Faq's</Link></li>
-                                <li><Link to="/webshop">Contact</Link></li>
-                                <li><Link to="/faq's">Mijn Account</Link></li>
-
-                                {auth ? <li><Link to="/inloggen">Uitloggen</Link></li> : <li><Link to="/inloggen">Inloggen</Link></li>}
-                                {auth && <li><Link to="/profiel">Profiel</Link></li>}
-                            </ul>
-
-                    </Column>
-                    <Column>
-
-                        <div className= "footer-text-section__contact">
-                            <h3>contact</h3>
-
-                            <figure><img src={mail} alt="mail" className="mail"/></figure>
-                            <h4><NavLink to="mail">srruffino@outlook.com</NavLink></h4>
-                            <figure><img src={phone} alt="phone-icon" className="phone"/></figure>
-                            <h4><NavLink to="phone">SR.Ruffino:(+31)620940691</NavLink></h4>
-                            <figure><img src={phone} alt="phone" className="phone"/></figure>
-                            <h4><NavLink to="phone">E.Jongh Visscher:(+31)648889093</NavLink></h4>
-                        </div>
-
-
-
-                        <div className="footer-color">
-                            <figure><img src={rightColors} alt="right-colors" className="right"/></figure>
-                            <figure><img src={leftColors} alt="left-colors" className="left"/></figure>
-                        </div>
-
-
-                        <p className="footer-text-section__newsletter">Wilt u onze nieuwsbrief ontvangen</p>
-                        <button className="button">Inschrijven</button>
-
-
-                    </Column>
-                </TwoColumn>
-
-            </div>
+            <FooterResp/>
 
             <div className="skewer--footer-top"></div>
-
+            </div>
         </footer>
     );
 }
+
 export default Footer;
+
+
+
+
+
+
+

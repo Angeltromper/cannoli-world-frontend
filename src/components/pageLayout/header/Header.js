@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from "../navbar/Navbar";
-
+import HeaderResp from "./headerResp/HeaderResp";
 import './Header.css';
 
 function Header({headerImage, pageTitle}) {
@@ -11,8 +11,8 @@ function Header({headerImage, pageTitle}) {
     return (
         <>
             <header className="header">
-                <div className="header-text">
-                    <div className="header-text-one">
+                    <div className="header-text">
+                        <div className="header-text-one">
                         <h2>Heerlijk</h2>
                         <br/>
                     </div>
@@ -20,26 +20,24 @@ function Header({headerImage, pageTitle}) {
                     <div className="header-text-two">
                         <h2>Momentje</h2>
                         <br/>
-                        <h2>Genieten</h2>
+                        <h2>Genieten!</h2>
                     </div>
                 </div>
             </header>
 
             <Navbar/>
+            <HeaderResp/>
 
             <image className="header-img-container">
                 <span>
                     <img src={headerImage} className="header-img" alt= "/"/>
                 </span>
 
-
                 <div className="page-title">
                     <h1>{pageTitle}</h1>
                 </div>
 
-                <div className="skewer--top">
-
-                </div>
+                <div className="skewer--top"></div>
             </image>
         </>
     );

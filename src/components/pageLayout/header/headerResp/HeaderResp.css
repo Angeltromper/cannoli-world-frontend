@@ -1,3 +1,17 @@
+.color-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+.color-container .right  {
+    height: 8em;
+}
+
+.color-container .left {
+    height: 8em;
+}
 
 
 

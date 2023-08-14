@@ -36,11 +36,6 @@ function Navbar() {
                 {isAuth && <NavLink to="/orderList">Bestellingen</NavLink>}
             </ul>
 
-            <div className="color-container">
-                <figure><img src={rightColors} alt="right-colors" className="right"/></figure>
-                <figure><img src={leftColors} alt="left-colors" className="left"/></figure>
-            </div>
-
             <div className="skewer--bottom"></div>
         </nav>
 
