@@ -1,39 +1,58 @@
+/*
 .navbar-container {
     background: #150A06;
     background: linear-gradient(180deg, var(--background-color-dark) 0%, var(--background-color-dark) 40%, var(--background-color) 100%);
     width: 100%;
     position: fixed;
-    flex-direction: row;
-    align-items: flex-start;
     height: 20em;
+    margin: 0 auto;
     z-index: 9;
 }
 
-.navbar-container a,
-.navbar-container a:visited {
-    color: var(--text-light);
+.navbar a,
+.navbar a:visited {
+    color: white;
     text-decoration: none;
 }
 
-.navbar-container a:hover {
+.navbar a:hover {
     text-decoration: underline;
     color: var(--figure-color-2);
-    transition: transform 300ms ease-in-out;
+    transition: transform 250ms ease-in-out;
     transform: scale(1.10);
 }
 
 .navbar-menu {
     display: flex;
+    position: relative;
     font-family: var(--font);
     font-size: 1.2rem;
     font-weight: 400;
     list-style: none;
     justify-content:space-between;
+    align-items: flex-start;
     padding: 1em;
-    animation-duration: .7s;
-    animation-iteration-count: 2;
+    animation-duration: .8s;
+    animation-iteration-count: 1;
     animation-timing-function: ease;
     animation-fill-mode: both;
+}
+
+.navbar-menu .logo {
+    width: 6em;
+    z-index: 8;
+}
+
+.navbar-menu a:after {
+    background-color: var(--figure-color-1);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: "";
+    width: 0;
+    height: 1px;
+    transition: all 350ms ease-in;
 }
 
 .navbar-menu a:hover:after {
@@ -45,13 +64,6 @@
     content: "";
     width: 100%;
     height: 1px;
-    text-decoration: underline;
-    transition: transform 250ms ease-in-out;
-    transform: scale(1.10);
-}
-
-.navbar-menu .logo {
-    width: 6em;
 }
 
 button, header button:visited {
@@ -96,7 +108,6 @@ button, header .btn-text::after {
 }
 
 /*------------------- NAV-IMAGE---------------------*/
-
 
 
 

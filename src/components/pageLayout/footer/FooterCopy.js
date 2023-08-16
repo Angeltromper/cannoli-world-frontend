@@ -33,12 +33,9 @@ function Footer() {
                             {auth ? <li><Link to="/inloggen">Uitloggen</Link></li> : <li><Link to="/inloggen">Inloggen</Link></li>}
                             {auth && <li><Link to="/profiel">Profiel</Link></li>}
                         </ul>
-
                     </Column>
+
                     <Column>
-
-
-
                         <div className= "footer-text-section__contact">
                             <h3>contact</h3>
 
@@ -47,7 +44,7 @@ function Footer() {
                             <li><Link to="/"><figure><img src={phone} alt="phone-icon" className="phone"/>E.Jongh Visscher:(+31)648889093</figure></Link></li>
                         </div>
 
-                        <div className="footer-color">
+                        <div className="color-container">
                             <figure><img src={rightColors} alt="right-colors" className="right"/></figure>
                             <figure><img src={leftColors} alt="left-colors" className="left"/></figure>
                         </div>

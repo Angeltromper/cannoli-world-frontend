@@ -1,3 +1,4 @@
+/*
 import React, {useContext} from 'react';
 import {NavLink, useNavigate} from "react-router-dom";
 import logo from "../../../assets/logo/Logo Cannoli.png";
@@ -33,10 +34,8 @@ function Navbar() {
                 {isAuth && <NavLink to="/orderList">Bestellingen</NavLink>}
             </ul>
 
-                <div className="skewer--bottom"></div>
+            <div className="skewer--bottom"></div>
         </nav>
-
     );
 }
-
-export default Navbar;
+*/
