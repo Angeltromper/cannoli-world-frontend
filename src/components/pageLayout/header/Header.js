@@ -9,12 +9,14 @@ import './Header.css';
 function Header({headerImage, pageTitle}) {
 
 
+
     return (
         <>
+
+
             <header className="header">
 
                 <Navbar/>
-
                 <div className="color-container">
                     <figure><img src={rightColor} alt="right-color" className="right"/></figure>
                     <figure><img src={leftColor} alt="left-color" className="left"/></figure>
@@ -32,8 +34,8 @@ function Header({headerImage, pageTitle}) {
                         <h2>Genieten!</h2>
                     </div>
                 </div>
-            </header>
 
+            </header>
             <image className="header-img-container">
                 <span>
                     <img src={headerImage} className="header-img" alt="/"/>
@@ -43,8 +45,6 @@ function Header({headerImage, pageTitle}) {
                     <h1>{pageTitle}</h1>
                 </div>
             </image>
-
-            <div className="skewer--top"></div>
         </>
     );
 }

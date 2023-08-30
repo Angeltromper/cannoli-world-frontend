@@ -24,32 +24,37 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
 
     return (
         <homepage className="homepage">
-            <div className="columns">
-                <div className="inner-container__reusable">
-
-                    <div className="search-query__section" ref={refSearch}>
+            <div className="skewer--top"></div>
+            <div className="inner-container__reusable">
+                <div className="search-query__section" ref={refSearch}>
 
                         <TextContainer>
                             <h1>Welkom op de site van Cannoli World</h1>
                         </TextContainer>
 
                         <div className="inner-container__reusable default-area-padding default-text-restrictor">
-                            <br/>
-                            <h5>Graag willen wij de liefde voor Italië en de overheerlijke lekkernijen met u delen.We nemen u mee op reis.</h5>
-                            <h3><strong>De reis begint hier:<em> "hoe de liefde voor cannoli is ontstaan"</em></strong></h3>
-                            <h5><strong><em>Italië</em></strong> een land vol prachtige dorpjes en <strong><em>"heerlijke"</em></strong> gerechten. Het prachtige gardameer,</h5>
-                            <h5>vrolijke huisjes, bergen en wijnheuvels. <strong><em>Italië</em></strong> een land met een geschiedenis.</h5>
-                            <h5>De liefde voor Italië is ontstaan door het velen reizen door mooie gebieden van het land.</h5>
-                            <br/>
-                            <h5>Banketbakkerijen met de overheerlijke cannoli's. De bekende cannoli met ricotta.</h5>
-                            <h5>De smaakmogelijkheden zouden oneindig moeten zijn.</h5>
-                            <h5>Dit in een nieuw cannoli jasje alleen wel in de goede smaak combinatie.</h5>
-                            <h5>Door de ervaringen en de Italiaanse banketbakkerij zijn wij toen begonnen met het</h5>
-                            <h5>opzetten van een breed assortiment van verkoop van verse cannoli's.</h5>
-                            <br/>
+                            <div>
+                                <section id="intro" className="intro-container">
+                                    <br/>
+                                    <h5>Graag willen wij de liefde voor Italië en de overheerlijke lekkernijen met u delen.We nemen u mee op reis.</h5>
+                                    <h5><strong>De reis begint hier:<em> "hoe de liefde voor cannoli is ontstaan"</em></strong></h5>
+                                    <h5><strong><em>Italië</em></strong> een land vol prachtige dorpjes en <strong><em>"heerlijke"</em></strong> gerechten. Het prachtige gardameer,</h5>
+                                    <h5>vrolijke huisjes, bergen en wijnheuvels. <strong><em>Italië</em></strong> een land met een geschiedenis.</h5>
+                                    <h5>De liefde voor Italië is ontstaan door het velen reizen door mooie gebieden van het land.</h5>
+                                    <br/>
+                                    <br/>
+                                    <h5>Banketbakkerijen met de overheerlijke cannoli's. De bekende cannoli met ricotta.</h5>
+                                    <h5>De smaakmogelijkheden zouden oneindig moeten zijn.</h5>
+                                    <h5>Dit in een nieuw cannoli jasje alleen wel in de goede smaak combinatie.</h5>
+                                    <br/>
+                                    <br/>
+                                    <h5>Door de ervaringen en de Italiaanse banketbakkerij zijn wij toen begonnen met het</h5>
+                                    <h5>opzetten van een breed assortiment van verkoop van verse cannoli's.</h5>
+                                </section>
+                            </div>
                         </div>
-
-                        <image className="column col-1">
+                        <br/>
+                        <image className="cannoli-image">
                             <figure><img src={cannoliSnack} alt="cannoli-snack" className="cannoli-img"/></figure>
                             <figure><img src={cannoliGlutenFree} alt="cannoli-glutenFree" className="cannoli-img"/></figure>
                             <figure><img src={cannoliVegan} alt="cannoli-vegan" className="cannoli-img"/></figure>
@@ -177,11 +182,10 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                     </TextContainerResp>
                     <br/>
 
-                <img alt="go-up-search-section" src={goUp} onClick={() => HandleRef(refSearch)}
+                    <img alt="go-up-search-section" src={goUp} onClick={() => HandleRef(refSearch)}
                      className="search-result__go-up-icon"/>
-            </div>
-        </div>
-</homepage>
+                </div>
+        </homepage>
     );
 }
 

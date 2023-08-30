@@ -13,7 +13,7 @@
 
 :root {
     --font: Merriweather;
-    --text-weight: 800;
+    --font-weight: 800;
     --second-font: 'Roboto', sans-serif;
     --second-font-line-height: 10px;
 
@@ -33,7 +33,7 @@
     --text: #7A7A7A;
     --text-intro-white: #FFFFFF;
     --text-light: #FFFFFF;
-    --text-faded: #f2f0ff;
+    --text-faded: #FFDDE6;
     --text-dark: #010101;
 
     --dropshadow: 0.2em 0.2em 0 var(--shadow-color);
@@ -140,7 +140,6 @@ strong {
     width: 100%;
 }
 
-
 .outer-container__reusable {
     display: flex;
     max-width: 100%;
@@ -148,7 +147,6 @@ strong {
     justify-content: center;
     flex-wrap: wrap;
 }
-
 
 .inner-container__reusable  {
     display: flex;
@@ -161,9 +159,8 @@ strong {
 }
 
 .default-area-padding {
-    padding: 0 0 200px 0;
+    padding: 0 0 100px 0;
 }
-
 
 .default-text-restrictor {
     max-width: 100%;
@@ -173,10 +170,11 @@ strong {
 .page-content {
     color: var(--text-intro-pink);
     display: flex;
-    height: 6ch;
-    margin: 1em 0;
+    height: 18em;
+    margin: -12em 0;
     position: relative;
     justify-content: center;
+    z-index: 5;
 }
 
 .page-content-two h2 {

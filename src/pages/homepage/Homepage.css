@@ -5,7 +5,7 @@
 }
 
 .homepage:nth-of-type(even) .columns {
-    flex-direction: row-reverse;
+    flex-direction: row;
 }
 
 .homepage .column:first-of-type {
@@ -16,11 +16,52 @@
     padding-right: 2rem;
 }
 
-.homepage .cannoli-img {
-    margin-top: -8em;
-    margin-bottom: 10rem;
-    pointer-events: none;
-    border-top:2px dotted hsl(9, 9%, 70%);
+.intro-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#intro {
+    background-color: var(--background-color-light);
+    color: var(--background-color-dark);
+    font-weight: bold;
+    position: relative;
+}
+
+#intro::before {
+    display: block;
+    content: 'Welkom';
+    color: var(--text-faded);
+    opacity: 0.3;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size:300px;
+    font-weight: var(--font-weight);
+    letter-spacing: -16px;
+    top: -100px;
+    left: 0;
+}
+
+.cannoli-image {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 6;
+}
+
+.cannoli-img {
+    position: relative;
+    flex: 0 0 90%;
+    -ms-flex: 0 0 90%;
+    -webkit-box-flex: 0;
+    width: 15em;
+    max-width: 100%;
+    padding: 0.1em 0.3em;
 }
 
 .product-container {
@@ -56,6 +97,17 @@
 .search-query__section {
 
 }
+
+.skewer--top {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: -28em 0 16em auto;
+    border-left: 100vw solid transparent;
+    border-bottom: 100px solid var(--background-color-light);
+    z-index: 9;
+}
+
 
 
 /*--------------------- Media-queries -----------------*/

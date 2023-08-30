@@ -54,6 +54,19 @@
     width: 6em;
 }
 
+
+.input-field__reusable-cannoli {
+    display: flex;
+    border-style: none;
+    border-color: #150A06;
+    background: var(--background-color-dark);
+    color: var(--background-color-light);
+    font-family: var(--font);
+    font-size: 1.2rem;
+}
+
+
+
 button, header button:visited {
     background-color: var(--button-color);
     color: var(--text-intro-white);
