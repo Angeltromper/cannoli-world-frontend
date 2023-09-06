@@ -1,22 +1,19 @@
-import React, {useEffect} from 'react';
-import pageImg from "../../../src/assets/img.background/background-cannoli-snack.png";
+import React from 'react';
+import Cannoli from "../cannoli/Cannoli";
 
 
-function CannoliSnack({headerImageHandler, pageTitleHandler}) {
 
-    useEffect(() => {
-        headerImageHandler(pageImg);
-        pageTitleHandler ("Cannoli Snack");
-        }, [headerImageHandler]);
+function CannoliSnack() {
+
 
 
     return (
-        <>
-            <h1>De smaak van cannoli-snack</h1>
+        <cannoli className="cannoli-snack-container">
+
+            <Cannoli/>
 
 
-        </>
-
+        </cannoli>
     );
 
 }

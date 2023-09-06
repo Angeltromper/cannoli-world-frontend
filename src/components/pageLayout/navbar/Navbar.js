@@ -4,6 +4,7 @@ import logo from "../../../assets/logo/Logo Cannoli.png";
 import {AuthContext} from "../../../context/AuthContext";
 import './Navbar.css';
 
+
 function Navbar() {
     const navigate= useNavigate();
     const toLink = (e) => {
@@ -21,22 +22,20 @@ function Navbar() {
                 <button type="button" onClick={toLink}><span className="btn-text">inloggen</span></button>
             </div>
 
-
-
             <ul className="navbar-menu">
                 <NavLink to="/">Home</NavLink>
 
-                <NavLink to="/cannoli">
-                    <select
-                        id="search-by-cannoli"
-                        className="input-field__reusable-cannoli"
-                        value={cannoliQuery}
-                        onChange={(e) => setCannoliQuery(e.target.value)}
-                    >
-                        <option value="Cannoli Snack">Cannoli Snack</option>
-                        <option value="Cannoli GlutenFree">Cannoli Glutenvrij</option>
-                        <option value="Cannoli Vegan">Cannoli Vegan</option>
-                    </select>
+                <NavLink to="/cannoli">Cannoli<select
+                    id="search-by-cannoli"
+                    className="input__field-cannoli"
+                    value={cannoliQuery}
+                    onChange={(e ) => setCannoliQuery(e.target.value)}
+                >
+                    <option value="Menu"> - Menu</option>
+                    <option value="Snack"> - Snack</option>
+                    <option value="Glutenfree"> - Glutenfree</option>
+                    <option value="Vegan"> - Vegan</option>
+                </select>
                 </NavLink>
 
                 <NavLink to="/giftbox">Giftbox</NavLink>
