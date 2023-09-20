@@ -8,12 +8,8 @@ import './Header.css';
 
 function Header({headerImage, pageTitle}) {
 
-
-
     return (
         <>
-
-
             <header className="header">
 
                 <Navbar/>
@@ -34,8 +30,8 @@ function Header({headerImage, pageTitle}) {
                         <h2>Genieten!</h2>
                     </div>
                 </div>
-
             </header>
+
             <image className="header-img-container">
                 <span>
                     <img src={headerImage} className="header-img" alt="/"/>

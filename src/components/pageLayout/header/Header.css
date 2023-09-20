@@ -35,7 +35,7 @@ header::after {
     display: flex;
     flex-direction: column;
     font-family: var(--second-font);
-    margin: 32em 8em 0 auto;
+    margin: 34em 12em 0 auto;
     line-height: 1.5em;
     text-transform: uppercase;
 }
@@ -45,7 +45,7 @@ header::after {
 }
 
 .header-text-two {
-    color: #3B1C11;
+    color: var(--background-color);
 }
 
 .header-img-container  {
@@ -62,7 +62,7 @@ header::after {
     width: 100%;
     justify-content: space-between;
     margin-left: 0;
-    margin-right: -20em;
+    margin-right: -23em;
     z-index: 10;
 }
 

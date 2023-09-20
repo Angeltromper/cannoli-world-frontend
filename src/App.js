@@ -33,6 +33,7 @@ function App () {
     const [headerImage, setHeaderImage] = useState(headerImg);
     const [pageTitle, setPageTitle] = useState();
 
+
     const Wrapper = ({ children }) => {
         const location = useLocation();
         useLayoutEffect(() => {

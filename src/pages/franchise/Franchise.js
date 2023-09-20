@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import './Franchise.css';
+import pageImg from "../../assets/img.background/background franchise.jpg";
 
-function Franchise() {
+
+function Franchise({headerImageHandler,pageTitleHandler}) {
+    useEffect(() => {
+        headerImageHandler(pageImg);
+        pageTitleHandler();
+    }, [headerImageHandler,pageTitleHandler]);
 
     return (
-        <div>
+        <div className="franchise-container">
 
         </div>
 

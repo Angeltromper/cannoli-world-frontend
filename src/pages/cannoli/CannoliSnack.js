@@ -1,21 +1,24 @@
-import React from 'react';
-import Cannoli from "../cannoli/Cannoli";
+import React, { useEffect } from 'react';
+import './Cannoli.css';
+import pageImg from "../../assets/img.background/background cannoli-snack.jpg";
 
+function CannoliSnack({headerImageHandler, pageTitleHandler}) {
 
-
-function CannoliSnack() {
-
-
+    useEffect(() => {
+        headerImageHandler(pageImg);
+        pageTitleHandler();
+    }, [headerImageHandler, pageTitleHandler]);
 
     return (
-        <cannoli className="cannoli-snack-container">
 
-            <Cannoli/>
+        <div className="cannoli-snack-container">
 
 
-        </cannoli>
+        </div>
     );
 
 }
 
 export default CannoliSnack;
+
+

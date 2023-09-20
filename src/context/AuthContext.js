@@ -35,7 +35,7 @@ function AuthContextProvider({children}) {
     function login(token) {
         const decodedToken = jwtDecode (token);
         localStorage.setItem ('token', token);
-        getData (decodedToken.sub, token, "/profiel");
+        getData (decodedToken.sub, token, "/profiel").then ();
     }
 
     function logout(e) {

@@ -1,16 +1,17 @@
 import React, {useEffect, useRef, useState} from 'react';
 import pageImg from "../../assets/img.header/homepage-background-2400x1100.jpg";
-import cannoliSnack from "./../../assets/img.menu-background/cannoliSnack.png";
-import cannoliGlutenFree from "./../../assets/img.menu-background/cannoliGlutenFree.png";
-import cannoliVegan from "./../../assets/img.menu-background/cannoliVegan.png";
-import cannoliGiftbox from "./../../assets/img.menu-background/cannoliGiftbox.png";
-import cannoliFranchise from "./../../assets/img.menu-background/cannoliFranchise.png";
+import cannoliSnack from "./../../assets/img.background/background-cannoli-snack.png";
+import cannoliGlutenFree from "./../../assets/img.background/background cannoli-glutenfree.png";
+import cannoliVegan from "./../../assets/img.background/background cannoli vegan.png";
+import cannoliGiftbox from "./../../assets/img.background/background giftbox.png";
+import cannoliFranchise from "./../../assets/img.background/background-franchise.png";
 import SearchButton from "./../../components/button/searchButton/SearchButton";
 import TextContainer from "../../components/pageLayout/designElement/container/textContainer/TextContainer";
 import TextContainerResp from "../../components/pageLayout/designElement/container/textContainerResp/TextContainerResp";
 import HandleRef from "./../../helpers/HandleRef";
 import goUp from"./../../assets/navIcon/goUp.png";
 import './Homepage.css';
+
 
 function Homepage ({headerImageHandler, pageTitleHandler}) {
 
@@ -27,6 +28,7 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
             <div className="skewer--top"></div>
             <div className="inner-container__reusable">
                 <div className="search-query__section" ref={refSearch}>
+
 
                         <TextContainer>
                             <h1>Welkom op de site van Cannoli World</h1>
@@ -56,7 +58,7 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                         <br/>
                         <image className="cannoli-image">
                             <figure><img src={cannoliSnack} alt="cannoli-snack" className="cannoli-img"/></figure>
-                            <figure><img src={cannoliGlutenFree} alt="cannoli-glutenFree" className="cannoli-img"/></figure>
+                            <figure><img src={cannoliGlutenFree} alt="cannoli-glutenfree" className="cannoli-img"/></figure>
                             <figure><img src={cannoliVegan} alt="cannoli-vegan" className="cannoli-img"/></figure>
                             <figure><img src={cannoliGiftbox} alt="cannoli-giftbox" className="cannoli-img"/></figure>
                             <figure><img src={cannoliFranchise} alt="cannoli-franchise" className="cannoli-img"/></figure>

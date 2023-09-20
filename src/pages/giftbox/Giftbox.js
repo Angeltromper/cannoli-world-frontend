@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import pageImg from './../../assets/img.background/background giftbox.jpg';
+function Giftbox({headerImageHandler, pageTitleHandler}) {
 
-function Giftbox() {
+    useEffect(() => {
+        headerImageHandler (pageImg);
+        pageTitleHandler ();
+    }, [headerImageHandler, pageTitleHandler]);
 
     return (
-        <div>
+        <>
+            <div className="giftbox">
 
-        </div>
+            </div>
+
+
+
+
+
+        </>
+
 
     );
 }

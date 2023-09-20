@@ -1,0 +1,20 @@
+.cannoli-glutenfree-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.cannoli-img-container {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.skewer--cannoli-top {
+    border-top: 200px solid transparent;
+    border-right: 120vw solid var(--background-color-light);
+    position: absolute;
+    margin: 78em 0;
+    right: 0;
+    top: 0;
+    z-index: 4;
+}
