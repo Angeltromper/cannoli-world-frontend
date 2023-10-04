@@ -43,7 +43,6 @@ Open daarna http://localhost:3000 om de pagina in de browser te bekijken.
 
 ###Mappen
 *documenten / applicaties*
-
 ```
 src
 └── assets

@@ -115,12 +115,6 @@ button, header .btn-text::after {
     transform: translateX(0.2em);
 }
 
-.dropdown {
-    display: none;
-    position: absolute;
-    background: #fff;
-}
-
 .skewer--bottom {
     border-top: 200px solid var(--background-color);
     border-right: 150vw solid transparent;

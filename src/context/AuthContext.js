@@ -3,6 +3,7 @@ import {useNavigate} from "react-router-dom";
 import isTokenValid from "../helpers/isTokenValid";
 import jwtDecode from "jwt-decode";
 import axios from "axios";
+
 export const AuthContext = createContext(null);
 
 
@@ -85,7 +86,7 @@ function AuthContextProvider({children}) {
 
     return (
         <AuthContext.Provider value={contextData}>
-            {isAuth.status === 'done' ? children : <p>Ogenblik geduld alstublieft...</p>}
+            {isAuth.status === 'done' ? children : <h2>Ogenblik geduld alstublieft...</h2>}
         </AuthContext.Provider>
     );
 }

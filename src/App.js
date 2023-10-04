@@ -4,6 +4,7 @@ import {Cart} from "./components/cart/Cart";
 import headerImg from "../../cannoli-world-frontend-main/src/assets/img.header/homepage-background-2400x1100.jpg";
 import Header from "./components/pageLayout/header/Header";
 import Homepage from "./pages/homepage/Homepage";
+import Dropdown from "./components/pageLayout/navbar/Dropdown/Dropdown";
 import Footer from "./components/pageLayout/footer/Footer";
 import Cannoli from "./pages/cannoli/Cannoli";
 import Giftbox from "./pages/giftbox/Giftbox";
@@ -14,7 +15,6 @@ import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
 import SearchCannoli from "./pages/searchCannoli/SearchCannoli";
 import SearchResult from "./pages/searchResult/SearchResult";
 import CannoliIngredient from "./components/cannoliIngredient/CannoliIngredient";
-import AllCannolis from "./pages/allCannolis/AllCannolis";
 import CannoliGlutenFree from "./pages/cannoli/CannoliGlutenFree";
 import CannoliSnack from "./pages/cannoli/CannoliSnack";
 import CannoliVegan from './pages/cannoli/CannoliVegan';
@@ -33,7 +33,6 @@ function App () {
     const [headerImage, setHeaderImage] = useState(headerImg);
     const [pageTitle, setPageTitle] = useState();
 
-
     const Wrapper = ({ children }) => {
         const location = useLocation();
         useLayoutEffect(() => {
@@ -51,6 +50,9 @@ function App () {
                   <Routes>
                       <Route path="/"
                              element={<Homepage headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
+
+                      <Route path="/dropdownMenu"
+                             element={<Dropdown headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
 
                       <Route path="/cannoli"
                              element={<Cannoli headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
@@ -78,9 +80,6 @@ function App () {
 
                       <Route path="/cannoliIngredient"
                              element={<CannoliIngredient headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
-
-                      <Route path="/allCannolis"
-                             element={<AllCannolis headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
 
                       <Route path="/cannoliGlutenFree"
                              element={<CannoliGlutenFree headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>

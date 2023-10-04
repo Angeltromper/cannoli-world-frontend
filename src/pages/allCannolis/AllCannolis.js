@@ -1,14 +1,59 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
+import {Button} from "../../components/button/button/Button";
+import './AllCannolis.css';
+import {getDownloadURL, ref} from "firebase/storage";
+import {storage} from "../../firebase-config";
 
-function AllCannolis(props) {
+
+export function CannolisWrapper({children}) {
     return (
-        <article className="cannoli">
-            <img src={props.image} alt={props.title}/>
-            <h2 className="cannoli-name">{props.title}</h2>
-            <p className="cannoli-description">{props.description}</p>
-        </article>
+        <section className="cannolis">
+            <div className="container">
+                <div className="columns">
+                    {children}
+                </div>
+            </div>
+        </section>
     )
 }
 
-export default AllCannolis;
+export function AllCannolis({image, cannoliName, flavour, price, id}) {
+    const [cannoliImage, setCannoliImage] = useState(null);
+
+    useEffect(() => {
+        getDownloadURL(ref(storage,image)).then((url ) => {
+            setCannoliImage(url);
+        })
+    }, []);
+
+return (
+    <div className="col-1 col-2 col-3">
+        <div className="cannolis-card shadow">
+            <div className="image-wrapper">
+                <img src={cannoliImage} alt={cannoliName}/>
+            </div>
+            <div className="content">
+                <h2>{cannoliName}</h2>
+                <div className="specifics">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td>Cannoli:</td>
+                            <td>{flavour} smaak</td>
+                        </tr>
+
+                        <tr>
+                            <td>Prijs</td>
+                            <td>{price}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <Button url={`/cannoli/${id}`} variation="secondary" size="small">meer informatie</Button>
+            </div>
+        </div>
+    </div>
+);
+}
+
 

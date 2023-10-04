@@ -1,44 +1,51 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from "react";
+import {collection, getDocs} from 'firebase/firestore';
 import pageImg from './../../assets/img.background/background cannoli-snack.jpg';
-import cannoliSnack from './../../assets/img.menu-background/cannoliSnack.png';
-import cannoliGlutenFree from "./../../assets/img.menu-background/cannoliGlutenFree.png";
-import cannoliVegan from "./../../assets/img.menu-background/cannoliVegan.png";
-import AllCannolis from "../allCannolis/AllCannolis";
+import Navbar from "../../components/pageLayout/navbar/Navbar";
+import {AllCannolis, CannolisWrapper} from "../allCannolis/AllCannolis";
+import {db} from "../../firebase-config";
+import './Cannoli.css';
+import '../../css/Grid.css';
 
 
-function Cannoli ({headerImageHandler, pageTitleHandler}) {
+function Cannoli({headerImageHandler,pageTitleHandler}) {
+
+    const [cannolisList, setCannolisList] = useState([]);
+    const cannolisCollectionRef = collection(db, "cannolis");
+
 
     useEffect(() => {
         headerImageHandler (pageImg);
         pageTitleHandler ();
-        }, [headerImageHandler, pageTitleHandler]);
+        }, [headerImageHandler,pageTitleHandler]);
+        async function getCannolis() {
+            const data = await getDocs(cannolisCollectionRef);
+            setCannolisList(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
+        };
+        getCannolis();
 
-    return (
+        return (
         <>
-            <div className="cannolis">
-                <AllCannolis
-                    image={cannoliSnack}
-                    description="Cannoli-Snack(niet glutenvrij) is een koekje(la scorza) wat wordt gebakken in de oven en krijg zo zijn vorm
-                    door het deeg om de omhulsel te wikkelen wat lijkt op een tunnel. Het woord cannoli betekend letterlijk lange tunnel.
-                    Als het koekjes oven klaar is wordt het gevuld met een overheerlijke romige vulling."
-                />
+            <Navbar/>
 
-                <AllCannolis
-                    image={cannoliGlutenFree}
-                    description="Cannoil-Glutenvrij is een koekje(la scorza) wat wordt gefrituurd. Het wordt gemaakt van amandelmeel.
-                    door het deeg om de omhulsel te wikkelen wat lijkt op een tunnel. Het woord cannoli betekend letterlijk lange tunnel.
-                    Als het koekjes oven klaar is wordt het gevuld met een overheerlijke romige vulling."
-                />
+            <CannolisWrapper>
 
-                <AllCannolis
-                    image={cannoliVegan}
-                />
-            </div>
+                {cannolisList.sort( (b, a) =>
+                    a.createdAt - b.createdAt
+                ).map((cannoli) => (
+                    <AllCannolis
+                        key={cannoli.createdAt}
+                        id={cannoli.id}
+                        image={cannoli.image}
+                        cannoliName={cannoli.name}
+                        price={cannoli.price}
+                        flavour={cannoli.flavour}
+                    />
+                ))}
+
+            </CannolisWrapper>
         </>
     );
 }
 
-
 export default Cannoli;
-
-
