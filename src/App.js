@@ -48,6 +48,7 @@ function App () {
                   <Header headerImage={headerImage} pageTitle={pageTitle}/>
 
                   <Routes>
+
                       <Route path="/"
                              element={<Homepage headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
 

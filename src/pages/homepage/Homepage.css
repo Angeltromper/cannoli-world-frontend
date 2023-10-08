@@ -87,15 +87,14 @@
 .select {
     width: 100%;
 }
+.search-query__section {
+
+}
 
 .search-result__go-up-icon {
     width: 1.5em;
     cursor: pointer;
     align-self: center;
-}
-
-.search-query__section {
-
 }
 
 .skewer--top {

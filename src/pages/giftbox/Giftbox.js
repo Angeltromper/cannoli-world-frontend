@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react';
 import pageImg from './../../assets/img.background/background giftbox.jpg';
+import HeaderResp from "../../components/pageLayout/header/headerResp/HeaderResp";
+
+
+
 function Giftbox({headerImageHandler, pageTitleHandler}) {
 
     useEffect(() => {
@@ -10,6 +14,9 @@ function Giftbox({headerImageHandler, pageTitleHandler}) {
     return (
         <>
             <div className="giftbox">
+
+
+
 
             </div>
 

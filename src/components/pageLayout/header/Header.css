@@ -31,27 +31,7 @@ header::after {
 
 /*------------------- Header-image ---------------------*/
 
-.header-text {
-    display: flex;
-    flex-direction: column;
-    font-family: var(--second-font);
-    margin: 34em 12em 0 auto;
-    line-height: 1.5em;
-    text-transform: uppercase;
-}
 
-.header-text-one {
-    color: var(--text-intro-pink);
-}
-
-.header-text-two {
-    color: var(--background-color);
-}
-
-.header-img-container  {
-    display: flex;
-    flex-direction: row;
-}
 
 .img {
     width: 100%;

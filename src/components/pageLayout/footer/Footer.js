@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, { useContext, useRef } from 'react';
 import {NavLink} from "react-router-dom";
 import {AuthContext} from "../../../context/AuthContext";
 import Column from "../designElement/column/Column";
@@ -7,11 +7,15 @@ import TwoColumn from "../designElement/column/TwoColumn";
 import mail from "../../../assets/navIcon/mail.png";
 import phone from "../../../assets/navIcon/phone.png";
 import './Footer.css';
+import goUp from "../../../assets/navIcon/goUp.png";
+import HandleRef from "../../../helpers/HandleRef";
 
 function Footer() {
 
     // eslint-disable-next-line no-unused-vars
+    const refSearch = useRef(null);
     const {isAuth} = useContext(AuthContext);
+
 
     return (
         <footer className="footer-container">
@@ -53,7 +57,6 @@ function Footer() {
                         </form>
                     </div>
                 </Column>
-
 
             </TwoColumn>
             <div className="skewer--footer-top"></div>

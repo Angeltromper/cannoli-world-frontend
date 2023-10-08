@@ -4,8 +4,6 @@ import rightColor from "../../../assets/img.header/rightColor.png";
 import leftColor from "../../../assets/img.header/leftColor.png";
 import './Header.css';
 
-
-
 function Header({headerImage, pageTitle}) {
 
     return (
@@ -13,23 +11,12 @@ function Header({headerImage, pageTitle}) {
             <header className="header">
 
                 <Navbar/>
+
                 <div className="color-container">
                     <figure><img src={rightColor} alt="right-color" className="right"/></figure>
                     <figure><img src={leftColor} alt="left-color" className="left"/></figure>
                 </div>
 
-                <div className="header-text">
-                        <div className="header-text-one">
-                        <h2>Heerlijk</h2>
-                        <br/>
-                    </div>
-
-                    <div className="header-text-two">
-                        <h2>Momentje</h2>
-                        <br/>
-                        <h2>Genieten!</h2>
-                    </div>
-                </div>
             </header>
 
             <image className="header-img-container">

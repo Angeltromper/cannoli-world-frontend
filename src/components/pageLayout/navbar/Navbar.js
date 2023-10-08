@@ -3,7 +3,6 @@ import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../../../assets/logo/Logo Cannoli.png";
 import './Navbar.css';
 import { AuthContext } from "../../../context/AuthContext";
-import Dropdown from "../navbar/Dropdown/Dropdown";
 
 function Navbar() {
 
@@ -25,12 +24,6 @@ function Navbar() {
 
             <div className="navbar-menu">
                 <NavLink to="/">Home</NavLink>
-                <Dropdown title="cannoli">
-                    <Dropdown to="/cannolisnack">cannoli snack</Dropdown>
-                    <Dropdown to="/cannoliglutenfree">cannoli glutenfree</Dropdown>
-                    <Dropdown to="/cannolivegan">cannoli vegan</Dropdown>
-                </Dropdown>
-
                 <NavLink to="/cannoli">Cannoli</NavLink>
 
                 <NavLink to="/giftbox">Giftbox</NavLink>

@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import pageImg from './../../assets/img.background/background contact.jpg';
 
-function Contact() {
+function Contact({headerImageHandler,pageTitleHandler}) {
+
+    useEffect(() => {
+        headerImageHandler (pageImg);
+        pageTitleHandler ();
+        }, [headerImageHandler, pageTitleHandler]);
+
+
 
     return (
         <div>

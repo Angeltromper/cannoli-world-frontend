@@ -1,0 +1,50 @@
+.cannoli-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+}
+
+.snacks {
+    color: #083e43;
+    margin: -14em 4em;
+    z-index: 5;
+}
+
+.glutenfree {
+    color: var(--text-intro-pink);
+    margin: 30em 4em;
+
+
+    z-index: 5;
+}
+
+.cannoli-flavours {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.cannoli-img {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 0 0 90%;
+    -ms-flex: 0 0 90%;
+    -webkit-box-flex: 0;
+    width: 25em;
+    max-width: 100%;
+    padding: 1em 1em;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 6;
+}
+
+.go-up-search-section {
+    width: 1.5em;
+    cursor: pointer;
+    align-self: center;
+}
+
+
