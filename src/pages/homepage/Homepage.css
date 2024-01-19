@@ -1,6 +1,5 @@
-.homepage {
+.homepage-container {
     background-color: white;
-    padding: 1rem;
     z-index: 14;
 }
 
@@ -87,9 +86,6 @@
 .select {
     width: 100%;
 }
-.search-query__section {
-
-}
 
 .search-result__go-up-icon {
     width: 1.5em;
@@ -101,7 +97,7 @@
     position: relative;
     top: 0;
     left: 0;
-    margin: -28em 0 16em auto;
+    margin: -7em 0 1em auto;
     border-left: 100vw solid transparent;
     border-bottom: 100px solid var(--background-color-light);
     z-index: 9;

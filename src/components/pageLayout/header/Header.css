@@ -57,7 +57,7 @@ header::after {
 .header-img {
     display: flex;
     width: 100%;
-    margin: 20em auto;
+    margin: 22em auto;
     z-index: 2;
 }
 

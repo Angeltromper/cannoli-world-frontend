@@ -1,5 +1,5 @@
-import React, {useEffect, useRef, useState} from 'react';
-import pageImg from "../../assets/img.header/homepage-background-2400x1100.jpg";
+import React, { useEffect, useRef, useState } from 'react';
+import pageImg from "../../assets/img.header/homepage-background-2400.jpg";
 import cannoliSnack from "./../../assets/img.background/background-cannoli-snack.png";
 import cannoliGlutenFree from "./../../assets/img.background/background cannoli-glutenfree.png";
 import cannoliVegan from "./../../assets/img.background/background cannoli vegan.png";

@@ -23,8 +23,8 @@ function Navbar() {
             </div>
 
             <div className="navbar-menu">
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/cannoli">Cannoli</NavLink>
+                <NavLink to="/" exact activeClassName="active-link">Home</NavLink>
+                <NavLink to="/cannoli" exact activeClassName="active-link">Cannoli</NavLink>
 
                 <NavLink to="/giftbox">Giftbox</NavLink>
 

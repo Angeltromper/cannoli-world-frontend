@@ -8,15 +8,13 @@
 
 .snacks {
     color: #083e43;
-    margin: -14em 4em;
+    margin: 8ch 2ch;
     z-index: 5;
 }
 
 .glutenfree {
     color: var(--text-intro-pink);
-    margin: 30em 4em;
-
-
+    margin: 20em 4em;
     z-index: 5;
 }
 

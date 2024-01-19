@@ -171,8 +171,8 @@ strong {
 .page-content {
     color: var(--text-intro-pink);
     display: flex;
-    height: 18em;
-    margin: -12em 0;
+    height: 1.5em;
+    margin: 2em 0;
     position: relative;
     justify-content: center;
     z-index: 5;
@@ -180,12 +180,12 @@ strong {
 
 .page-content-two h2 {
     color: var(--text-intro-pink);
-    height: 1ch;
+    height: 1.5ch;
 }
 
 .page-content-two h3 {
     color: var(--text-intro-pink);
-    height: 1ch;
+    height: 1.5ch;
 }
 
 .page-content-two {

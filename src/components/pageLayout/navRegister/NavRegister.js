@@ -1,41 +1,51 @@
+import React, { useContext } from 'react';
 import {NavLink} from "react-router-dom";
-import {useState} from "react";
-import {AiOutlineMenu} from "react-icons/ai";
-import logo from '../../../assets/logo/Logo Cannoli.png';
-import MobileNavbar from "../mobileNavbar/MobileNavbar";
+import AccountButton from "../../button/accountButton/AccountButton";
+import LogOutButton from "../../button/logoutButton/LogOutButton";
 import './NavRegister.css';
-import Navbar from "../navbar/Navbar";
+import { AuthContext } from "../../../context/AuthContext";
+
+
+
 
 function NavRegister() {
-    const [open, setOpen] = useState (false);
 
-    /* When the window is less than 992px, switch to hamburger menu. */
-    window.addEventListener ('resize', (event) => {
-        if (window.innerWidth> 992) {
-            setOpen (false);
-        }
-    });
+    const {isAuth} = useContext(AuthContext);
+
 
     return (
-        <div className="navRegister">
-            <div className="columns">
-                <NavLink to="/" className="logo-wrapper">
-                    <img className="logo" src={logo} alt="logo"/>
-                </NavLink>
-                <div className="desktop-navbar">
-                    <Navbar/>
+        <>
+            {isAuth === false ?
+
+                <div className="navbar__register-login">
+                    <NavLink to="/login" exact activeClassName="active-link">Inloggen</NavLink>
+                    <br/>
+
+                    <NavLink to="/register" exact activeClassName="active-link">
+                        <button type="button" className="navbar__button-register">Registreren</button>
+                    </NavLink>
                 </div>
-                <AiOutlineMenu
-                    className="hamburger"
-                    size="3rem"
-                    color="white"
-                    onClick={() => setOpen (!open)}
-                />
-            </div>
-        <MobileNavbar open={open}/>
-    </div>
+                :
+                <span className="login__account-button">
+                    <br/>
+
+                    <AccountButton/>
+                    <LogOutButton/>
+
+                </span>
+            }
+
+            </>
 
     );
 }
 
 export default NavRegister;
+
+
+
+
+
+
+
+
