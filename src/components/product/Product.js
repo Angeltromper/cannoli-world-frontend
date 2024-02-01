@@ -17,7 +17,7 @@ export const Product = (props) => {
             naam: props.productName,
             prijs: props.productPrice,
             url: props.url
-        }
+        };
 
         const exists = cart.find((x) => x.id === product.artikelnummer);
         if (exists) {
@@ -30,11 +30,11 @@ export const Product = (props) => {
         } else {
             setCart([...cart, {...product, qty: 1}]);
         }
-        localStorage.setItem(cart. JSON.stringify(cart));
+        localStorage.setItem (cart, JSON.stringify (cart));
     };
 
     function redirect() {
-        navigate.push( `products/${props.product_id}`)
+        navigate (`products/${props.product_id}`)
     }
 
     return (
@@ -52,7 +52,24 @@ export const Product = (props) => {
                                 onClick={addToCart}> +
                         </button>
                     </div>
+
                 </div>
+
+                <div className="container-imageButton">
+                    <div className="product-image">
+                        <img alt={props.fileName} src={props.url}/>
+                    </div>
+                </div>
+
+                <span className="container-textPrice">
+                    <span className="product-price">
+                        <p> € {props.productPrice.toFixed(2)} </p>
+                    </span>
+
+                    <span className="product-text">
+                        <h5> {props.productName} </h5>
+                    </span>
+                </span>
             </section>
         </>
     );

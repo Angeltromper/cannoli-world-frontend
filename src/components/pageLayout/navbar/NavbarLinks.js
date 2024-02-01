@@ -6,16 +6,19 @@ import { ReactComponent as Logo } from '../../../assets/logo/Logo.svg';
 import MobileNavbar from "../mobileNavbar/MobileNavbar";
 import { AiOutlineMenu } from "react-icons/ai";
 import '../navbar/Navbar.css'
+import '../../../App.css';
 
 function NavbarLinks() {
-    const[open, setOpen] = useState('');
+    const[open, setOpen] = useState(false);
 
-    /* When the window is less than 992px, switch to hamburger menu. */
-    window.addEventListener('resize', (event) => {
-        if (window.innerWidth > 992) {
-            setOpen (false);
+    /* When the window is less than 1050px, switch to hamburger menu. */
+    window.addEventListener('resize',() => {
+        if (window.innerWidth > 1050) {
+            setOpen(false)
+
         }
-    });
+    })
+
 
     return (
         <section className="navbar-link">
@@ -35,6 +38,16 @@ function NavbarLinks() {
                         color="black"
                         onClick={() => setOpen(!open)}
                     />
+
+                    <div className="navbar-hamburgermenu_container slide-bottom">
+                        <div className="navbar-desktop_container_links">
+                            <NavbarLinks/>
+                        </div>
+
+                        <div className="navbar-desktop_container_links_login">
+                            <NavRegister/>
+                        </div>
+                    </div>
                 </div>
 
             <MobileNavbar open={open}/>

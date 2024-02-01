@@ -1,0 +1,13 @@
+.orderlist-page-container {
+    display: flex;
+    background-color: #CEA71E;
+    box-shadow:var(--shadow-color);
+    padding: 1rem;
+}
+
+.orderlist-comment {
+    display: flex;
+    max-width: 18rem;
+    flex-direction: column;
+}
+

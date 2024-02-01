@@ -8,9 +8,8 @@ export const AuthContext = createContext({});
 
 
 
-
 function AuthContextProvider({children}) {
-    const [auth, toggleAuth] = useState ({
+    const [auth, toggleIsAuth] = useState ({
         isAuth: false,
         user: null,
         status:'pending',
@@ -26,7 +25,7 @@ function AuthContextProvider({children}) {
             getData (decodedToken.sub, token);
         } else {
             // als er geen token is doen we niks en zetten we de status op 'done'
-            toggleAuth ( {
+            toggleIsAuth ( {
                 isAuth: false,
                 user: null,
                 status: 'done',
@@ -43,7 +42,7 @@ function AuthContextProvider({children}) {
     function logout(e) {
         localStorage.clear ();
         e.preventDefault ();
-        toggleAuth ({
+        toggleIsAuth ({
             isAuth: false,
             user: null,
             status: 'done',
@@ -59,7 +58,7 @@ function AuthContextProvider({children}) {
                     "Authorization": `Bearer ${token}`,
                 }
             });
-            toggleAuth({
+            toggleIsAuth({
                 ...auth,
                 isAuth: true,
                 user: {
@@ -69,7 +68,7 @@ function AuthContextProvider({children}) {
                     roles: response.data.authorities[0].authority,
                     person_id: response.data.person.id,
                     person_firstname: response.data.person.personFirstname,
-                    person_lastname: response.data.person.person_lastname,
+                    person_lastname: response.data.person.personLastname,
                     person_street_name: response.data.person.personHouseNumber,
                     person_house_number: response.data.person.personHouseNumber,
                     person_house_number_add: response.data.person.personHouseNumberAdd,

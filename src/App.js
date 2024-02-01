@@ -1,7 +1,7 @@
 import {Route, Routes, useLocation} from "react-router-dom";
 import React, {useLayoutEffect, useState} from 'react'
-import {Cart} from "./components/cart/Cart";
 import headerImg from "../../cannoli-world-frontend-main/src/assets/img.header/homepage-background-2400.jpg";
+import {Cart} from "./components/cart/Cart";
 import Header from "./components/pageLayout/header/Header";
 import Homepage from "./pages/homepage/Homepage";
 import Dropdown from "./components/pageLayout/navbar/Dropdown/Dropdown";
@@ -15,18 +15,19 @@ import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
 import SearchCannoli from "./pages/searchCannoli/SearchCannoli";
 import SearchResult from "./pages/searchResult/SearchResult";
 import CannoliIngredient from "./components/cannoliIngredient/CannoliIngredient";
-import PrivateRoute from './components/pageLayout/route/PrivateRoute';
-import Profile from './pages/profile/Profile';
-import PrivacyPolicy from './pages/privacy/PrivacyPolicy';
-import SignIn from './pages/signIn/SignIn';
-import SignUp from './pages/signUp/SignUp';
+import Admin_UserInfo from "./components/admin/Admin_UserInfo";
+import PrivateRoute from "./components/pageLayout/route/PrivateRoute";
+import Profile from "./pages/profile/Profile";
+import PrivacyPolicy from "./pages/privacy/PrivacyPolicy";
+import SignIn from "./pages/signIn/SignIn";
+import SignUp from "./pages/signUp/SignUp";
 import Cart_DeliveryRequest from "./components/cart_DeliveryRequest/Cart_DeliveryRequest";
 import Info_Form from "./components/form/InfoForm"
-import Elements from './pages/elements/Elements';
-import FourZeroFour from './pages/404/FourZeroFour';
-import OrderList from './components/orderList/OrderList';
+import Elements from "./pages/elements/Elements";
+import FourZeroFour from "./pages/404/FourZeroFour";
+import OrderList from "./components/orderList/OrderList";
+import OrderLists from "./pages/orderLists/OrderLists";
 import './App.css';
-
 
 function App () {
     const [headerImage, setHeaderImage] = useState(headerImg);
@@ -41,12 +42,17 @@ function App () {
     }
 
     return (
+
         <Wrapper>
             <div className="container">
               <div className="inner-container__reusable default-area-padding default-text-restrict">
+
                   <Header headerImage={headerImage} pageTitle={pageTitle}/>
 
+
                   <Routes>
+
+
                       <Route path="/"
                              element={<Homepage headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
 
@@ -97,6 +103,9 @@ function App () {
                       <Route path="/404/"
                              element={<FourZeroFour headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
 
+                      <Route path="/admin-gebruikers/"
+                             element={<PrivateRoute><Admin_UserInfo headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/></PrivateRoute>}/>
+
                       <Route path="/checkout/"
                              element={<PrivateRoute><Cart headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/></PrivateRoute>}/>
 
@@ -106,6 +115,10 @@ function App () {
                       <Route path="/deliveryRequests/:deliveryRequest_id"
                              element={<PrivateRoute><OrderList headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/></PrivateRoute>}/>
 
+                      <Route path="/deliveryRequests/:deliveryRequest"
+                             element={<PrivateRoute><OrderLists headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/></PrivateRoute>}/>
+
+
                       <Route exact path="/users/:user_id"
                              element={<PrivateRoute><Info_Form headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/></PrivateRoute>}/>
 
@@ -114,6 +127,7 @@ function App () {
               </div>
           </div>
       </Wrapper>
+
   );
 }
 

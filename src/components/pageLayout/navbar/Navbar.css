@@ -121,45 +121,50 @@ button, header .btn-text::after {
     z-index: 4;
 }
 
+
 @media screen and (max-width: 1050px) {
 
     .navbar-menu {
         align-items: center;
         flex-basis: 12rem;
         flex-direction: column;
+        z-index: 999;
     }
 
     .navbar-link {
         justify-content: center;
     }
 
-    .navbar-link .navbar_logo {
+   .navbar_logo {
         display: flex;
         justify-content: center;
         width: 8rem;
     }
 
-    .navbar-link .navbar-fullscreen {
+   .navbar-fullscreen {
         display: none;
     }
 
-    .navbar-link .hamburger-menu {
+    .hamburger-menu {
         display: flex;
-        flex-direction: column;
-        width: 10rem;
-        cursor: pointer;
+        justify-content: flex-end;
+        align-items: center;
     }
 
+    .navbar-hamburgermenu_container {
+        display: flex;
+        width: 12rem;
+        flex-direction: column;
+    }
 
+    .navbar-desktop_container_links {
+        display: flex;
+        flex-direction: column;
+    }
 
-
-
-
-
-
-
-
-
+    .navbar-desktop_container_links_login {
+        display: none;
+    }
 
     .navbar__button-register {
         display: flex;

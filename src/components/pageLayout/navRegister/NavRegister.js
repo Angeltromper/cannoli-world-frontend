@@ -2,8 +2,9 @@ import React, { useContext } from 'react';
 import {NavLink} from "react-router-dom";
 import AccountButton from "../../button/accountButton/AccountButton";
 import LogOutButton from "../../button/logoutButton/LogOutButton";
-import './NavRegister.css';
 import { AuthContext } from "../../../context/AuthContext";
+import '../navbar/Navbar.css';
+import '../../../App.css';
 
 
 
@@ -19,6 +20,7 @@ function NavRegister() {
 
                 <div className="navbar__register-login">
                     <NavLink to="/login" exact activeClassName="active-link">Inloggen</NavLink>
+
                     <br/>
 
                     <NavLink to="/register" exact activeClassName="active-link">

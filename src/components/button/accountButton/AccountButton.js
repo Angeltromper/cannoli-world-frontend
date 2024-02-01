@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { ReactComponent as NavIcon } from '../../../assets/navIcon/account.svg';
-import 'AccountButton.css'
+import './AccountButton.css';
 
 
 function AccountButton() {
@@ -8,7 +8,7 @@ function AccountButton() {
     const navigate = useNavigate ();
 
     function redirect() {
-        navigate.push ('/persoonsgegevens')
+        navigate('/persoonsgegevens')
     }
 
     return (

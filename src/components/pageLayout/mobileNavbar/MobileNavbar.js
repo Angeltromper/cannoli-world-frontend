@@ -1,6 +1,6 @@
 import React from 'react';
 import './MobileNavbar.css';
-import NavbarLinks from "../navbar/NavbarLinks";
+import Navbar from "../navbar/Navbar";
 
 function MobileNavbar({open}) {
 
@@ -8,7 +8,7 @@ function MobileNavbar({open}) {
         <div className={`mobile-nav ${open ? 'active' : ''}`}>
             <div className="mobile-container">
                 <div className="nav-menu">
-                    <NavbarLinks/>
+                    <Navbar/>
                 </div>
             </div>
         </div>
