@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { NavLink } from "react-router-dom";
 import './Cannoli.css';
 import pageImg from './../../assets/img.background/background cannoli-snack.jpg';
 import snackVanille from "../../assets/img.cannoli-snack/Snack Vanille.png";
@@ -6,8 +7,6 @@ import snackLimoncello from "../../assets/img.cannoli-snack/Snack Limoncello.png
 import snackChampagne from "../../assets/img.cannoli-snack/Snack Champagne Proseco.png";
 import snackAmandel from "../../assets/img.cannoli-snack/Snack Mandorla Amandel.png";
 import snackCocos from "../../assets/img.cannoli-snack/Snack Cocos.png";
-
-
 import glutenfreePistacchio from "../../assets/img.cannoli-glutenfree/Glutenfree Pistacchio.png";
 import glutenfreeNocciola from "../../assets/img.cannoli-glutenfree/Glutenfree Nocciola (hazelnoot).png";
 import glutenfreeRicotta from "../../assets/img.cannoli-glutenfree/Glutenfree Ricotta.png";
@@ -20,17 +19,18 @@ import glutenfreeFruttidiBosco from "../../assets/img.cannoli-glutenfree/Glutenf
 import glutenfreeMandarino from "../../assets/img.cannoli-glutenfree/Glutenfree Mandarino (mandarijn).png";
 import goUp from "../../assets/navIcon/goUp.png";
 import HandleRef from "../../helpers/HandleRef";
-import { NavLink } from "react-router-dom";
+
 
 
 function Cannoli({headerImageHandler, pageTitleHandler})  {
 
     useEffect(() => {
-        headerImageHandler(pageImg);
+        headerImageHandler (pageImg);
         pageTitleHandler();
         }, [headerImageHandler, pageTitleHandler]);
 
     const refSearch = useRef(null);
+
     return (
         <div className="cannoli-container">
             <div className="inner-container__reusable">
@@ -64,8 +64,8 @@ function Cannoli({headerImageHandler, pageTitleHandler})  {
                     </div>
                 </div>
 
-                <img alt="go-up-search-section" src={goUp} onClick={() => HandleRef(refSearch)}/>
-                <div className="search-result__go-up-icon"/>
+                <img alt="go-up-search-section" src={goUp} onClick={() => HandleRef(refSearch)}
+                     className= "search-result__go-up-icon"/>
             </div>
         </div>
     );

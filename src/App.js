@@ -15,6 +15,8 @@ import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
 import SearchCannoli from "./pages/searchCannoli/SearchCannoli";
 import SearchResult from "./pages/searchResult/SearchResult";
 import CannoliIngredient from "./components/cannoliIngredient/CannoliIngredient";
+import Admin_ProductAdded from "./components/admin/Admin_ProductAdded";
+import Admin_ProductEdit from "./components/admin/Admin_ProductEdit";
 import Admin_UserInfo from "./components/admin/Admin_UserInfo";
 import PrivateRoute from "./components/pageLayout/route/PrivateRoute";
 import Profile from "./pages/profile/Profile";
@@ -39,7 +41,7 @@ function App () {
             document.documentElement.scrollTo(0, 0);
             }, [location.pathname]);
         return children
-    }
+    };
 
     return (
 
@@ -85,6 +87,7 @@ function App () {
 
                       <Route path="/cannoliIngredient"
                              element={<CannoliIngredient headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
+
                       <Route path="/profile/"
                              element={<PrivateRoute><Profile headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/></PrivateRoute>}/>
 
@@ -102,6 +105,12 @@ function App () {
 
                       <Route path="/404/"
                              element={<FourZeroFour headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
+
+                      <Route path="/admin-toevoegen product/"
+                             element={<PrivateRoute><Admin_ProductAdded headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/></PrivateRoute>}/>
+
+                      <Route path="/admin-productinfo/"
+                             element={<PrivateRoute><Admin_ProductEdit headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/></PrivateRoute>}/>
 
                       <Route path="/admin-gebruikers/"
                              element={<PrivateRoute><Admin_UserInfo headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/></PrivateRoute>}/>

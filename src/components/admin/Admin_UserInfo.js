@@ -1,33 +1,20 @@
 import React, { useContext, useEffect, useState } from 'react';
-import {useNavigate} from "react-router-dom";
 import './Admin_UserInfo.css';
+import {ReactComponent as Delete} from "../../assets/navIcon/delete.svg";
 import {AuthContext} from "../../context/AuthContext";
 import axios from "axios";
 
 
-function error() {
-
-}
-
-function Delete() {
-    return null;
-}
-
 function Admin_UserInfo(username) {
-    const history = useNavigate();
+    const [users, setUsers] = useState([]);
+    const [isAdmin, setIsAdmin] = useState (false);
+    const [adminInput, setAdminInput] = useState ([]);
     const token = localStorage.getItem ('token');
     const {user} = useContext (AuthContext);
 
-    const [isAdmin, setIsAdmin] = useState (false);
-    const [users, setUsers] = useState ([]);
-    const [, setAdminInput] = useState ([]);
-
-    history.push = function() {
-
-    };
 
     useEffect(() => {
-        async function fetchAdmin() {
+        async function fetchData() {
             try {
                 const response = await axios.get(`http://localhost:8080/users/${username}/`,
                     {
@@ -50,7 +37,7 @@ function Admin_UserInfo(username) {
             }
         }
 
-        fetchAdmin ();
+        fetchData ();
         }, [isAdmin, token]);
 
     async function deleteUser(username) {
@@ -80,9 +67,9 @@ function Admin_UserInfo(username) {
                         }
                     }
                 );
-                setUsers (response.data)
+                setUsers(response.data)
 
-            } catch (errors) {
+            } catch (error) {
                 console.error ('There was an error!', error);
             }
         }

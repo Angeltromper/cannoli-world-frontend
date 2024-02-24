@@ -39,10 +39,8 @@
     z-index: 6;
 }
 
-.go-up-search-section {
+.search-result__go-up-icon {
     width: 1.5em;
     cursor: pointer;
     align-self: center;
 }
-
-

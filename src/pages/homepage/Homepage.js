@@ -9,7 +9,7 @@ import SearchButton from "./../../components/button/searchButton/SearchButton";
 import TextContainer from "../../components/pageLayout/designElement/container/textContainer/TextContainer";
 import TextContainerResp from "../../components/pageLayout/designElement/container/textContainerResp/TextContainerResp";
 import HandleRef from "./../../helpers/HandleRef";
-import goUp from"./../../assets/navIcon/goUp.png";
+import goUp from "./../../assets/navIcon/goUp.png";
 import './Homepage.css';
 
 function Homepage ({headerImageHandler, pageTitleHandler}) {
@@ -29,8 +29,8 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
             <div className="inner-container__reusable">
                 <div className="search-query__section" ref={refSearch}>
 
-                        <TextContainer>
-                            <h1>Welkom op de site van Cannoli World</h1>
+                    <TextContainer>
+                        <h1>Welkom op de site van Cannoli World</h1>
                         </TextContainer>
 
                     <div className="inner-container__reusable default-area-padding default-text-restrictor">

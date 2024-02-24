@@ -6,10 +6,8 @@ import axios from "axios";
 
 export const AuthContext = createContext({});
 
-
-
 function AuthContextProvider({children}) {
-    const [auth, toggleIsAuth] = useState ({
+    const [isAuth, toggleIsAuth] = useState ({
         isAuth: false,
         user: null,
         status:'pending',
@@ -59,7 +57,7 @@ function AuthContextProvider({children}) {
                 }
             });
             toggleIsAuth({
-                ...auth,
+                ...isAuth,
                 isAuth: true,
                 user: {
                     username: response.data.username,
@@ -89,15 +87,15 @@ function AuthContextProvider({children}) {
 
 
     const contextData = {
-        "auth": auth.isAuth,
+        "auth": isAuth.isAuth,
         "login": login,
         "logout": logout,
-        "user": auth.user,
+        "user": isAuth.user,
     };
 
     return (
         <AuthContext.Provider value={contextData}>
-            {auth.status === 'done' ? children : <h2>Ogenblik geduld alstublieft...</h2>}
+            {isAuth.status === 'done' ? children : <h2>Ogenblik geduld alstublieft...</h2>}
         </AuthContext.Provider>
     );
 }
