@@ -1,7 +1,9 @@
 import {Route, Routes, useLocation} from "react-router-dom";
+
 import React, {useLayoutEffect, useState} from 'react'
 import headerImg from "../../cannoli-world-frontend-main/src/assets/img.header/homepage-background-2400.jpg";
 import {Cart} from "./components/cart/Cart";
+import NavbarLinks from "./components/pageLayout/navbar/NavbarLinks";
 import Header from "./components/pageLayout/header/Header";
 import Homepage from "./pages/homepage/Homepage";
 import Dropdown from "./components/pageLayout/navbar/Dropdown/Dropdown";
@@ -31,6 +33,7 @@ import OrderList from "./components/orderList/OrderList";
 import OrderLists from "./pages/orderLists/OrderLists";
 import './App.css';
 
+
 function App () {
     const [headerImage, setHeaderImage] = useState(headerImg);
     const [pageTitle, setPageTitle] = useState();
@@ -44,8 +47,8 @@ function App () {
     };
 
     return (
-
         <Wrapper>
+
             <div className="container">
               <div className="inner-container__reusable default-area-padding default-text-restrict">
 
@@ -53,10 +56,11 @@ function App () {
 
 
                   <Routes>
-
-
                       <Route path="/"
                              element={<Homepage headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
+
+                      <Route path="/NavbarLinks"
+                             element={<NavbarLinks headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
 
                       <Route path="/dropdownMenu"
                              element={<Dropdown headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
@@ -127,16 +131,14 @@ function App () {
                       <Route path="/deliveryRequests/:deliveryRequest"
                              element={<PrivateRoute><OrderLists headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/></PrivateRoute>}/>
 
-
                       <Route exact path="/users/:user_id"
                              element={<PrivateRoute><Info_Form headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/></PrivateRoute>}/>
 
                       </Routes>
                   <Footer/>
               </div>
-          </div>
-      </Wrapper>
-
+            </div>
+        </Wrapper>
   );
 }
 

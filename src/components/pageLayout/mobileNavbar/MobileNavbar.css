@@ -1,78 +1,24 @@
+
+
 .mobile-nav {
-    background: var(--background-color-light-mobile);
-    background: linear-gradient(180deg, var(--background-color-light-mobile) 0%, var(--background-color-light-mobile) 25%, var(--background-color-mobile) 100%); ;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
-    transform: translateY(-100%);
-    transition: all 0.15s ease-in-out;
-}
-
-.mobile-nav.active {
-    transform: translateY(0%);
-}
-
-.mobile-nav .nav-menu {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-block: 2.5rem;
-    gap: 1 rem;
-}
-
-.mobile-nav .nav-menu a {
-    color: black;
-    display: inline-block;
+    background-color: purple;
     position: relative;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-.mobile-nav a:after {
-    background-color: black;
-    content: "";
-    position: absolute;
-    display: block;
     width: var(--menu-bar-width);
     height: var(--menu-bar-height);
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: all 0.35s ease-in-out;
+    z-index: 99;
+    transition: all 500ms ease-in-out;
 }
 
-.mobile-nav a:hover:after {
-    background-color: black;
-    content: "";
-    position: absolute;
+.mobile-nav::before,
+.mobile-nav::after {
     display: block;
+    background-color: white;
+    position: absolute;
+    content: "";
     width: var(--menu-bar-width);
     height: var(--menu-bar-height);
-    left: 0;
-    right: 0;
-    bottom: 0;
     transition: all 0.35s ease-in-out;
+    z-index: 99;
 }
 
-/*--------------------- Media-queries -----------------*/
 
-@media screen and (max-width: 1050px) {
-
-    body {
-        font-family: 'Roboto', sans-serif;
-        font-size: 1em;
-    }
-
-    body a {
-        color: black;
-    }
-
-    a,
-    a:visited,
-    a:link {
-        text-decoration: none;
-        color: var(--text-dark-mobile);
-    }
-}

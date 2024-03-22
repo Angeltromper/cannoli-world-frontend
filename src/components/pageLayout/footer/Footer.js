@@ -1,3 +1,5 @@
+
+
 import React, { useContext, useRef } from 'react';
 import {NavLink} from "react-router-dom";
 import {AuthContext} from "../../../context/AuthContext";
@@ -7,8 +9,7 @@ import TwoColumn from "../designElement/column/TwoColumn";
 import mail from "../../../assets/navIcon/mail.png";
 import phone from "../../../assets/navIcon/phone.png";
 import './Footer.css';
-import goUp from "../../../assets/navIcon/goUp.png";
-import HandleRef from "../../../helpers/HandleRef";
+
 
 function Footer() {
 
@@ -31,19 +32,23 @@ function Footer() {
                             <li><NavLink to="/contact">Contact</NavLink></li>
                             <li><NavLink to="/account">Account</NavLink></li>
 
-                            {isAuth ? <li><NavLink to="/inloggen">Uitloggen</NavLink></li> : <li><NavLink to="/inloggen">Inloggen</NavLink></li>}
-                            {isAuth && <li><NavLink to="/profiel">Profiel</NavLink></li>}
+                            { isAuth ? <li><NavLink to="/inloggen">Uitloggen</NavLink></li> :
+                                <li><NavLink to="/inloggen">Inloggen</NavLink></li> }
+                            { isAuth && <li><NavLink to="/profiel">Profiel</NavLink></li> }
                         </ul>
                     </div>
                 </Column>
 
                 <Column>
-                    <div className= "footer-contact">
+                    <div className="footer-contact">
                         <h3>contact</h3>
                         <ul>
-                            <figure><img src={mail} alt="mail" className="mail"/><NavLink to="mail">srruffino@outlook.com</NavLink></figure>
-                            <figure><img src={phone} alt="phone" className="phone"/><NavLink to="phone">SR.Ruffino:(+31)620940691</NavLink></figure>
-                            <figure><img src={phone} alt="phone" className="phone"/><NavLink to="phone">E.Jongh Visscher:(+31)648889093</NavLink></figure>
+                            <figure><img src={ mail } alt="mail" className="mail"/><NavLink
+                                to="mail">srruffino@outlook.com</NavLink></figure>
+                            <figure><img src={ phone } alt="phone" className="phone"/><NavLink
+                                to="phone">SR.Ruffino:(+31)620940691</NavLink></figure>
+                            <figure><img src={ phone } alt="phone" className="phone"/><NavLink to="phone">E.Jongh
+                                Visscher:(+31)648889093</NavLink></figure>
                         </ul>
                     </div>
 

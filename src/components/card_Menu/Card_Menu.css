@@ -1,0 +1,19 @@
+.card__menu-container {
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: .4em;
+    overflow: hidden;
+    box-shadow: var(--shadow-color);
+
+
+
+}
+
+.card__menu-image {
+
+}
+
+.text__menu-container {
+
+}
+
