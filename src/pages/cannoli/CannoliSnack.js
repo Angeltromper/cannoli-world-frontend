@@ -1,62 +1,56 @@
-import React, { useEffect, useState } from "react";
-import './CannoliSnack.css';
-import axios from "axios";
-import { Product } from "../../components/index";
+import React, { useEffect, useRef, useState } from "react";
+import pageImg from './../../assets/img.background/background cannoli-snack.jpg';
+import snackvanille from "../../assets/img.cannoli-snack/Snack Vanille.png";
+import snacklimoncello from "../../assets/img.cannoli-snack/Snack Limoncello.png";
+import snackchampagne from "../../assets/img.cannoli-snack/Snack Champagne Proseco.png";
+import snackamandel from "../../assets/img.cannoli-snack/Snack Mandorla Amandel.png";
+import snackcocos from "../../assets/img.cannoli-snack/Snack Cocos.png";
+import goUp from "../../assets/navIcon/goUp.png";
+import HandleRef from "../../helpers/HandleRef";
+import Card from "../../components/card_Menu/Card";
+import './Cannoli.css';
 
-
-
-function CannoliSnack() {
-    const [cannoliSnack, setCannoliSnack] = useState([]);
+function CannoliSnack({headerImageHandler, pageTitleHandler})  {
 
     useEffect(() => {
-        async function fetchCannoliSnack(e)  {
-            try {
-                const response = await axios.get ('http://localhost:8080/products/');
+        headerImageHandler (pageImg);
+        pageTitleHandler();
+    }, [headerImageHandler, pageTitleHandler]);
 
-                setCannoliSnack (response.data);
-
-            } catch (e) {
-                console.error(e);
-            }
-        }
-        fetchCannoliSnack();
-    }, []);
+    const [cannoliQuery, setCannoliQuery] = useState("");
+    const refSearch = useRef(null);
 
     return (
-        <>
-            <section className="cannoliSnack-container">
+        <div className="cannoli-container">
 
-                <h2> Cannoli Snack </h2>
 
-                <div className="product-container">
+            <div>
+                <h2>Almond Cannoli (glutenvrij)</h2>
+            </div>
 
-                    {cannoliSnack.map((product) => {
-                        if (product.productType === 'Cannoli')
+            <div className="cards-container">
 
-                            return (
-                                product.picture !== null ?
+                <Card image={ snackvanille } imageAlt="cannoli nocciola" title="Nocciola" content="Almond Cannoli is een
+                         glutenvrije cannoli"/>
+                <Card image={ snacklimoncello } imageAlt="cannoli ricotta" title="Ricotta" content="Almond Cannoli is een
+                         glutenvrije cannoli"/>
+                <Card image={ snackchampagne } imageAlt="cannoli cioccolatonero" title="Donkere Chocolade" content="Almond Cannoli is een
+                         glutenvrije cannoli"/>
+                <Card image={ snackamandel } imageAlt="cannoli limoncello" title="Limoncello" content="Almond Cannoli is een
+                         glutenvrije cannoli"/>
+                <Card image={ snackcocos } imageAlt="cannoli tiramisu" title="Tiramisu" content="Almond Cannoli is een
+                         glutenvrije cannoli"/>
+            </div>
 
-                                    <Product key={product.id}
 
-                                             url={product.picture.url}
-                                             product_id={product.id}
-                                             productName={product.productName}
-                                             productPrice={product.price}
-                                    />
-                                    :
-                                    <Product key={product.id}
+            <img alt="go-up-search-section" src={ goUp } onClick={ () => HandleRef (refSearch) }
+                 className="search-result__go-up-icon"/>
 
-                                             product_id{product.id}
-                                             productName={product.productName}
-                                             productPrice={product.price}
-                                    />
-                            )
-                    })}
-
-                </div>
-            </section>
-        </>
+        </div>
     );
 }
 
 export default CannoliSnack;
+
+
+

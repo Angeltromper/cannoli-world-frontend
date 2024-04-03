@@ -8,6 +8,7 @@ import MobileNavbar from "../mobileNavbar/MobileNavbar";
 function NavbarLinks() {
     const [open,  setOpen] = useState (false);
 
+
     /* When the window is less than 1050, switch to hamburger menu. */
     window.addEventListener( 'resize', () => {
         if (window.innerWidth > 992) {

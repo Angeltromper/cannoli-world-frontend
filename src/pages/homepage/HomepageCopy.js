@@ -11,26 +11,16 @@ import TextContainerResp from "../../components/pageLayout/designElement/contain
 import HandleRef from "./../../helpers/HandleRef";
 import goUp from "./../../assets/navIcon/goUp.png";
 import './Homepage.css';
-import { Link, useNavigate } from "react-router-dom";
-
 
 function Homepage ({headerImageHandler, pageTitleHandler}) {
-
-    const navigate = useNavigate()
 
     useEffect(() => {
         headerImageHandler(pageImg);
         pageTitleHandler();
-        }, [headerImageHandler, pageTitleHandler]);
+    }, [headerImageHandler, pageTitleHandler]);
 
     const [cannoliQuery, setCannoliQuery] = useState("");
     const refSearch = useRef(null);
-
-    function handleSelect(e){
-        setCannoliQuery(e.target.value)
-        navigate(`/${e.target.value}`)
-        console.log('test')
-    }
 
     return (
 
@@ -41,64 +31,61 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
 
                     <TextContainer>
                         <h1>Welkom op de site van Cannoli World</h1>
-                        </TextContainer>
+                    </TextContainer>
 
                     <div className="inner-container__reusable default-area-padding default-text-restrictor">
                         <div>
                             <section id="intro" className="intro-container">
                                 <br/>
-                                    <h5>Graag willen wij de liefde voor Italië en de overheerlijke lekkernijen met u delen.We nemen u mee op reis.</h5>
-                                    <h5><strong>De reis begint hier:<em> "hoe de liefde voor cannoli is ontstaan"</em></strong></h5>
-                                    <h5><strong><em>Italië</em></strong> een land vol prachtige dorpjes en <strong><em>"heerlijke"</em></strong> gerechten. Het prachtige gardameer,</h5>
-                                    <h5>vrolijke huisjes, bergen en wijnheuvels. <strong><em>Italië</em></strong> een land met een geschiedenis.</h5>
-                                    <h5>De liefde voor Italië is ontstaan door het velen reizen door mooie gebieden van het land.</h5>
-                                    <br/>
-                                    <br/>
-                                    <h5>Banketbakkerijen met de overheerlijke cannoli's. De bekende cannoli met ricotta.</h5><h5>De smaakmogelijkheden zouden oneindig moeten zijn.</h5>
-                                    <h5>Dit in een nieuw cannoli jasje alleen wel in de goede smaak combinatie.</h5>
-                                    <br/>
-                                    <br/>
-                                    <h5>Door de ervaringen en de Italiaanse banketbakkerij zijn wij toen begonnen met het</h5>
-                                    <h5>opzetten van een breed assortiment van verkoop van verse cannoli's.</h5>
+                                <h5>Graag willen wij de liefde voor Italië en de overheerlijke lekkernijen met u delen.We nemen u mee op reis.</h5>
+                                <h5><strong>De reis begint hier:<em> "hoe de liefde voor cannoli is ontstaan"</em></strong></h5>
+                                <h5><strong><em>Italië</em></strong> een land vol prachtige dorpjes en <strong><em>"heerlijke"</em></strong> gerechten. Het prachtige gardameer,</h5>
+                                <h5>vrolijke huisjes, bergen en wijnheuvels. <strong><em>Italië</em></strong> een land met een geschiedenis.</h5>
+                                <h5>De liefde voor Italië is ontstaan door het velen reizen door mooie gebieden van het land.</h5>
+                                <br/>
+                                <br/>
+                                <h5>Banketbakkerijen met de overheerlijke cannoli's. De bekende cannoli met ricotta.</h5>
+                                <h5>De smaakmogelijkheden zouden oneindig moeten zijn.</h5>
+                                <h5>Dit in een nieuw cannoli jasje alleen wel in de goede smaak combinatie.</h5>
+                                <br/>
+                                <br/>
+                                <h5>Door de ervaringen en de Italiaanse banketbakkerij zijn wij toen begonnen met het</h5>
+                                <h5>opzetten van een breed assortiment van verkoop van verse cannoli's.</h5>
                             </section>
                         </div>
                     </div>
                     <br/>
                     <image className="cannoli-image">
-                            <figure><img src={cannoliSnack} alt="cannoli-snack" className="cannoli-img"/></figure>
-                            <figure><img src={cannoliGlutenFree} alt="cannoli-glutenfree" className="cannoli-img"/></figure>
-                            <figure><img src={cannoliVegan} alt="cannoli-vegan" className="cannoli-img"/></figure>
-                            <figure><img src={cannoliGiftbox} alt="cannoli-giftbox" className="cannoli-img"/></figure>
-                            <figure><img src={cannoliFranchise} alt="cannoli-franchise" className="cannoli-img"/></figure>
+                        <figure><img src={cannoliSnack} alt="cannoli-snack" className="cannoli-img"/></figure>
+                        <figure><img src={cannoliGlutenFree} alt="cannoli-glutenfree" className="cannoli-img"/></figure>
+                        <figure><img src={cannoliVegan} alt="cannoli-vegan" className="cannoli-img"/></figure>
+                        <figure><img src={cannoliGiftbox} alt="cannoli-giftbox" className="cannoli-img"/></figure>
+                        <figure><img src={cannoliFranchise} alt="cannoli-franchise" className="cannoli-img"/></figure>
                     </image>
 
                     <div className="product-container">
-
                         <fieldset>
                             <label htmlFor="search-by-cannoli-snack">
                                 <select
                                     id="search-by-cannoli-snack"
                                     className="input-field__reusable input-field__select-information"
-                                    onChange={ handleSelect }
-                                    defaultValue='DEFAULT'
+                                    value={cannoliQuery}
+                                    onChange={(e ) => setCannoliQuery(e.target.value)}
                                 >
-                                    <option disabled value='DEFAULT'>-- choose one option --</option>
-                                    <option value="cannolisnack">Cannoli snack</option>
-                                    <option value="cannolisnack">Cannoli snack ingredient</option>
+                                    <option value="Cannoli Snack" >Cannoli snack</option>
+                                    <option value="Cannoli Snack ingredient">Cannoli snack ingredient</option>
                                     <option value="Cannoli Snack prijslijst">Cannoli snack prijslijst</option>
                                 </select>
                             </label>
                         </fieldset>
-
-
 
                         <fieldset>
                             <label htmlFor="search-by-cannoli-glutenfree">
                                 <select
                                     id="search-by-cannoli-glutenfree"
                                     className="input-field__reusable input-field__select-information"
-                                    value={ cannoliQuery }
-                                    onChange={ (e) => setCannoliQuery (e.target.value) }
+                                    value={cannoliQuery}
+                                    onChange={(e) => setCannoliQuery(e.target.value)}
                                 >
                                     <option value="Cannoli GlutenFree">Cannoli glutenvrij</option>
                                     <option value="Cannoli GlutenFree ingredient">Cannoli glutenvrij ingredient</option>
@@ -107,30 +94,30 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                             </label>
                         </fieldset>
 
-
-
+                        <fieldset>
                             <label htmlFor="search-by-cannoli-vegan">
                                 <select
                                     id="search-by-cannoli-vegan"
                                     className="input-field__reusable input-field__select-information"
-                                    value={ cannoliQuery }
-                                    onChange={ (e) => setCannoliQuery (e.target.value) }
+                                    value={cannoliQuery}
+                                    onChange={(e) => setCannoliQuery(e.target.value)}
                                 >
                                     <option value="Cannoli Vegan">Cannoli vegan</option>
                                     <option value="Cannoli Vegan ingredient">Cannoli vegan ingredient</option>
                                     <option value="Cannoli Vegan prijslijst">Cannoli vegan prijslijst</option>
                                 </select>
                             </label>
+                        </fieldset>
 
                         <fieldset>
                             <label htmlFor="search-by-giftbox">
                                 <select
                                     id="search-by-giftbox"
                                     className="input-field__reusable input-field__select-information"
-                                    value={ cannoliQuery }
-                                    onChange={ (e) => setCannoliQuery (e.target.value) }
+                                    value={cannoliQuery}
+                                    onChange={(e) => setCannoliQuery(e.target.value)}
                                 >
-                                    <option value="Giftbox">Giftbox</option>
+                                    <option value="Giftbox" >Giftbox</option>
                                     <option value="Giftbox prijslijst">Giftbox prijslijst</option>
                                 </select></label>
                         </fieldset>
@@ -140,8 +127,8 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                                 <select
                                     id="search-by-franchise"
                                     className="input-field__reusable input-field__select-information"
-                                    value={ cannoliQuery }
-                                    onChange={ (e) => setCannoliQuery (e.target.value) }
+                                    value={cannoliQuery}
+                                    onChange={(e) => setCannoliQuery(e.target.value)}
                                 >
                                     <option value="Franchise">Franchise</option>
                                     <option value="Franchise informatie">Franchise informatie</option>
@@ -152,14 +139,11 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                     <br/>
 
                     <SearchButton
-                        onClick={ () => HandleRef (refSearch) }
+                        onClick={() => HandleRef(refSearch)}
                         type="submit"
                         text="zoeken"
                     />
                 </div>
-
-
-
 
                 <TextContainerResp>
                     <h3>We nemen u verder mee op reis:<em>"geschiedenis over de oorsprong van de cannoli"</em></h3>
@@ -167,17 +151,13 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                     <h4>De geschiedenis over de oorsprong van de cannoli is waarschijnlijk een mix van alle legendes en
                         overtuigingen verzamelden doorgegeven door de eeuwen heen.
                         <em><strong>"Twee daarvan zijn de legendes" </strong></em>die vertellen over de oorsprong van
-                        de cannoli. Beide van hen het eens over één ding: vrouwen zijn achter hun schepping die
-                        plaatsvond
+                        de cannoli. Beide van hen het eens over één ding: vrouwen zijn achter hun schepping die plaatsvond
                         in of rond de stad Caltanissetta</h4>
 
                     <h3><strong><em>Het eerste verhaal:</em></strong></h3>
-                    <h4>Brengt ons in de harem van een Arabische prins, tijdens de Arabische overheersing van het
-                        eiland.Men zegt dat de concubines van
-                        de emir gebak bakken als afleiding, onder hen, een cilinder-vorm pastei geval gevuld met
-                        ricotta, amandelen en honing.
-                        De Arabische oorsprong van de cannoli wordt ondersteund door het feit dat de stad Capitalises
-                        historisch verbonden is met de
+                    <h4>Brengt ons in de harem van een Arabische prins, tijdens de Arabische overheersing van het eiland.Men zegt dat de concubines van
+                        de emir gebak bakken als afleiding, onder hen, een cilinder-vorm pastei geval gevuld met ricotta, amandelen en honing.
+                        De Arabische oorsprong van de cannoli wordt ondersteund door het feit dat de stad Capitalises historisch verbonden is met de
                         aanwezigheid van de Moren in Sicilië, zoals blijkt uit de
                         naam zelf, die voorkomt uit "kalf el nissa", een Arabische locatie die "vrouwenkasteel"betekent.
                         Interessant, gezien de legende is gevestigd in een
@@ -212,13 +192,5 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
 
 
 export default Homepage;
-
-
-
-
-
-
-
-
 
 

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../../../assets/logo/Logo Cannoli.png";
 import { AuthContext } from "../../../context/AuthContext";
@@ -21,14 +21,11 @@ function Navbar() {
                 </div>
 
                 <div className="navbar-menu">
-
                     <NavLink to="/" exact activeClassName="active-link">Home</NavLink>
                     <NavLink to="/cannoli" exact activeClassName="active-link">Cannoli</NavLink>
                     <NavLink to="/giftbox" exact activeClassName="active-link">Giftbox</NavLink>
 
-                    <NavLink to="/logo">
-                        <figure><img src={ logo } alt="logo" className="logo"/></figure>
-                    </NavLink>
+                    <NavLink to="/logo"><figure><img src={ logo } alt="logo" className="logo"/></figure></NavLink>
 
                     <NavLink to="/service" exact activeClassName="active-link">Service</NavLink>
                     <NavLink to="/franchise" exact activeClassName="active-link">Franchise</NavLink>

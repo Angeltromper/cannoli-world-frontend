@@ -82,8 +82,6 @@
     width: 6em;
 }
 
-
-
 button, header button:visited {
     background-color: var(--button-color);
     color: var(--text-intro-white);
@@ -113,6 +111,32 @@ button, header .btn-text::after {
     margin-left: 0.5em;
     content: "";
     transform: translateX(0.2em);
+}
+
+.search-by-flavour {
+    display: inline-block;
+    background-color: #083e43;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 18;
+}
+
+.dropdown-content a {
+    display: block;
+    color: white;
+    text-align: left;
+    text-decoration: none;
+    padding:12px, 18px;
+    float: none;
 }
 
 .skewer--bottom {

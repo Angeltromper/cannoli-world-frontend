@@ -1,12 +1,10 @@
 import {Route, Routes, useLocation} from "react-router-dom";
-
 import React, {useLayoutEffect, useState} from 'react'
 import headerImg from "../../cannoli-world-frontend-main/src/assets/img.header/homepage-background-2400.jpg";
 import {Cart} from "./components/cart/Cart";
 import NavbarLinks from "./components/pageLayout/navbar/NavbarLinks";
 import Header from "./components/pageLayout/header/Header";
 import Homepage from "./pages/homepage/Homepage";
-import Dropdown from "./components/pageLayout/navbar/Dropdown/Dropdown";
 import Footer from "./components/pageLayout/footer/Footer";
 import Cannoli from "./pages/cannoli/Cannoli";
 import Giftbox from "./pages/giftbox/Giftbox";
@@ -32,11 +30,13 @@ import FourZeroFour from "./pages/404/FourZeroFour";
 import OrderList from "./components/orderList/OrderList";
 import OrderLists from "./pages/orderLists/OrderLists";
 import './App.css';
+import CannoliSnack from "./pages/cannoli/CannoliSnack";
 
 
 function App () {
     const [headerImage, setHeaderImage] = useState(headerImg);
     const [pageTitle, setPageTitle] = useState();
+
 
     const Wrapper = ({ children }) => {
         const location = useLocation();
@@ -62,11 +62,11 @@ function App () {
                       <Route path="/NavbarLinks"
                              element={<NavbarLinks headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
 
-                      <Route path="/dropdownMenu"
-                             element={<Dropdown headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
-
                       <Route path="/cannoli"
                              element={<Cannoli headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
+
+                      <Route path="/cannolisnack"
+                      element={<CannoliSnack headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
 
                       <Route path="/giftbox"
                              element={<Giftbox headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>

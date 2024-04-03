@@ -1,20 +1,22 @@
 .cannoli-container {
     display: flex;
-    width: 100%;
     align-items: center;
-    position: relative;
-    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 2em;
+    gap: 2em;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    margin: 3em auto;
+    max-width: 1200px;
+    gap: 2em;
 }
 
 .snacks {
     color: #083e43;
     margin: 8ch 2ch;
-    z-index: 5;
-}
-
-.glutenfree {
-    color: var(--text-intro-pink);
-    margin: 20em 4em;
     z-index: 5;
 }
 
@@ -44,3 +46,5 @@
     cursor: pointer;
     align-self: center;
 }
+
+
