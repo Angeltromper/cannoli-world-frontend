@@ -1,70 +1,202 @@
-# Getting Started with Create React App
+![cannoli-world](src/assets/logo/Logo%20Cannoli.png "cannoli-world logo")
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Cannoli-world webapplicatie/ 2022-2023 / Novi College / Eindopdracht Full Stack Developer
+Dit is het frontend gedeelte voor mijn webapplicatie "cannoli-world".
 
-## Available Scripts
+## Inhoudsopgave
+1. Inleiding
+2. Applicatie starten
+3. Mappen (documenten / applicaties)
+4. Gebruikers / Rollen
 
-In the project directory, you can run:
+### Inleiding
+Cannoli-world-frontend is een onderdeel van het project backend
 
-### `npm start`
+**Mijn Github voor de BACK-END vind je**  [hier](https://github.com/Angeltromper/cannoli-world-backend)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Mijn Github voor de FRONT-END vind je** [hier](https://github.com/Angeltromper/cannoli-world-frontend)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Clonen van de repository voor het frontend gedeelte van de webapplicatie "cannoli-world-frontend"
+- HTTPS: `https://github.com/angeltr/cannoli-world-frontend.git`
+- SSH:   `git@github.com:angeltr/cannoli-world-frontend.git`
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Applicatie starten
 
-### `npm run build`
+Dit project is opgezet met React.
+Na het clonen van het project naar jouw locale machine, installeer je als eerst de **node_modules**
+door het volgende commando in de terminal te runnen:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Stap 1.
+***npm install***
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Na het installeren kan de applicatie gestart worden met behulp van:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Stap 2.
+***npm start***
 
-### `npm run eject`
+Stap 3.
+Open daarna http://localhost:3000 om de pagina in de browser te bekijken.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+###Mappen
+*documenten / applicaties*
+```
+src
+└── assets
+|    └── icons
+|        ├── Facebook-logo-clipart-2.png
+|        ├── Instagram-clipart.png
+|        └── Twitter-clipart.png 
+|    └── image
+|        ├── IMG-2022-Cappuccino.jpg
+|        └──   "      (alle afbeeldingen van 20 verschillende cannoli smaken)
+|              "              
+|              "             
+|            etc.
+|    └── logo    
+|        └── Logo Cannoli.png
+|    └── screenshots     
+|   
+└── components
+|    └── back
+|        ├── BackLink.js
+|        └── Back-module.css   
+|    └── buttons
+|        ├── Button.js
+|        └── Button-module.css   
+|    └── contactForm
+|        ├── ContactForm.js
+|        └── ContactForm-module.css    
+|    └── formErrorMessage
+|        ├── FormErrorMessage.js
+|        └── FormErrorMessage-module.css    
+|    └── formLink
+|        ├── FormLink.js
+|        └── FormLink-module.css
+|    └── formSubmit
+|        ├── FormSubmit.js
+|        └── FormSubmit-module.css
+|    └── inputField
+|        └── InputField.js
+|    └── loginForm
+|        ├── LoginForm.js
+|        └── LoginForm-module.css
+|    └── loginGoogle
+|        ├── LoginGoogle.js
+|        └── LoginGoogle-module.css
+|    └── mobileNavigation
+|        ├── MobileNavigation.js
+|        └── MobileNavigation-module.css
+|    └── navBar
+|        └── icons
+|           ├── NavBar.js
+|           └── NavBar-module.css
+|    └── navPageTitle
+|        ├── NavPageTitle.js
+|        └── NavPageTitle-module.css
+|    └── pageItems
+|        └── footer
+|           ├── Footer.js
+|           └── Footer-module.css
+|        └── header
+|           ├── Header.js
+|           └── Header-module.css
+|        └── pageDesignElements
+|           └── bookmarkBox
+|               ├── BookmarkBox.js
+|               └── BookmarkBox-module.css
+|           └── textContainer
+|               └── TextContainer.js
+|        └── route
+|           ├── PrivateRoute.js
+|           └── PublicRoute.js
+|     └── product
+|           └── cannoli
+|               └── Cannoli.js
+|           └── packaging
+|               ├── Packaging.js
+|               └── Packaging.module-css
+|     └── tile
+|           └── Tile.js
+|     └── titleAndDescription
+|           ├── TitleAndDescription.js
+|           └── TitleAndDescription.module-css
+└── context
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+└── pages
+|    └── contact
+|        ├── Contact.js
+|        └── Contact-module.css
+|    └── home
+|        ├── Homepage.js
+|        └── Home-module.css
+|    └── profile
+|        ├── Profile.js
+|        └── Profile-module.css
+|    └── tabel
+|        ├── Tabel.js
+|        └── Tabel-module.css
+└── stylesheet
+|    ├── Base.css
+|    ├── Form.css
+|    ├── Grid.css
+|    ├── Hamburger.css
+|    ├── Reset.css
+|    └── Typography.css
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+|    └── navigation
+|        └── Navigation.js
+|    └── privateroute
+|        └── PrivateRoute.js
+|    └── products
+|        └── Product.js
+|    └── tile
+|        └── Tilet.js  
+└── context  
+|    └── AuthContext.js
+└── pages
+|    ├── Advertisement.js
+|    ├── ArticleOne.js
+|    ├── ArticleTwo.js
+|    ├── Compare.js
+|    ├── Contact.js   
+|    ├── Home.js   
+|    ├── Login.js 
+|    ├── Profile.js    
+|    ├── Register.js   
+|    ├── SignIn.js 
+|    ├── SignUp.js    
+|    └── ViewPage.js
 
-### Code Splitting
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+###Gebruikers & Rollen
 
-### Analyzing the Bundle Size
+De gebruiker kan:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Registreren met ***E-MAIL ADRES*** en ***WACHTWOORD***
+2. Inloggen met ***GOOGLE***
+3. Bij voorkeur kan er een testaccount worden gebruikt.
+4. Testen en runnen van de applicatie door gebruik van ***ADMIN_ROLE*** en ***USER_ROLE***
 
-### Making a Progressive Web App
+Emailadres: novi@test.nl  
+Wachtwoord: 123123
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**ADMIN_ROLE**
+- Gebruikersnaam: admin
+- Wachtwoord: .........
 
-### Advanced Configuration
+**USER_ROLE**
+- Gebruikersnaam: .........
+- Wachtwoord: ..........
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+###### Eindopdracht Full-Stack Developer NOVI College / Angelique Tromper / Copyright © 2022-2023 Cannoli-world/ Alle rechten voorbehouden.

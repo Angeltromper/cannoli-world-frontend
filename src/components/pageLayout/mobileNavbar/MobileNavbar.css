@@ -1,0 +1,24 @@
+
+
+.mobile-nav {
+    background-color: purple;
+    position: relative;
+    width: var(--menu-bar-width);
+    height: var(--menu-bar-height);
+    z-index: 99;
+    transition: all 500ms ease-in-out;
+}
+
+.mobile-nav::before,
+.mobile-nav::after {
+    display: block;
+    background-color: white;
+    position: absolute;
+    content: "";
+    width: var(--menu-bar-width);
+    height: var(--menu-bar-height);
+    transition: all 0.35s ease-in-out;
+    z-index: 99;
+}
+
+

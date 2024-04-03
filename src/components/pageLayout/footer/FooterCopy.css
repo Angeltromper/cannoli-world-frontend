@@ -1,0 +1,120 @@
+
+/*
+.footer-container {
+    background: #150A06;
+    background: linear-gradient(180deg, var(--background-color) 100%, var(--background-color-dark) 40%, var(--background-color-dark) 0%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-shrink: 1;
+    flex-grow: 0;
+    margin-bottom: 0, auto;
+}
+
+.footer {
+    width: 100%;
+    position: revert;
+    font-size: 14px;
+    justify-content: space-around;
+    flex-wrap: wrap ;
+    padding: 0 0;
+    z-index: 8;
+}
+
+.footer-text__section-list h3 {
+    text-transform: uppercase;
+    margin-left: -1em;
+    max-width: 10ch;
+}
+
+.footer-text__section-list {
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-transform: none;
+    font: 12px;
+    width: 100%;
+    height: 0.1em;
+    margin: 1em 0;
+    padding: 8em;
+}
+
+.footer-text-section__contact h3 {
+    text-transform: uppercase;
+}
+
+.footer-text-section__contact {
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-transform: none;
+    width: 100%;
+    height: 0.1em;
+    margin: 1em 0;
+    padding: 8em;
+}
+
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 20ch;
+}
+
+.footer.logo {
+    width: 6em;
+    padding: 1em;
+    transform: rotate(-1.3deg);
+}
+
+
+.footer-text-section__newsletter {
+    color: var(--text-light);
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+}
+
+.button {
+    color: var(--background-color-light);
+    background-color: var(--button-color);
+    font-size: 10px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 5px 8px 4px rgba(0, 0, 0, .2);
+    padding: 10px 10px;
+    margin: 10px 0;
+}
+
+.footer-color {
+    display: flex;
+    width: 100%;
+    z-index: 5;
+}
+
+.footer-color .right {
+    margin: 1.5em -30em;
+}
+
+.footer-color .left {
+    margin: -10em 48em;
+}
+
+
+.skewer--top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 100px solid var(--background-color-light);
+    border-right: 100vw solid transparent;
+    z-index: 10;
+}
+*/
+
