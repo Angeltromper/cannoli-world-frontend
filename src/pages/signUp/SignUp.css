@@ -1,0 +1,139 @@
+.form-register {
+    display: flex;
+    background-color: rgba(255, 235, 205, 0.47);
+    border-radius: 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 2rem 1em 2rem 1rem;
+    padding: 3rem;
+    min-width: 600px;
+    justify-content: space-between;
+    gap: 0.5em;
+    flex-grow: 1;
+    z-index: 10;
+}
+
+.register {
+    display: flex;
+    width: 100%;
+    margin: 2rem 1em 2rem 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeout-succes {
+    display: flex;
+    flex-direction: row-reverse;
+    color: black;
+    justify-content: center;
+    text-align: center;
+    max-width: 40rem;
+    min-height: 10rem;
+    margin: auto;
+}
+
+.timeout-succes a {
+    font-style: normal;
+}
+
+.timeout-succes h1 {
+    margin: 2rem;
+}
+
+a {
+    transform: scale(1.05);
+    transition: transform 250ms ease-in;
+}
+
+a, a:visited {
+    color: white;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.button-register {
+    display: flex;
+    color: white;
+}
+
+.form-register
+input [type="text"],
+input [type="email"],
+input [type="password"],
+button,
+textarea {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    width: min-content;
+    padding: 0.2rem 0.7rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+.user {
+    padding: 20px;
+    width: 500px;
+    border-radius: 1em;
+}
+
+.email {
+    padding: 20px;
+    width: 500px;
+    border-radius: 1em;
+}
+
+.password {
+    padding: 20px;
+    width: 500px;
+    border-radius: 1em;
+}
+
+.confirm {
+    padding: 20px;
+    width: 500px;
+    border-radius: 1em;
+}
+
+.instructions {
+    background: none;
+    color: var(--text-intro-pink);
+    font-size: 1rem;
+    padding: 0.30rem;
+    position: relative;
+    bottom: -5px;
+}
+
+button.form-button {
+    width: 100%;
+}
+
+.form-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.akkoord-registratie {
+    display: flex;
+}
+
+/*Keyframes*/
+
+.succes-slide-down {
+    -webkit-animation: succes-slide-bottom 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+    animation: succes-slide-bottom 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+}
+
+@-webkit-keyframes succes-slide-down {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translatey(0);
+    }
+    100% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+    }
+}

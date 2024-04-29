@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export function ButtonGroup({children}) {
     return (
-        <div className="button">
+        <div className="button-group">
             {children}
         </div>
     );

@@ -1,10 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import pageImg from './../../assets/img.background/background giftbox.jpg';
-import './Giftbox.css';
 import goUp from "../../assets/navIcon/goUp.png";
 import HandleRef from "../../helpers/HandleRef";
 import TextContainer from "../../components/pageLayout/designElement/container/textContainer/TextContainer";
-
+import './Giftbox.css';
 
 function Giftbox({headerImageHandler, pageTitleHandler}) {
 

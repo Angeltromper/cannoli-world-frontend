@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import pageImg from "../../assets/img.header/homepage-background-2400.jpg";
 import cannoliSnack from "./../../assets/img.background/background-cannoli-snack.png";
 import cannoliGlutenFree from "./../../assets/img.background/background cannoli-glutenfree.png";
@@ -11,7 +12,6 @@ import TextContainerResp from "../../components/pageLayout/designElement/contain
 import HandleRef from "./../../helpers/HandleRef";
 import goUp from "./../../assets/navIcon/goUp.png";
 import './Homepage.css';
-import { Link, useNavigate } from "react-router-dom";
 
 
 function Homepage ({headerImageHandler, pageTitleHandler}) {

@@ -204,6 +204,18 @@ strong {
     animation: slide-bottom 1s cubic-bezier(0.230, 2.000, 0.320, 1.000) both;
 }
 
+
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
 @-webkit-keyframes slide-bottom {
     0% {
         -webkit-transform: translateY(-100px);
@@ -225,8 +237,6 @@ strong {
         transform: translateY(10px);
     }
 }
-
-
 
 
 /*--------------------- 4.Media-queries -----------------*/

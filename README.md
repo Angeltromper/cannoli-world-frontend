@@ -169,7 +169,7 @@ src
 |    ├── Home.js   
 |    ├── Login.js 
 |    ├── Profile.js    
-|    ├── Register.js   
+|    ├── SignUp.js   
 |    ├── SignIn.js 
 |    ├── SignUp.js    
 |    └── ViewPage.js

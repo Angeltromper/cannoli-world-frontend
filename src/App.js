@@ -29,8 +29,9 @@ import Elements from "./pages/elements/Elements";
 import FourZeroFour from "./pages/404/FourZeroFour";
 import OrderList from "./components/orderList/OrderList";
 import OrderLists from "./pages/orderLists/OrderLists";
-import './App.css';
+import FooterNav from "./components/pageLayout/footerNav/FooterNav";
 import CannoliSnack from "./pages/cannoli/CannoliSnack";
+import './App.css';
 
 
 function App () {
@@ -47,6 +48,7 @@ function App () {
     };
 
     return (
+
         <Wrapper>
 
             <div className="container">
@@ -54,19 +56,18 @@ function App () {
 
                   <Header headerImage={headerImage} pageTitle={pageTitle}/>
 
-
                   <Routes>
                       <Route path="/"
                              element={<Homepage headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
 
-                      <Route path="/NavbarLinks"
+                      <Route path="/"
                              element={<NavbarLinks headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
 
                       <Route path="/cannoli"
                              element={<Cannoli headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
 
                       <Route path="/cannolisnack"
-                      element={<CannoliSnack headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
+                             element={<CannoliSnack headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
 
                       <Route path="/giftbox"
                              element={<Giftbox headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
@@ -106,6 +107,9 @@ function App () {
 
                       <Route path="/design elements/"
                              element={<Elements headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
+
+                      <Route patch="/footer-nav"
+                             element={<FooterNav headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
 
                       <Route path="/404/"
                              element={<FourZeroFour headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
