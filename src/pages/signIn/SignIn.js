@@ -2,7 +2,7 @@ import React, {useContext, useEffect, useState} from 'react';
 import { useForm } from "react-hook-form";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
-import pageImg from "../../../src/assets/img.background/background signin.png";
+import pageImg from "../../../src/assets/img.background/Background header 3.jpg";
 import axios from "axios";
 import SignInButton from "../../components/button/signinButton/SignInButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -66,68 +66,69 @@ function SignIn({headerImageHandler, pageTitleHandler}) {
         <>
             {!isAuth ?
                 <div className="page-login">
-                    <h1 className="legend">Inloggen</h1>
                     <form className="form-login"
-                      onSubmit={handleSubmit(signIn)}>
+                          onSubmit={ handleSubmit (signIn) }>
 
-                    <label htmlFor="details-username">
-                        Gebruikersnaam:
-                        <input
-                            type="text"
-                            id="details-username"
-                            {...register ("username", {
-                                required: "gebruikersnaam is verplicht!",
-                            }) }
-                            aria-invalid={ validName ? "false" : "true"}
-                            placeholder="gebruikersnaam"
-                        />
-                    </label>
-                    {errors.username && <p>{ errors.username.message }</p> }
-                    <br/>
+                        <h2 className="legend">Inloggen</h2>
+                        <br/>
 
-                    <label htmlFor="details-password">
-                        Wachtwoord:
-                        <input
-                            type="password"
-                            id="details-password"
-                            { ...register ("password", {
-                                required: "wachtwoord is verplicht!"
-                            })}
-                            aria-invalid={ validPassword ? "false" : "true" }
-                            placeholder="wachtwoord"
-                        />
+                        <label htmlFor="details-username">
+                            Gebruikersnaam:
+                            <input
+                                className="details-username"
+                                type="text"
+                                id="details-username"
+                                { ...register ("text", {
+                                    required: "gebruikersnaam is verplicht!",
+                                }) }
+                                aria-invalid={ validName ? "false" : "true" }
+                                placeholder="gebruikersnaam"
+                            />
+                        </label>
+                        { errors.username && <p>{ errors.username.message }</p> }
+                        <br/>
 
-                    </label>
-                    {errors.password && <p>{errors.password.message}</p>}<br/>
+                        <label htmlFor="details-password">
+                            Wachtwoord:
+                            <input
+                                className="details-password"
+                                type="password"
+                                id="details-password"
+                                { ...register ("password", {
+                                    required: "wachtwoord is verplicht!"
+                                }) }
+                                aria-invalid={ validPassword ? "false" : "true" }
+                                placeholder="wachtwoord"
+                            />
 
-                    <div className="error-inlog">
-                        {error && "Er ging iets mis, controleer uw gegevens en probeer het later nog een keer."}
-                    </div>
+                        </label>
+                        { errors.password && <p>{ errors.password.message }</p> }
+                        <br/>
 
-                    <SignInButton
-                        disabled={!validPassword || !validName}/>
+                        <div className="error-inlog">
+                            { error && "Er ging iets mis, controleer uw gegevens en probeer het later nog een keer." }
+                        </div>
+
+                        <SignInButton
+                            disabled={ !validPassword || !validName }/>
 
 
-                </form>
-
-                <section className="page-content">
-                    Heeft u nog geen account? <br/>
-
-                    <span className="line">
-                         <NavLink to="/registreren" exact activeClassName="active-link">Registreer</NavLink>
-                    </span>
-                </section>
+                        <section className="form-footer">
+                            Heeft u nog geen account?<br/>
+                            <span className="line">
+                                <NavLink to="/registreren" exact activeClassName="active-link">Registreer</NavLink>
+                            </span>
+                        </section>
+                    </form>
                 </div>
-
                 :
                 <span className="timeout-succes-signin succes-slide-bottom">
-                    <h2>Inloggen succesvol! <FontAwesomeIcon icon={faCheck} className="valid-green-check"/></h2>
+                    <h2>Inloggen succesvol! <FontAwesomeIcon icon={faCheck} className="valid-check"/></h2>
                     <h5>U bent succesvol ingelogd<br/> en wordt automatisch doorgestuurd..</h5>
                     <p>Mocht u niet automatisch doorgestuurd worden<br/>
                     <NavLink to="/persoonsgegevens" exact activeClassName="active-link">klik dan hier!</NavLink>
                     </p>
                 </span>
-
             }
             </>
     )

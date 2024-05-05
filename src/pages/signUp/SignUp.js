@@ -1,11 +1,10 @@
 import React, {useRef, useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import {faCheck, faTimes, faInfoCircle} from "@fortawesome/free-solid-svg-icons";
-import pageImg from '../../assets/img.background/background registration.png';
+import pageImg from '../../assets/img.background/Background header 3.jpg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import './SignUp.css';
-
 
 const userRegex = /^[A-z][A-z0-9-_]{4,12}$/;
 const passwordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,24}$/;
@@ -29,9 +28,9 @@ function SignUp({headerImageHandler, pageTitleHandler}) {
     const [validPassword, setValidPassword] = useState(false);
     const [passwordFocus, setPasswordFocus] = useState(false);
 
-    const [matchPassword, setMatchPassword] = useState ('');
-    const [validMatch, setValidMatch] = useState(false);
-    const [matchFocus, setMatchFocus] = useState(false);
+    const [repeat, setRepeat] = useState ('');
+    const [validRepeat, setValidRepeat] = useState(false);
+    const [repeatFocus, setRepeatFocus] = useState(false);
 
     const [errorMessage, setErrorMessage] = useState ('');
     const [succes, setSuccess] = useState (false);
@@ -52,8 +51,8 @@ function SignUp({headerImageHandler, pageTitleHandler}) {
 
     useEffect (() => {
         setValidPassword(passwordRegex.test(password));
-        setValidMatch (password === matchPassword);
-    }, [password, matchPassword]);
+        setValidRepeat (password === repeat);
+    }, [password, repeat]);
 
     useEffect (() => {
         setValidEmail(emailRegex.test(email));
@@ -61,7 +60,7 @@ function SignUp({headerImageHandler, pageTitleHandler}) {
 
     useEffect (() => {
         setErrorMessage ('');
-    }, [user, password, matchPassword, email]);
+    }, [user, password, repeat, email]);
 
     const handleSubmit = async (e) => {
         e.preventDefault ();
@@ -92,7 +91,7 @@ function SignUp({headerImageHandler, pageTitleHandler}) {
             if(!error?.response) {
                 setErrorMessage ('Geen server response');
             } else if (error.response?.status === 409) {
-                setErrorMessage('Registratie is mislukt.. Gebruikersnaam en/of emal is al in gebruik!')
+                setErrorMessage('Registratie is mislukt.. Gebruikersnaam en/of email is al in gebruik!')
             }
             errorRef.current.focus();
         }
@@ -113,144 +112,155 @@ function SignUp({headerImageHandler, pageTitleHandler}) {
 
             ) : (
 
-                 <section className="register flip-2-hor-top-1">
-                     <p ref={ errorRef } className={ errorMessage ? 'error-message' : 'offscreen' } aria-live="assertive">
+                <section className="register flip-2-hor-top-1">
+                    <p ref={ errorRef } className={ errorMessage ? 'error-message' : 'offscreen' }
+                       aria-live="assertive">
                         { errorMessage }</p>
-                    <h2>Registreren</h2>
-                     <form className="form-register"
-                           onSubmit={ handleSubmit }>
 
-                         <label htmlFor="user">
-                             Gebruikersnaam:
-                             <FontAwesomeIcon icon={ faCheck } className={ validName ? "valid" : "hide" }/>
-                             <FontAwesomeIcon icon={ faTimes } className={ validName || !user ? "hide" : "invalid" }/>
-                         </label>
+                    <form className="form-register"
+                          onSubmit={ handleSubmit }>
 
-                         <input
-                             type="text"
-                             className="user"
-                             id="user"
-                             ref={ userRef }
-                             autoComplete="off"
-                             onChange={ (e) => setUser(e.target.value) }
-                             value={user}
-                             required
-                             aria-invalid={ validName ? "false" : "true" }
-                             aria-describedby="usernamenote"
-                             onFocus={() => setUserFocus (true)}
-                             onBlur={() => setUserFocus (false)}
-                         />
+                        <h2>Registreren</h2>
+                        <br/>
 
-                         <p id="uidnote" className={ userFocus && !validName ? "instructions" : "offscreen" }>
-                             <FontAwesomeIcon icon={ faInfoCircle }/>
-                             <em>4 tot 12 karakters. <br/>
-                                 Moet met een letter beginnen.<br/>
-                                 Letters, cijfers, underscore, middenstreep zijn toegestaan.</em>
-                             <br/>
-                         </p>
+                        <label htmlFor="user">
+                            Gebruikersnaam:
+                            <FontAwesomeIcon icon={ faCheck } className={ validName ? "valid" : "hide" }/>
+                            <FontAwesomeIcon icon={ faTimes } className={ validName || !user ? "hide" : "invalid" }/>
+                        </label>
 
+                        <input
+                            type="text"
+                            className="user"
+                            id="user"
+                            ref={ userRef }
+                            autoComplete="off"
+                            onChange={ (e) => setUser (e.target.value) }
+                            value={ user }
+                            required
+                            aria-invalid={ validName ? "false" : "true" }
+                            aria-describedby="usernamenote"
+                            onFocus={ () => setUserFocus (true) }
+                            onBlur={ () => setUserFocus (false) }
+                        />
 
-                         <label htmlFor="email">
-                             E-mail:
-                             <FontAwesomeIcon icon={ faCheck } className={ validEmail ? "valid" : "hide" }/>
-                             <FontAwesomeIcon icon={ faTimes } className={ validEmail || !email ? "hide" : "invalid" }/>
-                         </label>
+                        <p id="uidnote" className={ userFocus && !validName ? "instructions" : "offscreen" }>
+                            <FontAwesomeIcon icon={ faInfoCircle }/>
+                            <em>4 tot 12 karakters. <br/>
+                                Moet met een letter beginnen.<br/>
+                                Letters, cijfers, underscore, middenstreep zijn toegestaan.</em>
+                        </p>
+                        <br/>
 
-                         <input
-                             type="e-mail"
-                             className="email"
-                             id="email"
-                             onChange={ (e) => setEmail(e.target.value) }
-                             value={ email }
-                             required
-                             aria-invalid={ validEmail ? "false" : "true" }
-                             aria-describedby="emailnote"
-                             onFocus={ () => setEmailFocus (true) }
-                             onBlur={ () => setEmailFocus (false) }
-                         />
-
-                         <p id="emailnote"
-                            className={ emailFocus && !validEmail ? "instructions" : "offscreen" }>
-                             <FontAwesomeIcon icon={ faInfoCircle }/>
-                             <em>Dit veld mag niet leeg zijn!</em>
-                         </p>
+                        <label htmlFor="email">
+                            E-mail:
+                            <FontAwesomeIcon icon={ faCheck } className={ validEmail ? "valid" : "hide" }/>
+                            <FontAwesomeIcon icon={ faTimes } className={ validEmail || !email ? "hide" : "invalid" }/>
+                        </label>
 
 
-                         <label htmlFor="password">
-                             Wachtwoord:
-                             <FontAwesomeIcon icon={ faCheck } className={ validPassword ? "valid" : "hide" }/>
-                             <FontAwesomeIcon icon={ faTimes } className={ validPassword || !password ? "hide" : "invalid" }/>
-                         </label>
+                        <input
+                            type="e-mail"
+                            className="email"
+                            id="email"
+                            onChange={ (e) => setEmail (e.target.value) }
+                            value={ email }
+                            required
+                            aria-invalid={ validEmail ? "false" : "true" }
+                            aria-describedby="emailnote"
+                            onFocus={ () => setEmailFocus (true) }
+                            onBlur={ () => setEmailFocus (false) }
+                        />
 
-                         <input
-                             type="password-user"
-                             className="password"
-                             id="password"
-                             onChange={ (e) => setPassword(e.target.value) }
-                             value={ password }
-                             required
-                             aria-invalid={ validPassword ? "false" : "true" }
-                             aria-describedby="password-note"
-                             onFocus={ () => setPasswordFocus (true) }
-                             onBlur={ () => setPasswordFocus (false) }
-                         />
-
-                         <p id="password-note"
-                            className={ passwordFocus && !validPassword ? "instructions" : "offscreen" }>
-                             <FontAwesomeIcon icon={ faInfoCircle }/>
-                             <em>8 tot 24 karakters.<br/>
-                                 Moet een hoofd en klein letter, cijfer plus een speciaal teken bevatten.<br/>
-                                 De toegestane speciale tekens zijn: <span aria-label="exclamation mark">!</span>
-                                 <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span>
-                                 <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span></em>
-                         </p>
-
-                         <label htmlFor="confirm">
-                             Herhaal wachtwoord:
-                             <FontAwesomeIcon icon={ faCheck } className={ validMatch ? "valid" : "hide" }/>
-                             <FontAwesomeIcon icon={ faTimes } className={ validMatch || !matchPassword ? "hide" : "invalid" }/>
-                         </label>
-
-                         <input
-                             type="confirm-password"
-                             className="confirm"
-                             id="confirm"
-                             onChange={ (e) => setMatchPassword(e.target.value) }
-                             value={ matchPassword }
-                             required
-                             aria-invalid={ setValidEmail ? "false" : "true" }
-                             aria-describedby="confirm-note"
-                             onFocus={ () => setMatchFocus (true) }
-                             onBlur={ () => setMatchFocus (false) }
-                         />
-
-                         <p id="confirmnote" className={ matchFocus && !validMatch ? "instructions" : "offscreen" }>
-                             <FontAwesomeIcon icon={ faInfoCircle }/>
-                             <em>Wachtwoorden moeten overeenkomen.</em>
-                         </p>
+                        <p id="emailnote"
+                           className={ emailFocus && !validEmail ? "instructions" : "offscreen" }>
+                            <FontAwesomeIcon icon={ faInfoCircle }/>
+                            <em>Dit veld mag niet leeg zijn!</em>
+                        </p>
+                        <br/>
 
 
-                         <button
-                             type="submit"
-                             className="button-register"
-                             disabled={ !validName || !validPassword || !validMatch || !validEmail }>Registreren
-                         </button>
-                     </form>
+                        <label htmlFor="password">
+                            Wachtwoord:
+                            <FontAwesomeIcon icon={ faCheck } className={ validPassword ? "valid" : "hide" }/>
+                            <FontAwesomeIcon icon={ faTimes }
+                                             className={ validPassword || !password ? "hide" : "invalid" }/>
+                        </label>
 
-                     <div className="akkoord-registratie">
-                         <h4>Door te registreren ga ik akkoord met de algemene voorwaarden <br/>
-                             en het privacybeleid</h4>
-                     </div>
+                        <input
+                            type="password-user"
+                            className="password"
+                            id="password"
+                            onChange={ (e) => setPassword (e.target.value) }
+                            value={ password }
+                            required
+                            aria-invalid={ validPassword ? "false" : "true" }
+                            aria-describedby="password-note"
+                            onFocus={ () => setPasswordFocus (true) }
+                            onBlur={ () => setPasswordFocus (false) }
+                        />
 
-                     <div className="form-footer">
-                         Heeft u al een account?<br/>
+                        <p id="password-note"
+                           className={ passwordFocus && !validPassword ? "instructions" : "offscreen" }>
+                            <FontAwesomeIcon icon={ faInfoCircle }/>
+                            <em>8 tot 24 karakters.<br/>
+                                Moet een hoofd en klein letter, cijfer plus een speciaal teken bevatten.<br/>
+                                De toegestane speciale tekens zijn: <span aria-label="exclamation mark">!</span>
+                                <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span>
+                                <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span></em>
+                        </p>
+                        <br/>
 
-                         <span className="inline">
-                             <NavLink to="/login" exact activeClassName="active-link">Inloggen</NavLink>
-                         </span>
-                     </div>
-                 </section>
-            )}
+                        <label htmlFor="repeat">
+                            Herhaal wachtwoord:
+                            <FontAwesomeIcon icon={ faCheck } className={ validRepeat ? "valid" : "hide" }/>
+                            <FontAwesomeIcon icon={ faTimes }
+                                             className={ validRepeat || !repeat ? "hide" : "invalid" }/>
+                        </label>
+
+                        <input
+                            type="repeat-password"
+                            className="repeat"
+                            id="repeat"
+                            onChange={ (e) => setRepeat (e.target.value) }
+                            value={ repeat }
+                            required
+                            aria-invalid={ validRepeat ? "false" : "true" }
+                            aria-describedby="repeat-note"
+                            onFocus={ () => setRepeatFocus (true) }
+                            onBlur={ () => setRepeatFocus (false) }
+                        />
+
+                        <p id="repeat-note"
+                           className={ repeatFocus && !validRepeat ? "instructions" : "offscreen" }>
+                            <FontAwesomeIcon icon={ faInfoCircle }/>
+                            <em>Wachtwoorden moeten overeenkomen.</em>
+                        </p>
+
+
+                        <button
+                            type="submit"
+                            className="button-register"
+                            disabled={ !validName || !validPassword || !validRepeat || !validEmail }>Registreren
+                        </button>
+
+                        <div className="akkoord-registratie">
+                            <h4>Door te registreren ga ik akkoord met de algemene voorwaarden <br/>
+                                en het privacybeleid</h4>
+                        </div>
+
+
+                        <section className="form-footer">
+                            Heeft u al een account?<br/>
+                            <span className="line">
+                                 <NavLink to="/login" exact activeClassName="active-link">Log hier in!</NavLink>
+                             </span>
+                        </section>
+                    </form>
+
+
+                </section>
+            ) }
         </>
     );
 }
