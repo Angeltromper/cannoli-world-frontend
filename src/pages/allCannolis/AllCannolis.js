@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import {Button} from "../../components/button/button/Button";
+import {Button} from "../../components/button/Button";
 import './AllCannolis.css';
 import {getDownloadURL, ref} from "firebase/storage";
 import {storage} from "../../firebase-config";

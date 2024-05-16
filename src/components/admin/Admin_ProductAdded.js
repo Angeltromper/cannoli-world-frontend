@@ -3,7 +3,7 @@ import { useFormContext } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import axios from "axios";
-import SaveButton from "../button/saveButton/SaveButton";
+import Button from "../button/Button";
 import {ReactComponent as Delete} from "../../assets/navIcon/delete.svg";
 import './Admin_ProductAdded.css';
 
@@ -210,7 +210,7 @@ function Admin_ProductAdded() {
                                 <br/>
 
                                 <div className="product-form-saveButton">
-                                    <SaveButton/>
+                                    <Button/>
                                 </div>
                             </div>
                         </form>

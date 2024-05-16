@@ -4,7 +4,6 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import pageImg from "../../../src/assets/img.background/Background header 3.jpg";
 import axios from "axios";
-import SignInButton from "../../components/button/signinButton/SignInButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import './SignIn.css';
@@ -109,8 +108,11 @@ function SignIn({headerImageHandler, pageTitleHandler}) {
                             { error && "Er ging iets mis, controleer uw gegevens en probeer het later nog een keer." }
                         </div>
 
-                        <SignInButton
-                            disabled={ !validPassword || !validName }/>
+                        <button
+                            type="submit"
+                            className="button-inlog"
+                            disabled={ !validName || !validPassword }>Inloggen
+                        </button>
 
 
                         <section className="form-footer">
@@ -123,7 +125,7 @@ function SignIn({headerImageHandler, pageTitleHandler}) {
                 </div>
                 :
                 <span className="timeout-succes-signin succes-slide-bottom">
-                    <h2>Inloggen succesvol! <FontAwesomeIcon icon={faCheck} className="valid-check"/></h2>
+                    <h2>Inloggen succesvol! <FontAwesomeIcon icon={ faCheck } className="valid-check"/></h2>
                     <h5>U bent succesvol ingelogd<br/> en wordt automatisch doorgestuurd..</h5>
                     <p>Mocht u niet automatisch doorgestuurd worden<br/>
                     <NavLink to="/persoonsgegevens" exact activeClassName="active-link">klik dan hier!</NavLink>

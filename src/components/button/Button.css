@@ -1,4 +1,4 @@
-.search-button__reusable {
+.button__reusable {
     background-color: var(--button-color);
     color: var(--text-intro-white);
     box-shadow: 0 5px 8px 4px rgba(0, 0, 0, .2);
@@ -18,3 +18,4 @@
     color: #1AE216;
     box-shadow: var(--dropshadow);
 }
+

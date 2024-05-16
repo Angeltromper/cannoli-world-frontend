@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button} from "../button/button/Button";
+import {Button} from "../button/Button";
 
 
 function RedirectArea({text, buttonText, buttonVariation, buttonUrl}) {

@@ -6,7 +6,7 @@ import cannoliGlutenFree from "./../../assets/img.background/background cannoli-
 import cannoliVegan from "./../../assets/img.background/background cannoli vegan.png";
 import cannoliGiftbox from "./../../assets/img.background/background giftbox.png";
 import cannoliFranchise from "./../../assets/img.background/background-franchise.png";
-import SearchButton from "./../../components/button/searchButton/SearchButton";
+import Button from "./../../components/button/Button";
 import TextContainer from "../../components/pageLayout/designElement/container/textContainer/TextContainer";
 import TextContainerResp from "../../components/pageLayout/designElement/container/textContainerResp/TextContainerResp";
 import HandleRef from "./../../helpers/HandleRef";
@@ -151,14 +151,12 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                     </div>
                     <br/>
 
-                    <SearchButton
+                    <Button
                         onClick={ () => HandleRef (refSearch) }
                         type="submit"
                         text="zoeken"
                     />
                 </div>
-
-
 
 
                 <TextContainerResp>
@@ -187,7 +185,7 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                     <h4>Werden cannoli voor het eerst gemaakt in een klooster in de buurt van Caltanissetta. Om het carnaval te vieren, "verzonnen"
                         de nonnen een buisvormig gebak gevuld met ricotta crème, chocoladeschilfers en gehakte hazelnoten.
                         Concubines of nonnen, het is zeker dat cannoli voor het eerst werden gemaakt ten tijde van de Arabische overheersing van
-                        Sicillié suikerriet, rijst, amandelen, jasmijn, anijs, sesam, saffraan en kaneel gebracht, alle ingredienten sterk aanwezig in
+                        Sicilië suikerriet, rijst, amandelen, jasmijn, anijs, sesam, saffraan en kaneel gebracht, alle ingredienten sterk aanwezig in
                         de Siciliaanse keuken nog steeds vandaag. Zoals zo vaak het geval is, de waarheid over de historische oorsprong van cannoli is
                         waarschijnlijk een mix van alle legendes en overtuigingen verzameld en doorgegeven door de eeuwen heen.</h4>
 

@@ -3,7 +3,7 @@ import { useFormContext } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import axios from "axios";
-import SaveButton from "../button/saveButton/SaveButton";
+import Button from "../button/Button";
 
 function Admin_ProductEdit() {
     const {product_id} = useParams();
@@ -185,7 +185,7 @@ function Admin_ProductEdit() {
                             <br/>
 
                             <div className="product-form-saveButton">
-                                <SaveButton/>
+                                <Button/>
                             </div>
                         </div>
                     </form>
