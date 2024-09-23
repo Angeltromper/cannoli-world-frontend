@@ -10,10 +10,10 @@ Dit is het frontend gedeelte voor mijn webapplicatie "cannoli-world".
 4. Gebruikers / Rollen
 
 ### Inleiding
+
 Cannoli-world-frontend is een onderdeel van het project backend
 
 **Mijn Github voor de BACK-END vind je**  [hier](https://github.com/Angeltromper/cannoli-world-backend)
-
 **Mijn Github voor de FRONT-END vind je** [hier](https://github.com/Angeltromper/cannoli-world-frontend)
 
 Clonen van de repository voor het frontend gedeelte van de webapplicatie "cannoli-world-frontend"

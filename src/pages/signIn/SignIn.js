@@ -128,7 +128,7 @@ function SignIn({headerImageHandler, pageTitleHandler}) {
                     <h2>Inloggen succesvol! <FontAwesomeIcon icon={ faCheck } className="valid-check"/></h2>
                     <h5>U bent succesvol ingelogd<br/> en wordt automatisch doorgestuurd..</h5>
                     <p>Mocht u niet automatisch doorgestuurd worden<br/>
-                    <NavLink to="/persoonsgegevens" exact activeClassName="active-link">klik dan hier!</NavLink>
+                        <NavLink to="/persoonsgegevens" exact activeClassName="active-link">klik dan hier!</NavLink>
                     </p>
                 </span>
             }

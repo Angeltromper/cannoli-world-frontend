@@ -12,6 +12,7 @@ const emailRegex =/^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\
 
 
 function SignUp({headerImageHandler, pageTitleHandler}) {
+
     const navigate = useNavigate();
     const userRef = useRef();
     const errorRef = useRef();
@@ -100,7 +101,7 @@ function SignUp({headerImageHandler, pageTitleHandler}) {
     return (
         <>
             {succes ? (
-                <section className="timeout-succes succes-slide-down">
+                <div className="timeout-succes succes-slide-down">
                     <div>
                         <h1>Gelukt! <FontAwesomeIcon icon={ faCheck } className="valid-check"/></h1>
                         <h3>U heeft succesvol een account aangemaakt<br/> en wordt doorgestuurd naar de inlog pagina..</h3>
@@ -108,11 +109,11 @@ function SignUp({headerImageHandler, pageTitleHandler}) {
                             <NavLink to="/login" exact activeClassName="active-link">klik dan hier!</NavLink>
                         </h5>
                     </div>
-                </section>
+                </div>
 
             ) : (
 
-                <section className="register flip-2-hor-top-1">
+                <div className="register">
                     <p ref={ errorRef } className={ errorMessage ? 'error-message' : 'offscreen' }
                        aria-live="assertive">
                         { errorMessage }</p>
@@ -257,10 +258,8 @@ function SignUp({headerImageHandler, pageTitleHandler}) {
                              </span>
                         </section>
                     </form>
-
-
-                </section>
-            ) }
+                </div>
+            )}
         </>
     );
 }
