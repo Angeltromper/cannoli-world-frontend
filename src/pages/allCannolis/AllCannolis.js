@@ -1,59 +1,77 @@
-import { useEffect, useState } from 'react';
-import {Button} from "../../components/button/Button";
-import './AllCannolis.css';
-import {getDownloadURL, ref} from "firebase/storage";
-import {storage} from "../../firebase-config";
+import React, { useContext } from 'react';
+import { useNavigate } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
+import { FaInfoCircle } from "react-icons/fa";
 
 
-export function CannolisWrapper({children}) {
+export const AllCannolis = (props) => {
+
+    const navigate = useNavigate();
+    const [cart, setCart] = useContext(CartContext);
+
+    const addToCart = () => {
+
+        const cannoli = {
+            artikelnummer: props.cannoli_id,
+            naam: props.cannoliName,
+            prijs: props.cannoliPrice,
+            url: props.url
+        };
+
+        const exists = cart.find((x) => x.id === cannoli.artikelnummer);
+        if (exists) {
+            setCart(
+                cart.map((x, index) =>
+
+                    x.id === cannoli.artikelnummer ? {...exists, qty: exists.qty + 1} : x
+                )
+            );
+        } else {
+            setCart([...cart, {...cannoli, qty: 1}]);
+        }
+        localStorage.setItem (cart, JSON.stringify (cart));
+    };
+
+    function redirect() {
+        navigate (`cannolis/${props.cannoli_id}`)
+    }
+
     return (
-        <section className="cannolis">
-            <div className="container">
-                <div className="columns">
-                    {children}
+        <>
+            <section className="cannoli">
+                <div className="info-marker-cannoli"
+                     onClick={redirect}>
+                    <FaInfoCircle/>
                 </div>
-            </div>
-        </section>
-    )
+
+                <div className="flavour-container">
+
+                    <div className="buy-button-container">
+                        <button type="button"
+                                onClick={addToCart}> +
+                        </button>
+                    </div>
+
+                </div>
+
+                <div className="container-imageButton">
+                    <div className="cannoli-image">
+                        <img alt={props.fileName} src={props.url}/>
+                    </div>
+                </div>
+
+                <span className="container-textPrice">
+                    <span className="cannoli-price">
+                        <p> € {props.cannoliPrice.toFixed(2)} </p>
+                    </span>
+
+                    <span className="cannoli-text">
+                        <h5> {props.cannoliName} </h5>
+                    </span>
+                </span>
+            </section>
+        </>
+    );
 }
 
-export function AllCannolis({image, cannoliName, flavour, price, id}) {
-    const [cannoliImage, setCannoliImage] = useState(null);
-
-    useEffect(() => {
-        getDownloadURL(ref(storage,image)).then((url ) => {
-            setCannoliImage(url);
-        })
-    }, []);
-
-return (
-    <div className="col-1 col-2 col-3">
-        <div className="cannolis-card shadow">
-            <div className="image-wrapper">
-                <img src={cannoliImage} alt={cannoliName}/>
-            </div>
-            <div className="content">
-                <h2>{cannoliName}</h2>
-                <div className="specifics">
-                    <table>
-                        <tbody>
-                        <tr>
-                            <td>Cannoli:</td>
-                            <td>{flavour} smaak</td>
-                        </tr>
-
-                        <tr>
-                            <td>Prijs</td>
-                            <td>{price}</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <Button url={`/cannoli/${id}`} variation="secondary" size="small">meer informatie</Button>
-            </div>
-        </div>
-    </div>
-);
-}
-
-
+export default AllCannolis;

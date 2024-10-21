@@ -164,7 +164,7 @@ src
 |    ├── Advertisement.js
 |    ├── ArticleOne.js
 |    ├── ArticleTwo.js
-|    ├── Compare.js
+|    ├── Assortiment.js
 |    ├── Contact.js   
 |    ├── Home.js   
 |    ├── Login.js 

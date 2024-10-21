@@ -1,0 +1,23 @@
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    margin: 6em auto;
+    max-width: 1200px;
+    gap: 3em;
+}
+
+.card-image {
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+}
+
+.text-container {
+    padding: 2em;
+}
+
+.text-container h2 {
+    font-size: 1.2em;
+    margin-bottom: .5em;
+
+}

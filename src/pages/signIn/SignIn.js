@@ -2,7 +2,7 @@ import React, {useContext, useEffect, useState} from 'react';
 import { useForm } from "react-hook-form";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
-import pageImg from "../../../src/assets/img.background/Background header 3.jpg";
+import pageImg from "../../../src/assets/img.background/background cannolis.jpg";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";

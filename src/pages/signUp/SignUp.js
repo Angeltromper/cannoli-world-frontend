@@ -1,7 +1,7 @@
 import React, {useRef, useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import {faCheck, faTimes, faInfoCircle} from "@fortawesome/free-solid-svg-icons";
-import pageImg from '../../assets/img.background/Background header 3.jpg';
+import pageImg from '../../assets/img.background/background cannolis.jpg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import './SignUp.css';

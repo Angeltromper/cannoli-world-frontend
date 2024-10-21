@@ -14,6 +14,8 @@ import goUp from "./../../assets/navIcon/goUp.png";
 import './Homepage.css';
 
 
+
+
 function Homepage ({headerImageHandler, pageTitleHandler}) {
 
     const navigate = useNavigate()
@@ -29,7 +31,7 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
     function handleSelect(e){
         setCannoliQuery(e.target.value)
         navigate(`/${e.target.value}`)
-        console.log('test')
+        console.log (e.target.value)
     }
 
     return (
@@ -84,8 +86,8 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                                 >
                                     <option disabled value='DEFAULT'>-- choose one option --</option>
                                     <option value="cannolisnack">Cannoli snack</option>
-                                    <option value="cannolisnack">Cannoli snack ingredient</option>
-                                    <option value="Cannoli Snack prijslijst">Cannoli snack prijslijst</option>
+                                    <option value="cannoli-ingredient">Cannoli ingredient</option>
+                                    <option value="cannoli-prijslijst">Cannoli prijslijst</option>
                                 </select>
                             </label>
                         </fieldset>
@@ -97,12 +99,13 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                                 <select
                                     id="search-by-cannoli-glutenfree"
                                     className="input-field__reusable input-field__select-information"
-                                    value={ cannoliQuery }
-                                    onChange={ (e) => setCannoliQuery (e.target.value) }
+                                    onChange={ handleSelect }
+                                    defaultValue='DEFAULT'
                                 >
-                                    <option value="Cannoli GlutenFree">Cannoli glutenvrij</option>
-                                    <option value="Cannoli GlutenFree ingredient">Cannoli glutenvrij ingredient</option>
-                                    <option value="Cannoli GlutenFree prijslijst">Cannoli glutenvrij prijslijst</option>
+                                    <option disabled value='DEFAULT'>-- choose one option --</option>
+                                    <option value="cannoliglutenfree">Cannoli glutenvrij</option>
+                                    <option value="cannoli-ingredient">Cannoli ingredient</option>
+                                    <option value="cannoli-prijslijst">Cannoli prijslijst</option>
                                 </select>
                             </label>
                         </fieldset>
@@ -113,12 +116,13 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                                 <select
                                     id="search-by-cannoli-vegan"
                                     className="input-field__reusable input-field__select-information"
-                                    value={ cannoliQuery }
-                                    onChange={ (e) => setCannoliQuery (e.target.value) }
+                                    onChange={ handleSelect }
+                                    defaultValue='DEFAULT'
                                 >
-                                    <option value="Cannoli Vegan">Cannoli vegan</option>
-                                    <option value="Cannoli Vegan ingredient">Cannoli vegan ingredient</option>
-                                    <option value="Cannoli Vegan prijslijst">Cannoli vegan prijslijst</option>
+                                    <option disabled value='DEFAULT'>-- choose one option --</option>
+                                    <option value="cannolivegan">Cannoli vegan</option>
+                                    <option value="cannoli-ingredient">Cannoli ingredient</option>
+                                    <option value="cannoli-prijslijst">Cannoli prijslijst</option>
                                 </select>
                             </label>
 
@@ -127,11 +131,12 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                                 <select
                                     id="search-by-giftbox"
                                     className="input-field__reusable input-field__select-information"
-                                    value={ cannoliQuery }
-                                    onChange={ (e) => setCannoliQuery (e.target.value) }
+                                    onChange={ handleSelect }
+                                    defaultValue='DEFAULT'
                                 >
-                                    <option value="Giftbox">Giftbox</option>
-                                    <option value="Giftbox prijslijst">Giftbox prijslijst</option>
+                                    <option disabled value='DEFAULT'>-- choose one option --</option>
+                                    <option value="giftbox">Giftbox</option>
+                                    <option value="giftbox-prijslijst">Giftbox prijslijst</option>
                                 </select></label>
                         </fieldset>
 
@@ -140,11 +145,12 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                                 <select
                                     id="search-by-franchise"
                                     className="input-field__reusable input-field__select-information"
-                                    value={ cannoliQuery }
-                                    onChange={ (e) => setCannoliQuery (e.target.value) }
+                                    onChange={ handleSelect }
+                                    defaultValue='DEFAULT'
                                 >
-                                    <option value="Franchise">Franchise</option>
-                                    <option value="Franchise informatie">Franchise informatie</option>
+                                    <option disabled value='DEFAULT'>-- choose one option --</option>
+                                    <option value="franchise">Franchise</option>
+                                    <option value="franchise-informatie">Franchise informatie</option>
                                 </select>
                             </label>
                         </fieldset>

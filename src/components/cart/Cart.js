@@ -50,7 +50,7 @@ export const Cart = () => {
                                     </button>
                                 </div>
                             </div>
-                            {cart.map((product,index) => {
+                            {cart.map((cannoli,index) => {
                                 return (
                                     <ul key={index}>
 
@@ -61,11 +61,11 @@ export const Cart = () => {
                                                     onClick={() => removeItem(index)}><RiCloseLine/>
                                                 </button>
                                                 <div className="cart-items-name-padding">
-                                                    {product.naam}
+                                                    {cannoli.naam}
                                                 </div>
                                             </div>
                                             <div>
-                                                € {product.prijs.toFixed(2)}
+                                                € {cannoli.prijs.toFixed(2)}
                                             </div>
 
                                         </div>
@@ -77,7 +77,7 @@ export const Cart = () => {
                             {cart.length === 0 && <div> Winkelwagen is leeg</div>}
                             <br/>
 
-                            {Object.keys(cart).length} product(en)
+                            {Object.keys(cart).length} cannoli(s)
 
                             <br/>
                             <h3><strong> Totaal prijs: € {totalPrice.toFixed(2)} </strong></h3>
