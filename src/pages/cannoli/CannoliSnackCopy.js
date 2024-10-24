@@ -12,6 +12,7 @@ import './CannoliSnack.css';
 
 
 
+
 function CannoliSnack({headerImageHandler, pageTitleHandler})  {
 
     useEffect(() => {
@@ -22,9 +23,6 @@ function CannoliSnack({headerImageHandler, pageTitleHandler})  {
     const [cannoliQuery, setCannoliQuery] = useState("");
     const refSearch = useRef(null);
 
-
-
-
     return (
         <div className="cannoli-container">
 
@@ -33,25 +31,18 @@ function CannoliSnack({headerImageHandler, pageTitleHandler})  {
                 <h2>Cannoli (snack)</h2>
             </div>
 
-
-
             <div className="cards-container">
                 <Card image={ snackvanille } imageAlt="cannoli vanille" title="Vanille"
-                      content="Om prijzen te bekijken"/>
+                      content="Snack Cannoli (niet glutenvrij)"/>
                 <Card image={ snacklimoncello } imageAlt="cannoli limoncello" title="Limoncello"
-                      content="Om prijzen te bekijken"/>
+                      content="Snack Cannoli (niet glutenvrij)"/>
                 <Card image={ snackchampagne } imageAlt="cannoli cioccolatonero" title="Champagne"
-                      content="Om prijzen te bekijken"/>
+                      content="Snack Cannoli (niet glutenvrij)"/>
                 <Card image={ snackamandel } imageAlt="cannoli Amandel" title="Amandel"
-                      content="Om prijzen te bekijken"/>
+                      content="Snack Cannoli (niet glutenvrij)"/>
                 <Card image={ snackcocos } imageAlt="cannoli cocos" title="Cocos"
-                      content="Om prijzen te bekijken"/>
+                      content="Snack Cannoli (niet glutenvrij)"/>
             </div>
-
-
-
-
-
 
 
             <img alt="go-up-search-section" src={ goUp } onClick={ () => HandleRef (refSearch) }
@@ -63,28 +54,6 @@ function CannoliSnack({headerImageHandler, pageTitleHandler})  {
 }
 
 export default CannoliSnack;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
+import axios from "axios";
 import { useFormContext } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
-import { AuthContext } from "../../context/AuthContext";
-import axios from "axios";
 import Button from "../button/Button";
+import { AuthContext } from "../../context/AuthContext";
+
+
 
 function Admin_EditCannoliComponent() {
     const {cannoli_id} = useParams();
@@ -14,7 +16,7 @@ function Admin_EditCannoliComponent() {
 
     async function sendCannoliData(cannolidata) {
         try {
-            await axios.put (`http://localhost:8080/cannolis/${cannoli_id}`,
+            await axios.put (`https://localhost:8080/cannolis/${cannoli_id}`,
                 {
                     id: cannolidata.cannoli_id,
                     cannoliName: cannolidata.cannoli_name,

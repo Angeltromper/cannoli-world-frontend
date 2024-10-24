@@ -24,10 +24,13 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="3">
+          <list size="6">
             <item index="0" class="java.lang.String" itemvalue="type" />
             <item index="1" class="java.lang.String" itemvalue="exact" />
             <item index="2" class="java.lang.String" itemvalue="activeClassName" />
+            <item index="3" class="java.lang.String" itemvalue="src" />
+            <item index="4" class="java.lang.String" itemvalue="img" />
+            <item index="5" class="java.lang.String" itemvalue="imageAlt" />
           </list>
         </value>
       </option>

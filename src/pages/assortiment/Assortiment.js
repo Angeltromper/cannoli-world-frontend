@@ -1,3 +1,4 @@
+/*
 import React, { useEffect, useState } from "react";
 import pageImg from '../../../src/assets/img.background/background marktkraam cannolis.jpg';
 import axios from "axios";
@@ -49,10 +50,7 @@ function Assortiment({headerImageHandler, pageTitleHandler}) {
 }
 
 export default Assortiment;
-
-
-
-
+*/
 
 
 

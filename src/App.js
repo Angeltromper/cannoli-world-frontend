@@ -7,13 +7,13 @@ import Header from "./components/pageLayout/header/Header";
 import Homepage from "./pages/homepage/Homepage";
 import Footer from "./components/pageLayout/footer/Footer";
 import Assortiment from "./pages/assortiment/Assortiment";
-import Cannoli from "./pages/cannoli/Cannoli";
+import Cannolis from "./pages/categorien/Cannolis";
 import CannoliSnack from "./pages/cannoli/CannoliSnack";
 import CannoliGlutenfree from "./pages/cannoli/CannoliGlutenFree";
 import CannoliVegan from "./pages/cannoli/CannoliVegan";
 import CannoliIngredient from "./components/cannoliIngredient/CannoliIngredient";
 import CannoliPricelist from "./pages/priceList/CannoliPriceList";
-import Giftbox from "./pages/giftbox/Giftbox";
+import Giftbox from "./pages/categorien/giftbox/Giftbox";
 import Service from "./pages/service/Service";
 import Franchise from "./pages/franchise/Franchise";
 import Contact from "./pages/contact/Contact";
@@ -71,7 +71,7 @@ function App () {
                              element={<Assortiment headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
 
                       <Route path="/cannoli"
-                             element={<Cannoli headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
+                             element={<Cannolis headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
 
                       <Route path="/cannolisnack"
                              element={<CannoliSnack headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>

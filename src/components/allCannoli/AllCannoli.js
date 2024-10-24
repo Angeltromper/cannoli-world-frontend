@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import { FaInfoCircle } from "react-icons/fa";
+import './AllCannoli.css';
 
 
-export const AllCannolis = (props) => {
+export const AllCannoli = (props) => {
 
     const navigate = useNavigate();
     const [cart, setCart] = useContext(CartContext);
@@ -38,15 +39,15 @@ export const AllCannolis = (props) => {
 
     return (
         <>
-            <section className="cannoli">
-                <div className="info-marker-cannoli"
+            <section className="allCannoli">
+                <div className="info-marker-allCannoli"
                      onClick={redirect}>
                     <FaInfoCircle/>
                 </div>
 
-                <div className="flavour-container">
+                <div className="add-items-container">
 
-                    <div className="buy-button-container">
+                    <div className="buy_button_plus_container">
                         <button type="button"
                                 onClick={addToCart}> +
                         </button>
@@ -54,24 +55,24 @@ export const AllCannolis = (props) => {
 
                 </div>
 
-                <div className="container-imageButton">
-                    <div className="cannoli-image">
+                <div className="imageButton-container">
+                    <div className="allCannoli-image">
                         <img alt={props.fileName} src={props.url}/>
                     </div>
                 </div>
 
-                <span className="container-textPrice">
+                <span className="textPrice-container">
                     <span className="cannoli-price">
                         <p> € {props.cannoliPrice.toFixed(2)} </p>
                     </span>
 
-                    <span className="cannoli-text">
+                    <span className="allCannoli-text">
                         <h5> {props.cannoliName} </h5>
                     </span>
                 </span>
             </section>
         </>
     );
-}
+};
 
-export default AllCannolis;
+export default AllCannoli;

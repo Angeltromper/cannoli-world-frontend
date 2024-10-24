@@ -115,7 +115,7 @@ src
 |           └── PublicRoute.js
 |     └── product
 |           └── cannoli
-|               └── Cannoli.js
+|               └── Cannolis.js
 |           └── packaging
 |               ├── Packaging.js
 |               └── Packaging.module-css
