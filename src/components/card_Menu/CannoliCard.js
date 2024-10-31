@@ -10,7 +10,7 @@ function CannoliCard
             <p className="cannoli-card__description">{ description }</p>
             <p className="cannoli-card__price">{ formattedPrice }</p>
             <button type= { onClick }>
-                <p className="cannoli-card__buttonlist">Meer informatie</p>
+                <p className="cannoli-card__buttonlist">Assortiment</p>
             </button>
         </div>
     )

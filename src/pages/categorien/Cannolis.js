@@ -6,8 +6,8 @@ import HandleRef from "../../helpers/HandleRef";
 import cannolisnack from "../../assets/img.cannoli-snack/Cannolisnack-image.png";
 import cannoliglutenfree from "../../assets/img.cannoli-glutenfree/Cannoliglutenfree-image.png";
 import cannolivegan from "../../assets/img.cannoli-vegan/Cannolivegan-image.png";
-import './Cannolis.css';
 import CannoliCard from "../../components/card_Menu/CannoliCard";
+import './Cannolis.css';
 
 function Cannolis({headerImageHandler, pageTitleHandler})  {
     useEffect(() => {

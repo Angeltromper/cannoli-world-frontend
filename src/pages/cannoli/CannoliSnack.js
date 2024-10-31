@@ -22,43 +22,28 @@ function CannoliSnack({headerImageHandler, pageTitleHandler})  {
     const [cannoliQuery, setCannoliQuery] = useState("");
     const refSearch = useRef(null);
 
-
-
-
     return (
         <div className="cannoli-container">
 
 
             <div>
-                <h2>Cannoli (snack)</h2>
+                <h2>Cannoli snack</h2>
             </div>
 
 
-
-            <div className="cards-container">
-                <Card image={ snackvanille } imageAlt="cannoli vanille" title="Vanille"
-                      content="Om prijzen te bekijken"/>
-                <Card image={ snacklimoncello } imageAlt="cannoli limoncello" title="Limoncello"
-                      content="Om prijzen te bekijken"/>
-                <Card image={ snackchampagne } imageAlt="cannoli cioccolatonero" title="Champagne"
-                      content="Om prijzen te bekijken"/>
-                <Card image={ snackamandel } imageAlt="cannoli Amandel" title="Amandel"
-                      content="Om prijzen te bekijken"/>
-                <Card image={ snackcocos } imageAlt="cannoli cocos" title="Cocos"
-                      content="Om prijzen te bekijken"/>
-            </div>
-
-
-
-
+                <div className="cards-snack-container">
+                    <Card image={ snackvanille } imageAlt="cannoli vanille" title="Vanille" content="Krokant koekje gevuld met zachte vanille crème "/>
+                    <Card image={ snacklimoncello } imageAlt="cannoli limoncello" title="Limoncello" content="Krokant koekje gevuld met zachte limoncello crème"/>
+                    <Card image={ snackchampagne } imageAlt="cannoli cioccolatonero" title="Champagne" content="Krokant koekje gevuld met zachte champagne crème"/>
+                    <Card image={ snackamandel } imageAlt="cannoli Amandel" title="Amandel" content="Krokant koekje gevuld met zachte amandel crème"/>
+                    <Card image={ snackcocos } imageAlt="cannoli cocos" title="Cocos" content="Krokant koekje gevuld met zachte cocos crème"/>
+                </div>
 
 
 
             <img alt="go-up-search-section" src={ goUp } onClick={ () => HandleRef (refSearch) }
                  className="search-result__go-up-icon"/>
-
         </div>
-
     );
 }
 

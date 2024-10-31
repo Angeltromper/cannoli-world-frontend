@@ -184,7 +184,7 @@ function InfoForm() {
 
                     </div>
 
-                    <Button/>
+                <button className="button button-primary" type="submit">Verstuur</button>
                 </div>
             </form>
         </>

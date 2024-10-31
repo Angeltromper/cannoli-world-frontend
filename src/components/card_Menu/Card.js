@@ -1,6 +1,8 @@
-import  React, {useState} from 'react';
-import './Card.css';
+import  React from 'react';
 import { Link } from "react-router-dom";
+import { ButtonInfo } from "../button/ButtonInfo";
+import './Card.css';
+
 
 
 function Card({title, content, image, imageAlt}) {
@@ -15,9 +17,15 @@ function Card({title, content, image, imageAlt}) {
                 { content }
             </div>
 
+            <ButtonInfo url={`/cannolis/$`} variation="secondary" size="small">Meer informatie</ButtonInfo>
+
+
+
             <Link to={ "/registreren/" }>
-                <p className="btn-text-registreren">Registreer/Log in</p>
+                <p className="btn-text-registreren">Registreer/Log in om prijzen te kunnen zien</p>
             </Link>
+
+
         </div>
     );
 }

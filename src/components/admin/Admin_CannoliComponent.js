@@ -15,7 +15,7 @@ function Admin_CannoliComponent() {
     const {user} = useContext(AuthContext);
 
 
-    const [ cannolis, setCannolis] = useState([])
+    const [ cannolis, setCannolis] = useState([]);
 
     async function sendCannoliData(cannolidata) {
         try {
