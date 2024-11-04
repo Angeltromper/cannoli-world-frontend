@@ -4,9 +4,6 @@
   "private": true,
   "dependencies": {
     "@babel/plugin-transform-private-property-in-object": "^7.23.4",
-    "@fortawesome/free-brands-svg-icons": "^6.5.1",
-    "@fortawesome/free-solid-svg-icons": "^6.5.2",
-    "@fortawesome/react-fontawesome": "^0.2.0",
     "@react-icons/all-files": "^4.1.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^14.0.0",
@@ -19,6 +16,8 @@
     "dom-lib": "^3.3.1",
     "eslint-plugin-listeners": "^1.4.0",
     "firebase": "^10.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "jwt-decode": "^3.1.2",
     "make-event-props": "^1.6.2",
     "prop-types": "^15.8.1",
