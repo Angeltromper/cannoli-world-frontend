@@ -1,3 +1,4 @@
+/*
 import React, {useContext, useEffect, useState} from "react";
 import {ReactComponent as DeleteIcon} from '../../../assets/navIcon/delete.svg';
 import {AuthContext} from "../../../context/AuthContext";
@@ -52,3 +53,5 @@ function DeleteButton() {
 }
 
 export default DeleteButton;
+
+*/

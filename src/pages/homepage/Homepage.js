@@ -1,17 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import pageImg from "../../assets/img.header/homepage-background-2400.jpg";
 import cannoliSnack from "./../../assets/img.background/background-cannoli-snack.png";
 import cannoliGlutenFree from "./../../assets/img.background/background cannoli-glutenfree.png";
 import cannoliVegan from "./../../assets/img.background/background cannoli vegan.png";
 import cannoliGiftbox from "./../../assets/img.background/background giftbox.png";
 import cannoliFranchise from "./../../assets/img.background/background-franchise.png";
-import SearchButton from "./../../components/button/searchButton/SearchButton";
+import Button from "./../../components/button/Button";
 import TextContainer from "../../components/pageLayout/designElement/container/textContainer/TextContainer";
 import TextContainerResp from "../../components/pageLayout/designElement/container/textContainerResp/TextContainerResp";
 import HandleRef from "./../../helpers/HandleRef";
 import goUp from "./../../assets/navIcon/goUp.png";
 import './Homepage.css';
-import { Link, useNavigate } from "react-router-dom";
+
+
 
 
 function Homepage ({headerImageHandler, pageTitleHandler}) {
@@ -29,7 +31,7 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
     function handleSelect(e){
         setCannoliQuery(e.target.value)
         navigate(`/${e.target.value}`)
-        console.log('test')
+        console.log (e.target.value)
     }
 
     return (
@@ -84,8 +86,8 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                                 >
                                     <option disabled value='DEFAULT'>-- choose one option --</option>
                                     <option value="cannolisnack">Cannoli snack</option>
-                                    <option value="cannolisnack">Cannoli snack ingredient</option>
-                                    <option value="Cannoli Snack prijslijst">Cannoli snack prijslijst</option>
+                                    <option value="cannoli-ingredient">Cannoli ingredient</option>
+                                    <option value="cannoli-prijslijst">Cannoli prijslijst</option>
                                 </select>
                             </label>
                         </fieldset>
@@ -97,12 +99,13 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                                 <select
                                     id="search-by-cannoli-glutenfree"
                                     className="input-field__reusable input-field__select-information"
-                                    value={ cannoliQuery }
-                                    onChange={ (e) => setCannoliQuery (e.target.value) }
+                                    onChange={ handleSelect }
+                                    defaultValue='DEFAULT'
                                 >
-                                    <option value="Cannoli GlutenFree">Cannoli glutenvrij</option>
-                                    <option value="Cannoli GlutenFree ingredient">Cannoli glutenvrij ingredient</option>
-                                    <option value="Cannoli GlutenFree prijslijst">Cannoli glutenvrij prijslijst</option>
+                                    <option disabled value='DEFAULT'>-- choose one option --</option>
+                                    <option value="cannoliglutenfree">Cannoli glutenvrij</option>
+                                    <option value="cannoli-ingredient">Cannoli ingredient</option>
+                                    <option value="cannoli-prijslijst">Cannoli prijslijst</option>
                                 </select>
                             </label>
                         </fieldset>
@@ -113,12 +116,13 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                                 <select
                                     id="search-by-cannoli-vegan"
                                     className="input-field__reusable input-field__select-information"
-                                    value={ cannoliQuery }
-                                    onChange={ (e) => setCannoliQuery (e.target.value) }
+                                    onChange={ handleSelect }
+                                    defaultValue='DEFAULT'
                                 >
-                                    <option value="Cannoli Vegan">Cannoli vegan</option>
-                                    <option value="Cannoli Vegan ingredient">Cannoli vegan ingredient</option>
-                                    <option value="Cannoli Vegan prijslijst">Cannoli vegan prijslijst</option>
+                                    <option disabled value='DEFAULT'>-- choose one option --</option>
+                                    <option value="cannolivegan">Cannoli vegan</option>
+                                    <option value="cannoli-ingredient">Cannoli ingredient</option>
+                                    <option value="cannoli-prijslijst">Cannoli prijslijst</option>
                                 </select>
                             </label>
 
@@ -127,11 +131,12 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                                 <select
                                     id="search-by-giftbox"
                                     className="input-field__reusable input-field__select-information"
-                                    value={ cannoliQuery }
-                                    onChange={ (e) => setCannoliQuery (e.target.value) }
+                                    onChange={ handleSelect }
+                                    defaultValue='DEFAULT'
                                 >
-                                    <option value="Giftbox">Giftbox</option>
-                                    <option value="Giftbox prijslijst">Giftbox prijslijst</option>
+                                    <option disabled value='DEFAULT'>-- choose one option --</option>
+                                    <option value="giftbox">Giftbox</option>
+                                    <option value="giftbox-prijslijst">Giftbox prijslijst</option>
                                 </select></label>
                         </fieldset>
 
@@ -140,25 +145,24 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                                 <select
                                     id="search-by-franchise"
                                     className="input-field__reusable input-field__select-information"
-                                    value={ cannoliQuery }
-                                    onChange={ (e) => setCannoliQuery (e.target.value) }
+                                    onChange={ handleSelect }
+                                    defaultValue='DEFAULT'
                                 >
-                                    <option value="Franchise">Franchise</option>
-                                    <option value="Franchise informatie">Franchise informatie</option>
+                                    <option disabled value='DEFAULT'>-- choose one option --</option>
+                                    <option value="franchise">Franchise</option>
+                                    <option value="franchise-informatie">Franchise informatie</option>
                                 </select>
                             </label>
                         </fieldset>
                     </div>
                     <br/>
 
-                    <SearchButton
+                    <Button
                         onClick={ () => HandleRef (refSearch) }
                         type="submit"
                         text="zoeken"
                     />
                 </div>
-
-
 
 
                 <TextContainerResp>
@@ -187,7 +191,7 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
                     <h4>Werden cannoli voor het eerst gemaakt in een klooster in de buurt van Caltanissetta. Om het carnaval te vieren, "verzonnen"
                         de nonnen een buisvormig gebak gevuld met ricotta crème, chocoladeschilfers en gehakte hazelnoten.
                         Concubines of nonnen, het is zeker dat cannoli voor het eerst werden gemaakt ten tijde van de Arabische overheersing van
-                        Sicillié suikerriet, rijst, amandelen, jasmijn, anijs, sesam, saffraan en kaneel gebracht, alle ingredienten sterk aanwezig in
+                        Sicilië suikerriet, rijst, amandelen, jasmijn, anijs, sesam, saffraan en kaneel gebracht, alle ingredienten sterk aanwezig in
                         de Siciliaanse keuken nog steeds vandaag. Zoals zo vaak het geval is, de waarheid over de historische oorsprong van cannoli is
                         waarschijnlijk een mix van alle legendes en overtuigingen verzameld en doorgegeven door de eeuwen heen.</h4>
 

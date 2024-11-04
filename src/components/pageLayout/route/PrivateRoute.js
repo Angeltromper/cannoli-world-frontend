@@ -2,21 +2,12 @@ import React, { useContext } from 'react';
 import { Navigate, Route } from 'react-router-dom';
 import {AuthContext} from '../../../context/AuthContext';
 
-function PrivateRoute({children, path}) {
-
+function PrivateRoute({children}) {
     const {isAuth} = useContext(AuthContext);
 
     return (
-        <Route exact path={path}>
+        isAuth === true ? children : <Navigate to="/inloggen"/>
 
-            {isAuth ? children
-
-                :
-
-                <Navigate to={{pathname : '/login'}}/>
-            }
-
-        </Route>
     );
 }
 export default PrivateRoute;

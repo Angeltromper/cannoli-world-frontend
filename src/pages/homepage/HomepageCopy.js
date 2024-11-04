@@ -1,3 +1,5 @@
+/*
+
 import React, { useEffect, useRef, useState } from 'react';
 import pageImg from "../../assets/img.header/homepage-background-2400.jpg";
 import cannoliSnack from "./../../assets/img.background/background-cannoli-snack.png";
@@ -194,3 +196,4 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
 export default Homepage;
 
 
+*/

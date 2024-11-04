@@ -55,15 +55,6 @@
     position: relative;
 }
 
-.cannoliSnack {
-    display: flex;
-    background: #FFDDE6;
-    flex-direction: column;
-    border: #150A06;
-
-}
-
-
 
 .label {
     display: flex;

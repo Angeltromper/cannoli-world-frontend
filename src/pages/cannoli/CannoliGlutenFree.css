@@ -1,20 +1,70 @@
-.cannoli-glutenfree-container {
+.cannoli-container {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2em;
+    gap: 2em;
 }
 
-.cannoli-img-container {
-    display: flex;
-    flex-direction: row;
-    margin: 20px;
+.cards-glutenfree-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    margin: 3em auto;
+    max-width: 1200px;
+    gap: 2em;
 }
 
-.skewer--cannoli-top {
-    border-top: 200px solid transparent;
-    border-right: 120vw solid var(--background-color-light);
-    position: absolute;
-    margin: 78em 0;
-    right: 0;
-    top: 0;
-    z-index: 4;
+.cannoli-flavours {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
+
+.cannoli-img {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 0 0 90%;
+    -ms-flex: 0 0 90%;
+    -webkit-box-flex: 0;
+    width: 25em;
+    max-width: 100%;
+    padding: 1em 1em;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 6;
+}
+
+.search-result__go-up-icon {
+    width: 1.5em;
+    cursor: pointer;
+    align-self: center;
+}
+
+.cards-glutenfree-container .button {
+    display: inline-block;
+    color: #FF003D;
+    padding: 12px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+}
+
+
+.cards-glutenfree-container .button-primary {
+    background-color: #FF003D;
+    border: 2px solid #FF003D;
+}
+
+.cards-glutenfree-container .button-secondary {
+    border: 2px solid rgba(255, 0, 61, 0.63);
+}
+
+.cards-glutenfree-container .button-secondary:hover {
+    background-color: rgba(255, 0, 61, 0.44);
+}
+
+
