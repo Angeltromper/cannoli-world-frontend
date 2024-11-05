@@ -25,9 +25,8 @@
     --figure-color-2: #1AE216;
     --button-color: #FF003D;
 
-
     --focus-color: #010101;
-    --shadow-color: rgba(208, 205, 205, 0.97);
+    --shadow-color: #00000085;
 
     --text-logo: #CEA71E;
     --text-intro-pink: #FF003D;
@@ -205,18 +204,6 @@ strong {
     animation: slide-bottom 1s cubic-bezier(0.230, 2.000, 0.320, 1.000) both;
 }
 
-
-
-@keyframes rotating {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-
 @-webkit-keyframes slide-bottom {
     0% {
         -webkit-transform: translateY(-100px);
@@ -238,6 +225,8 @@ strong {
         transform: translateY(10px);
     }
 }
+
+
 
 
 /*--------------------- 4.Media-queries -----------------*/

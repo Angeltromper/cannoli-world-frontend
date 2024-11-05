@@ -1,1 +1,1 @@
-export { default as Cannoli } from '../cannoli/Cannoli';
+export { default as Product } from '../product/Product';
