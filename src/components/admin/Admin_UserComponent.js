@@ -128,7 +128,7 @@ function Admin_UserComponent(username) {
                                             <Delete/>
                                         </button>
                                     </td>
-                                    <td>{ user.id }</td>
+                                    <td>{user.id}</td>
                                     <td>{user.id}</td>
                                     <td>{user.picture && <img src={user.picture.url} alt={user.picture.fileName}/>}</td>
                                     <td>{user.email}</td>

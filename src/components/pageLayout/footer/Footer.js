@@ -16,6 +16,7 @@ function Footer() {
     const {isAuth} = useContext(AuthContext);
 
 
+
     return (
         <footer className="footer-container">
 
@@ -26,13 +27,17 @@ function Footer() {
                         <ul>
                             <li><NavLink to="/home">Home</NavLink></li>
                             <li><NavLink to="/webshop">Webshop</NavLink></li>
-                            <li><NavLink to="/faq's">Faq's</NavLink></li>
-                            <li><NavLink to="/contact">Contact</NavLink></li>
                             <li><NavLink to="/account">Account</NavLink></li>
+                            <li><NavLink to="/faq's">Faq's</NavLink></li>
+                            <li><NavLink to="/privacy">Privacy</NavLink></li>
+                            <li><NavLink to="/general-terms">Algemene Voorwaarden</NavLink></li>
+                            <li><NavLink to="/cookies">Cookie beleid</NavLink></li>
+                            <li><NavLink to="/contact">Contact</NavLink></li>
 
-                            { isAuth ? <li><NavLink to="/inloggen">Uitloggen</NavLink></li> :
-                                <li><NavLink to="/inloggen">Inloggen</NavLink></li> }
-                            { isAuth && <li><NavLink to="/profiel">Profiel</NavLink></li> }
+
+                            { isAuth ? <li><NavLink to="/logout">Uitloggen</NavLink></li> :
+                                <li><NavLink to="/login">Inloggen</NavLink></li> }
+                            { isAuth && <li><NavLink to="/profile">Profiel</NavLink></li> }
                         </ul>
                     </div>
                 </Column>

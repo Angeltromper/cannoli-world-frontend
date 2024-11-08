@@ -1,0 +1,23 @@
+.general {
+    display: flex;
+    width: 100%;
+    margin: 10em 0;
+    flex-direction: column-reverse;
+}
+
+.general-title  {
+    font-size: 12px;
+    margin: -4rem;
+    padding: 1em 2em;
+    position: relative;
+    box-shadow: rgba(30, 30, 70, 0.25) 0 8px 10px -1px, rgba(0, 0, 0, 0.02) 0 1px 7px -1px;
+    text-align: center;
+
+}
+
+.general-container {
+    align-items: center;
+    padding: 3em;
+    position: relative;
+    justify-content: space-between;
+}

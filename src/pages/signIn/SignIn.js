@@ -30,7 +30,7 @@ function SignIn({headerImageHandler, pageTitleHandler}) {
 
     useEffect(() => {
         headerImageHandler(pageImg);
-        pageTitleHandler("inloggen");
+        pageTitleHandler();
     }, []);
 
     useEffect( () => {

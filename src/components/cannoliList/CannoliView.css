@@ -1,0 +1,22 @@
+.cannoli-view {
+    background-color: cornsilk;
+    margin-top: 2.5rem;
+}
+
+
+
+.cannoli-view .description {
+    padding: 2.5rem;
+}
+
+.cannoli-view .image-wrapper {
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.cannoli-view .image-wrapper img {
+    height: 100%;
+    object-fit: cover;
+}
+

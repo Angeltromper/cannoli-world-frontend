@@ -104,5 +104,4 @@ function AuthContextProvider({children}) {
 export default AuthContextProvider;
 
 
-export class useAuth {
-}
+

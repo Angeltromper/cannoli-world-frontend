@@ -19,8 +19,6 @@ function Card({title, content, image, imageAlt}) {
 
             <ButtonInfo url={`/cannolis/$`} variation="secondary" size="small">Meer informatie</ButtonInfo>
 
-
-
             <Link to={ "/registreren/" }>
                 <p className="btn-text-registreren">Registreer/Log in om prijzen te kunnen zien</p>
             </Link>

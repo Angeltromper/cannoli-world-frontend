@@ -23,7 +23,7 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
     useEffect(() => {
         headerImageHandler(pageImg);
         pageTitleHandler();
-        }, [headerImageHandler, pageTitleHandler]);
+        }, []);
 
     const [cannoliQuery, setCannoliQuery] = useState("");
     const refSearch = useRef(null);
@@ -43,7 +43,7 @@ function Homepage ({headerImageHandler, pageTitleHandler}) {
 
                     <TextContainer>
                         <h1>Welkom op de site van Cannoli World</h1>
-                        </TextContainer>
+                    </TextContainer>
 
                     <div className="inner-container__reusable default-area-padding default-text-restrictor">
                         <div>

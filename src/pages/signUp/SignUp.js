@@ -1,14 +1,14 @@
 import React, {useRef, useEffect, useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import {faCheck, faTimes, faInfoCircle} from "@fortawesome/free-solid-svg-icons";
 import pageImg from '../../assets/img.background/background cannolis.jpg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import './SignUp.css';
 
-const userRegex = /^[A-z][A-z0-9-_]{4,12}$/;
-const passwordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,24}$/;
-const emailRegex =/^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const USER_REGEX = /^[A-z][A-z0-9-_]{4,12}$/;
+const PASSWORD_REGEX = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,24}$/;
+const EMAIL_REGEX =/^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 
 function SignUp({headerImageHandler, pageTitleHandler}) {
@@ -39,7 +39,7 @@ function SignUp({headerImageHandler, pageTitleHandler}) {
 
     useEffect(() => {
         headerImageHandler(pageImg);
-        pageTitleHandler('Registreren');
+        pageTitleHandler();
     }, [headerImageHandler, pageTitleHandler]);
 
     useEffect(() => {
@@ -47,16 +47,16 @@ function SignUp({headerImageHandler, pageTitleHandler}) {
     }, []);
 
     useEffect (() => {
-        setValidName(userRegex.test(user));
+        setValidName(USER_REGEX.test(user));
     }, [user]);
 
     useEffect (() => {
-        setValidPassword(passwordRegex.test(password));
+        setValidPassword(PASSWORD_REGEX.test(password));
         setValidRepeat (password === repeat);
     }, [password, repeat]);
 
     useEffect (() => {
-        setValidEmail(emailRegex.test(email));
+        setValidEmail(EMAIL_REGEX.test(email));
     }, [email]);
 
     useEffect (() => {
@@ -66,15 +66,15 @@ function SignUp({headerImageHandler, pageTitleHandler}) {
     const handleSubmit = async (e) => {
         e.preventDefault ();
 
-        const v1 = userRegex.test (user);
-        const v2 = passwordRegex.test (password);
+        const v1 = USER_REGEX.test (user);
+        const v2 = PASSWORD_REGEX.test (password);
         if (!v1 || !v2) {
             setErrorMessage ('Ongeldige invoer');
             return;
         }
 
         try {
-            await axios.post ("http://localhost:8080/users/createUser",
+            await axios.post ("http://localhost:8080/users/create",
                 {
                     username: user,
                     password: password,
@@ -84,7 +84,7 @@ function SignUp({headerImageHandler, pageTitleHandler}) {
 
             setTimeout (() => {
 
-                navigate('/inloggen');
+                navigate('/login');
 
             }, 2500);
 
@@ -246,9 +246,15 @@ function SignUp({headerImageHandler, pageTitleHandler}) {
                         </button>
 
                         <div className="akkoord-registratie">
+                            <Link to={ "/registreren/" }>
+
                             <h4>Door te registreren ga ik akkoord met de algemene voorwaarden <br/>
                                 en het privacybeleid</h4>
+
+                            </Link>
                         </div>
+
+                            <p className="btn-text-registreren">Registreer/Log in om prijzen te kunnen zien</p>
 
 
                         <section className="form-footer">

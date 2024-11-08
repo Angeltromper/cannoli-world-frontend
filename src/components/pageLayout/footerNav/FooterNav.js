@@ -1,27 +1,29 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
-import { useAuth } from "../../../context/AuthContext";
+import { AuthContext } from "../../../context/AuthContext";
+import './FooterNav.css';
+
 
 
 function FooterNav() {
-    const {user, logOut} = useAuth();
+    const {user, logOut} = AuthContext();
 
     return (
-        <>
-            <NavLink to="/privacystatement">Privacy statement</NavLink>
-            <NavLink to="/algemene voorwaarden">Algemene Voorwaarden</NavLink>
+        <div className="footer-nav">
             {
+
                 user ?
                     <>
-                        <NavLink to="/Cookie beleid">Cookie beleid</NavLink>
                         <NavLink onClick={logOut} to="/">Uitloggen</NavLink>
                     </>
-                    : <>
-                        <NavLink to="/log-in">Inloggen</NavLink>
-                        <NavLink to="/registreer">Registreren</NavLink>
+                    :
+                    <>
+                        <NavLink to="/login">Inloggen</NavLink>
+                        <NavLink to="/register">Registreren</NavLink>
                     </>
-            }
-        </>
-    )
+                }
+            </div>
+    );
 }
 
 export default FooterNav;

@@ -13,8 +13,8 @@ function Navbar() {
 
         <nav className="navbar__main-container">
             <div className="navbar-register-menu">
-                <NavLink to="/registreren" exact activeClassName="active-link"><button type="button">Registreren</button></NavLink>
-                <NavLink to="/inloggen" exact activeClassName="active-link"><button type="button">Inloggen</button></NavLink>
+                <NavLink to="/register" exact activeClassName="active-link"><button type="button">Registreren</button></NavLink>
+                <NavLink to="/login" exact activeClassName="active-link"><button type="button">Inloggen</button></NavLink>
             </div>
 
             <div className="navbar-menu">
@@ -29,7 +29,7 @@ function Navbar() {
                 <NavLink to="/service" exact activeClassName="active-link">Service</NavLink>
                 <NavLink to="/franchise" exact activeClassName="active-link">Franchise</NavLink>
                 <NavLink to="/contact" exact activeClassName="active-link">Contact</NavLink>
-                { isAuth && <NavLink to="/orderList" exact activeClassName="active-link">Bestellingen</NavLink> }
+                { isAuth && <NavLink to="/deliveryRequests/:deliveryRequest" exact activeClassName="active-link">Bestellingen</NavLink> }
             </div>
 
 

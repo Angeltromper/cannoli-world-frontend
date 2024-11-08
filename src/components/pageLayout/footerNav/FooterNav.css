@@ -1,0 +1,23 @@
+.footer-nav {
+    background: #150A06;
+    background: linear-gradient(180deg, var(--background-color) 100%, var(--background-color-dark) 40%, var(--background-color-dark) 0%);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    z-index: 14;
+}
+
+.footer-nav a,
+.footer-nav a:visited {
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+    color: var(--figure-color-2);
+    transition: transform 300ms ease-in-out;
+    transform: scale(1.10);
+}
+
+
