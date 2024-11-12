@@ -3,7 +3,7 @@ import axios from "axios";
 import { AuthContext } from '../../context/AuthContext';
 import {useFormContext} from 'react-hook-form';
 import {useNavigate} from 'react-router-dom';
-import Button from "../button/Button";
+import SaveButton from '../button/saveButton/SaveButton';
 import './InfoForm.css';
 
 function InfoForm() {
@@ -184,7 +184,7 @@ function InfoForm() {
 
                     </div>
 
-                <button className="button button-primary" type="submit">Verstuur</button>
+                    <SaveButton/>
                 </div>
             </form>
         </>

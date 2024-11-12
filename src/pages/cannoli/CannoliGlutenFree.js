@@ -15,7 +15,7 @@ import HandleRef from "../../helpers/HandleRef";
 import Card from "../../components/card_Menu/Card";
 import './CannoliGlutenFree.css';
 
-function CannoliGlutenfree({headerImageHandler, pageTitleHandler})  {
+function CannoliGlutenFree({headerImageHandler, pageTitleHandler})  {
 
     useEffect(() => {
         headerImageHandler (pageImg);
@@ -54,7 +54,7 @@ function CannoliGlutenfree({headerImageHandler, pageTitleHandler})  {
     );
 }
 
-export default CannoliGlutenfree;
+export default CannoliGlutenFree;
 
 
 

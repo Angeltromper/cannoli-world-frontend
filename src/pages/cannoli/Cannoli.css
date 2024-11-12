@@ -1,0 +1,50 @@
+.cannoli-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2em;
+    gap: 2em;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    margin: 3em auto;
+    max-width: 1200px;
+    gap: 2em;
+}
+
+.snacks {
+    color: #083e43;
+    margin: 8ch 2ch;
+    z-index: 5;
+}
+
+.cannoli-flavours {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.cannoli-img {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 0 0 90%;
+    -ms-flex: 0 0 90%;
+    -webkit-box-flex: 0;
+    width: 25em;
+    max-width: 100%;
+    padding: 1em 1em;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 6;
+}
+
+.search-result__go-up-icon {
+    width: 1.5em;
+    cursor: pointer;
+    align-self: center;
+}
+
+

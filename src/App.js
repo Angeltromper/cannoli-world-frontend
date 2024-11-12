@@ -9,7 +9,7 @@ import Footer from "./components/pageLayout/footer/Footer";
 import Assortiment from "./pages/assortiment/Assortiment";
 import Cannolis from "./pages/categorien/Cannolis";
 import CannoliSnack from "./pages/cannoli/CannoliSnack";
-import CannoliGlutenfree from "./pages/cannoli/CannoliGlutenFree";
+import CannoliGlutenFree from "./pages/cannoli/CannoliGlutenFree";
 import CannoliVegan from "./pages/cannoli/CannoliVegan";
 import CannoliView from "./components/cannoliList/CannoliView";
 import CannoliIngredient from "./components/cannoliIngredient/CannoliIngredient";
@@ -81,7 +81,7 @@ function App () {
                              element={<CannoliSnack headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
 
                       <Route path="/cannoliglutenfree"
-                             element={<CannoliGlutenfree headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
+                             element={<CannoliGlutenFree headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>
 
                       <Route path="/cannolivegan"
                              element={<CannoliVegan headerImageHandler={setHeaderImage} pageTitleHandler={setPageTitle}/>}/>

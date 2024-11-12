@@ -1,18 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from "../navbar/Navbar";
 import rightColor from "../../../assets/img.header/rightColor.png";
 import leftColor from "../../../assets/img.header/leftColor.png";
 import './Header.css';
-
-
+import { AiOutlineMenu } from "react-icons/ai";
+import MobileNavbar from "../mobileNavbar/MobileNavbar";
 
 function Header({headerImage, pageTitle}) {
-
 
     return (
         <>
             <header className="header">
-
                 <Navbar/>
 
                 <div className="color-container">
@@ -20,7 +18,6 @@ function Header({headerImage, pageTitle}) {
                         <figure><img src={ leftColor } alt="left-color" className="left"/></figure>
                     </div>
             </header>
-
 
             <image className="header-img-container">
                 <span>

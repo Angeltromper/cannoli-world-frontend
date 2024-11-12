@@ -19,8 +19,6 @@ function Franchise({headerImageHandler,pageTitleHandler}) {
             <div className="inner-container__reusable">
                 <div className="search-query__section" ref={refSearch}>
 
-
-
             </div>
 
             <img alt="go-up-search-section" src={goUp} onClick={() => HandleRef(refSearch)}
