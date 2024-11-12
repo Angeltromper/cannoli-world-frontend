@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from "react";
 import pageImg from './../../assets/img.background/background-cannoli-glutenfree.jpg';
 import glutenfreepistacchio from "../../assets/img.cannoli-glutenfree/Glutenfree Pistacchio.png";
@@ -16,45 +17,35 @@ import Card from "../../components/card_Menu/Card";
 import './CannoliGlutenFree.css';
 
 function CannoliGlutenFree({headerImageHandler, pageTitleHandler})  {
+=======
+import React, { useEffect } from 'react';
+import pageImg from "../../assets/img.background/background-cannoli-glutenfree.jpg";
+import './CannoliGlutenFree.css'
+
+
+
+function CannoliGlutenFree ({headerImageHandler, pageTitleHandler}) {
+>>>>>>> c83920548427fc702a209e27b3a5f2e767c34712
 
     useEffect(() => {
-        headerImageHandler (pageImg);
+        headerImageHandler(pageImg);
         pageTitleHandler();
     }, [headerImageHandler, pageTitleHandler]);
 
-    const [cannoliQuery, setCannoliQuery] = useState("");
-    const refSearch = useRef(null);
-
     return (
-        <div className="cannoli-container">
+
+        <div className="cannoli-glutenfree-container">
 
 
-            <div>
-                <h2>Almond Cannoli (glutenvrij)</h2>
-            </div>
-
-            <div className="cards-glutenfree-container">
-                <Card image={ glutenfreepistacchio } imageAlt="cannoli pistache" title="Pistache" content="Almond koekje gevuld met zachte pistache crème"/>
-                <Card image={ glutenfreenocciola } imageAlt="cannoli nocciola" title="Nocciola" content="Almond koekje gevuld met zachte nocciola crème"/>
-                <Card image={ glutenfreericotta } imageAlt="cannoli ricotta" title="Ricotta" content="Almond koekje gevuld met zachte ricotta crème"/>
-                <Card image={ glutenfreecioccolatonero } imageAlt="cannoli cioccolatonero" title="Donkere Chocolade" content="Almond koekje gevuld met zachte donkere chocolade crème"/>
-                <Card image={ glutenfreelimoncello } imageAlt="cannoli limoncello" title="Limoncello" content="Almond koekje gevuld met zachte limoncello crème"/>
-                <Card image={ glutenfreetiramisu } imageAlt="cannoli tiramisu" title="Tiramisu" content="Almond koekje gevuld met zachte tiramisu crème"/>
-                <Card image={ glutenfreecaramello } imageAlt="cannoli caramello" title="Zoute Caramel" content="Almond koekje gevuld met zachte zoute caramel crème"/>
-                <Card image={ glutenfreecaffe } imageAlt="cannoli caffe" title="Caffe" content="Almond koekje gevuld met zachte koffie crème "/>
-                <Card image={ glutenfreefruttidibosco } imageAlt="fruttidibosco" title="Bosvruchten" content="Almond koekje gevuld met zachte bosvruchten crème"/>
-                <Card image={ glutenfreemandarino } imageAlt="cannoli mandorino" title="Manderijn" content="Almond koekje gevuld met zachte manderijn crème"/>
-            </div>
-
-
-            <img alt="go-up-search-section" src={ goUp } onClick={ () => HandleRef (refSearch) }
-                 className="search-result__go-up-icon"/>
 
         </div>
     );
 }
 
 export default CannoliGlutenFree;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> c83920548427fc702a209e27b3a5f2e767c34712

@@ -8,9 +8,7 @@ import snackcocos from "../../assets/img.cannoli-snack/Snack Cocos.png";
 import goUp from "../../assets/navIcon/goUp.png";
 import HandleRef from "../../helpers/HandleRef";
 import Card from "../../components/card_Menu/Card";
-import './CannoliSnack.css';
-
-
+import './Cannoli.css';
 
 function CannoliSnack({headerImageHandler, pageTitleHandler})  {
 
@@ -27,49 +25,32 @@ function CannoliSnack({headerImageHandler, pageTitleHandler})  {
 
 
             <div>
-                <h2>Cannoli snack</h2>
+                <h2>Almond Cannoli (glutenvrij)</h2>
             </div>
 
+            <div className="cards-container">
 
-                <div className="cards-snack-container">
-                    <Card image={ snackvanille } imageAlt="cannoli vanille" title="Vanille" content="Krokant koekje gevuld met zachte vanille crème "/>
-                    <Card image={ snacklimoncello } imageAlt="cannoli limoncello" title="Limoncello" content="Krokant koekje gevuld met zachte limoncello crème"/>
-                    <Card image={ snackchampagne } imageAlt="cannoli cioccolatonero" title="Champagne" content="Krokant koekje gevuld met zachte champagne crème"/>
-                    <Card image={ snackamandel } imageAlt="cannoli Amandel" title="Amandel" content="Krokant koekje gevuld met zachte amandel crème"/>
-                    <Card image={ snackcocos } imageAlt="cannoli cocos" title="Cocos" content="Krokant koekje gevuld met zachte cocos crème"/>
-                </div>
-
+                <Card image={ snackvanille } imageAlt="cannoli nocciola" title="Nocciola" content="Almond Cannoli is een
+                         glutenvrije cannoli"/>
+                <Card image={ snacklimoncello } imageAlt="cannoli ricotta" title="Ricotta" content="Almond Cannoli is een
+                         glutenvrije cannoli"/>
+                <Card image={ snackchampagne } imageAlt="cannoli cioccolatonero" title="Donkere Chocolade" content="Almond Cannoli is een
+                         glutenvrije cannoli"/>
+                <Card image={ snackamandel } imageAlt="cannoli limoncello" title="Limoncello" content="Almond Cannoli is een
+                         glutenvrije cannoli"/>
+                <Card image={ snackcocos } imageAlt="cannoli tiramisu" title="Tiramisu" content="Almond Cannoli is een
+                         glutenvrije cannoli"/>
+            </div>
 
 
             <img alt="go-up-search-section" src={ goUp } onClick={ () => HandleRef (refSearch) }
                  className="search-result__go-up-icon"/>
+
         </div>
     );
 }
 
 export default CannoliSnack;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

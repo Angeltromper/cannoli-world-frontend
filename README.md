@@ -10,10 +10,10 @@ Dit is het frontend gedeelte voor mijn webapplicatie "cannoli-world".
 4. Gebruikers / Rollen
 
 ### Inleiding
-
 Cannoli-world-frontend is een onderdeel van het project backend
 
 **Mijn Github voor de BACK-END vind je**  [hier](https://github.com/Angeltromper/cannoli-world-backend)
+
 **Mijn Github voor de FRONT-END vind je** [hier](https://github.com/Angeltromper/cannoli-world-frontend)
 
 Clonen van de repository voor het frontend gedeelte van de webapplicatie "cannoli-world-frontend"
@@ -115,7 +115,7 @@ src
 |           └── PublicRoute.js
 |     └── product
 |           └── cannoli
-|               └── Cannolis.js
+|               └── Cannoli.js
 |           └── packaging
 |               ├── Packaging.js
 |               └── Packaging.module-css
@@ -164,12 +164,12 @@ src
 |    ├── Advertisement.js
 |    ├── ArticleOne.js
 |    ├── ArticleTwo.js
-|    ├── Assortiment.js
+|    ├── Compare.js
 |    ├── Contact.js   
 |    ├── Home.js   
 |    ├── Login.js 
 |    ├── Profile.js    
-|    ├── SignUp.js   
+|    ├── Register.js   
 |    ├── SignIn.js 
 |    ├── SignUp.js    
 |    └── ViewPage.js
