@@ -9,6 +9,17 @@ function Card({title, content, image, imageAlt}) {
                 <h4>{ title }</h4>
                 { content }
             </div>
+<<<<<<< HEAD
+
+            <ButtonInfo url={`/cannolis/$`} variation="secondary" size="small">Meer informatie</ButtonInfo>
+
+            <Link to={ "/registreren/" }>
+                <p className="btn-text-registreren">Registreer/Log in om prijzen te kunnen zien</p>
+            </Link>
+
+
+=======
+>>>>>>> c83920548427fc702a209e27b3a5f2e767c34712
         </div>
     );
 }

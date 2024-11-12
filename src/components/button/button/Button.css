@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+.search-button__reusable {
+    background-color: var(--button-color);
+    color: var(--text-intro-white);
+    box-shadow: 0 5px 8px 4px rgba(0, 0, 0, .2);
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 40px;
+    text-align: left;
+    padding: 10px 20px;
+    margin:  20px 45%;
+    cursor: pointer;
+}
+
+.button__reusable:hover {
+    color: #1AE216;
+    box-shadow: var(--dropshadow);
+}
+=======
 .button {
     display: inline-block;
     background-color: transparent;
@@ -37,3 +59,4 @@
     row-gap: 1.2rem;
 }
 
+>>>>>>> c83920548427fc702a209e27b3a5f2e767c34712

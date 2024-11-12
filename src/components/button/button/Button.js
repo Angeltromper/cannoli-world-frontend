@@ -1,17 +1,12 @@
-import './Button.css';
-import { Link } from "react-router-dom";
+import React from 'react';
+import "./Button.css";
 
-export function ButtonGroup({children}) {
+function Button({onClick, text, type}) {
     return (
-        <div className="button">
-            {children}
-        </div>
-    );
+        <button onClick={onClick} type={type} className="button__reusable">
+            {text}
+        </button>
+    )
 }
 
-export function Button({variation, url, size, children}) {
-    return (
-        <Link to={url} className={`button button-${variation} button-${size}`}>{children}</Link>
-    );
-}
-
+export default Button;

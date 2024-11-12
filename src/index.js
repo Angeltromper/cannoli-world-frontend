@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+export { default as Product } from '../product/Product';
+=======
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -22,3 +25,4 @@ root.render(
 );
 
 reportWebVitals();
+>>>>>>> c83920548427fc702a209e27b3a5f2e767c34712
